@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="TEST: Test for updating and getting the scores for each player manually">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for updating and getting the scores for each player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663593716235</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CODE: Wrote code for updating and getting the scores for each player">
+      <created>1663610094174</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663610094174</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +217,7 @@
     <MESSAGE value="TEST: Test for drawing a card and Rolling the dice" />
     <MESSAGE value="CODE: Wrote the code for drawing a card and Rolling the dice" />
     <MESSAGE value="TEST: Test for updating and getting the scores for each player manually" />
-    <option name="LAST_COMMIT_MESSAGE" value="TEST: Test for updating and getting the scores for each player manually" />
+    <MESSAGE value="CODE: Wrote code for updating and getting the scores for each player" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for updating and getting the scores for each player" />
   </component>
 </project>
