@@ -92,16 +92,51 @@ public class GameHost {
         }
 
     }
-    protected int updateScore(Player player, int score){
-
-    }
-
-    public void displayScores(){
-
+    protected void updateScore(Player player, int score){
+        player.updateScore(score);
     }
 
     protected int[] getScores(){
+        int[] scores = new int[players.length];
+        for(int i = 0; i < scores.length; i++){
+            scores[i] = players[i].getScore();
+        }
+        return scores;
+    }
 
+    public String displayScores(){
+        int[] scores = getScores();
+        int numOfPlayers = players.length;
+
+        //String for the final print
+        String scoreBoard = "";
+        //Player numbers
+        switch(numOfPlayers) {
+            case 1:
+                scoreBoard = scoreBoard +"|\tPlayer 1\t|\n";
+                break;
+            case 2:
+                scoreBoard = scoreBoard +"|\tPlayer 1\t|\tPlayer 2\t|\n";
+                break;
+            case 3:
+                scoreBoard = scoreBoard +"|\tPlayer 1\t|\tPlayer 2\t|\tPlayer 3\t|\n";
+                break;
+        }
+        //Format and display the points
+        scoreBoard = scoreBoard + "|";
+        for(int i = 0; i < scores.length; i++){
+            if(scores[i] > 999){
+                scoreBoard = scoreBoard + "\t" + scores[i] + "\t\t|";
+            } else {
+                scoreBoard = scoreBoard + "\t" + scores[i] + "\t\t\t|";
+            }
+        }
+        //Add an end of line
+        scoreBoard = scoreBoard + "\n\n";
+        //Print out the Score board
+        System.out.print(scoreBoard);
+
+        return scoreBoard;
     }
 
 
