@@ -5,13 +5,13 @@ public class GameHost {
 
     private Player[] players;
 
-    //Contsructor for GameHost
-    public GameHost(Player[] players){
-
+    //Constructor for GameHost
+    public GameHost(Player[] newPlayers){
+        players = newPlayers;
     }
 
     //Returns Number of player in the game
-    public static int numOfPlayers(){
-
+    public int numOfPlayers(){
+        return players.length;
     }
 }
