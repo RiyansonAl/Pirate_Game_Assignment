@@ -44,7 +44,7 @@ class GameHostTest {
         GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Gold,
                                         GameHost.Dice.Diamond, GameHost.Dice.Sword, GameHost.Dice.Skull,
                                         GameHost.Dice.Monkey, GameHost.Dice.Parrot};
-        assertEquals(rolledDice, host.rollDice(8,riggedDice) );
+        assertArrayEquals(rolledDice, host.rollDice(8, riggedDice) );
     }
 
 
