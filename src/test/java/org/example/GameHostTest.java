@@ -30,7 +30,6 @@ class GameHostTest {
         GameHost host = new GameHost(players);
         assertEquals(GameHost.FortuneCard.TreasureChest, host.drawCard(1) );
     }
-
     @Test
     @DisplayName("Rolling the Dice")
     void rollDice() {
@@ -45,6 +44,25 @@ class GameHostTest {
                                         GameHost.Dice.Diamond, GameHost.Dice.Sword, GameHost.Dice.Skull,
                                         GameHost.Dice.Monkey, GameHost.Dice.Parrot};
         assertArrayEquals(rolledDice, host.rollDice(8, riggedDice) );
+    }
+    @Test
+    @DisplayName("Get Players scores ")
+    void getScore() {
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+        host.displayScores();
+        host.updateScore(player1, 500);
+        host.updateScore(player2, 200);
+        host.updateScore(player3, 150);
+        host.displayScores();
+        host.updateScore(player1, -250);
+        host.displayScores();
+        int[] scores = {250, 200, 150};
+        assertArrayEquals(scores, host.getScores() );
     }
 
 

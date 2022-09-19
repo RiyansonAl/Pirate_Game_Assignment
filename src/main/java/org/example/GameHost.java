@@ -92,4 +92,19 @@ public class GameHost {
         }
 
     }
+    protected int updateScore(Player player, int score){
+
+    }
+
+    public void displayScores(){
+
+    }
+
+    protected int[] getScores(){
+
+    }
+
+
+
+
 }//End gameHost class
