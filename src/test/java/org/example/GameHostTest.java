@@ -100,13 +100,16 @@ class GameHostTest {
         GameHost host = new GameHost(players);
         int[] riggedDice = {1,2,3,4,5,6,1,2};
 
-        GameHost.Dice[] FinalRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
-                GameHost.Dice.Sword, GameHost.Dice.Skull, GameHost.Dice.Skull,
+        GameHost.Dice[] FirstRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Gold,
+                GameHost.Dice.Diamond, GameHost.Dice.Sword, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};
         GameHost.Dice[] rolledDice = host.rollDice(8, riggedDice);
-        riggedDice = new int[]{1, 2, 2, 5, 6, 6, 1, 2};
         int[] keepDice = {0,6,1,7};
-        assertArrayEquals(rolledDice, host.keepReRollDice(keepDice, rolledDice, riggedDice) );
+        riggedDice = new int[]{1, 1, 2, 2, 6, 6, 1, 2};
+        GameHost.Dice[] FinalRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
+                GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Parrot};
+        assertArrayEquals(FinalRolledDice, host.keepReRollDice(keepDice, rolledDice, riggedDice, false) );
     }
 
 

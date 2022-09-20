@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.util.Arrays;
 
 public class GameHost {
 
@@ -12,7 +13,7 @@ public class GameHost {
     }
     public enum Dice {
         Monkey, Parrot, Gold, Diamond,
-        Sword, Skull
+        Sword, Skull, None
     }
 
     //Constructor for GameHost
@@ -187,8 +188,63 @@ public class GameHost {
         return winner;
     }
 
-    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, int[] riggedDice){
+    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, int[] riggedDice, boolean hasSorceress){
+        Dice[] diceSet = new Dice[preDice.length];
+        //Give default value to the new Dice set
+        for(int i = 0; i < diceSet.length; i++){
+            diceSet[i] = Dice.None;
+        }
+        //Debug line
+        System.out.println(Arrays.toString(preDice));
 
+        //Add in the dice that is being kept to the new Dice set.
+        int counter = 0;
+        for(int i = 0; i < keepDice.length; i++){
+            diceSet[counter] = preDice[keepDice[i]];
+            counter = counter + 1;
+            preDice[keepDice[i]] = Dice.None; //Place holder to ignore the kept dice
+        }
+        //Debug line
+        System.out.println(Arrays.toString(diceSet));
+
+        //Keep the skulls since that cannot be re-rolled unless the sorceress fortune card
+        for(int i = 0; i < preDice.length; i++){
+            if((preDice[i] == Dice.Skull) && !hasSorceress){ //Found one skull dice and don't have Sorceress Card
+                diceSet[counter] = preDice[i];
+                counter = counter + 1;
+            } else if((preDice[i] == Dice.Skull) && (hasSorceress)) { //found one skull dice and have Sorceress Card
+                hasSorceress = false;
+            }
+        }
+
+        //Debug line
+        System.out.println(Arrays.toString(diceSet));
+
+        //The remaining dice is the amount of dice that will be rolled
+        int diceToRoll = preDice.length - counter;
+        Dice[] newRoll;
+        if(riggedDice[0] == 0){
+            int[] noRiggedDice = {0,0,0};
+            newRoll = rollDice(diceToRoll, noRiggedDice);
+        }else {
+            //Get the new set of riggedDice from the orignal rigged Dice set
+            int[] newRiggedDice = new int[diceToRoll];
+            int k = 0;
+            for(int i = counter; i < riggedDice.length; i++){
+                newRiggedDice[k] = riggedDice[i];
+                k = k + 1;
+            }
+            newRoll = rollDice(diceToRoll, newRiggedDice);
+        }
+        //Add the new dice to the dice set
+        int j = 0;
+        for(int i = 0; i < newRoll.length; i++){
+            diceSet[counter] = newRoll[i];
+            counter = counter + 1;
+        }
+        //Debug line
+        System.out.println(Arrays.toString(diceSet));
+        return diceSet;
     }
 
 
