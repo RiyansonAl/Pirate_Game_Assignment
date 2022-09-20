@@ -84,7 +84,7 @@ class GameHostTest {
         host.updateScore(player2, 1000);
         host.updateScore(player3, 1500);
         host.displayScores();
-        String winner = "Player 1 wins";
+        String winner = "Player 1 wins\n";
         assertEquals(winner, host.endRound());
 
     }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for updating and getting the scores for each player">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="TEST: Test case for end of the game and player with the highest score over 3000 wins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
@@ -50,20 +50,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.getScore">
-    <configuration name="PirateClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.PirateClient" />
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GameHostTest.endRound">
     <configuration name="GameHostTest.drawCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -75,6 +62,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="METHOD_NAME" value="drawCard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostTest.endRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="endRound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest.endRound" />
         <item itemvalue="JUnit.GameHostTest.getScore" />
         <item itemvalue="JUnit.GameHostTest.rollDice" />
         <item itemvalue="JUnit.GameHostTest.drawCard" />
         <item itemvalue="JUnit.GameHostTest.numOfPlayers" />
-        <item itemvalue="Application.PirateClient" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663610094174</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="TEST: Test case for end of the game and player with the highest score over 3000 wins">
+      <created>1663612635805</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663612635805</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +228,7 @@
     <MESSAGE value="CODE: Wrote the code for drawing a card and Rolling the dice" />
     <MESSAGE value="TEST: Test for updating and getting the scores for each player manually" />
     <MESSAGE value="CODE: Wrote code for updating and getting the scores for each player" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for updating and getting the scores for each player" />
+    <MESSAGE value="TEST: Test case for end of the game and player with the highest score over 3000 wins" />
+    <option name="LAST_COMMIT_MESSAGE" value="TEST: Test case for end of the game and player with the highest score over 3000 wins" />
   </component>
 </project>

@@ -5,6 +5,7 @@ package org.example;
 public class GameHost {
 
     private Player[] players;
+    private int winningScore = 3000;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
         Gold, Diamond, MonkeyBusiness, Skulls
@@ -140,7 +141,50 @@ public class GameHost {
     }
 
     protected String endRound(){
+        int[] scores = getScores();
+        int max = 0;
+        int player = 0;
 
+        //Check for highest score
+        for(int i = 0; i < scores.length; i++){
+            if(scores[i] >= max){
+                max = scores[i];
+                player = i + 1;
+            }
+        }
+        //Return string
+        String winner = "";
+        //Check if the max value is a winning score
+        if(max >= winningScore){
+            //Check if there are duplicate scores for multiple winners.
+            int count = 0;
+            for(int i = 0; i < scores.length; i++){
+                if(scores[i] == max){
+                    count = count + 1;
+                }
+            }
+            //One Winner
+            if(count == 1){ //One winner
+                winner = "Player " + player + " wins\n";
+            }
+            if(count >= 2){
+                int[] wonPlayers = new int[count];
+                int k = 0;
+                //Find which player won
+                for(int i = 0; i < scores.length; i++){
+                    if(scores[i] == max){
+                        wonPlayers[k] = i + 1;
+                        k = k + 1;
+                    }
+                }
+                //Create string for winning players
+                for(int i = 0; i < wonPlayers.length; i++){
+                    winner = winner + "Player " + wonPlayers[i] + " wins\n";
+                }
+            }
+        }
+        System.out.print(winner);
+        return winner;
     }
 
 
