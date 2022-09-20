@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="TEST: Test case for end of the game and player with the highest score over 3000 wins">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663612635805</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins">
+      <created>1663642054047</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663642054047</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +236,7 @@
     <MESSAGE value="TEST: Test for updating and getting the scores for each player manually" />
     <MESSAGE value="CODE: Wrote code for updating and getting the scores for each player" />
     <MESSAGE value="TEST: Test case for end of the game and player with the highest score over 3000 wins" />
-    <option name="LAST_COMMIT_MESSAGE" value="TEST: Test case for end of the game and player with the highest score over 3000 wins" />
+    <MESSAGE value="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins" />
   </component>
 </project>

@@ -187,6 +187,10 @@ public class GameHost {
         return winner;
     }
 
+    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, int[] riggedDice){
+
+    }
+
 
 
 
