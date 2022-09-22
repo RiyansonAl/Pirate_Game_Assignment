@@ -122,7 +122,7 @@ class GameHostTest {
 
         GameHost host = new GameHost(players);
 
-        GameHost.FortuneCard card = GameHost.FortuneCard.TreasureChest;
+        GameHost.FortuneCard card = GameHost.FortuneCard.Captain;
         GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
                 GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};

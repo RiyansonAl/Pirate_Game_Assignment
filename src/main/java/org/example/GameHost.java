@@ -248,7 +248,77 @@ public class GameHost {
     }
 
     protected int calculateScore(Player player, FortuneCard card, Dice[] rolledDice){
+        int score = 0;
 
+        if(card == FortuneCard.Captain){
+            score = scoreFromDice(rolledDice);
+            score = score * 2;
+        }
+
+        return score;
+    }
+
+    private int scoreFromDice(Dice[] rolledDice){
+        //Initializing the array to count duplicates
+        int[] duplicates = {0, 0, 0, 0, 0, 0};
+
+        //Count the duplicates in the rolled dice Array
+        for(int i = 0; i < rolledDice.length; i++){
+
+            switch(rolledDice[i]) {
+                case Monkey:
+                    duplicates[0] = duplicates[0] + 1;
+                    break;
+                case Parrot:
+                    duplicates[1] = duplicates[1] + 1;
+                    break;
+                case Gold:
+                    duplicates[2] = duplicates[2] + 1;
+                    break;
+                case Diamond:
+                    duplicates[3] = duplicates[3] + 1;
+                    break;
+                case Sword:
+                    duplicates[4] = duplicates[4] + 1;
+                    break;
+                case Skull:
+                    duplicates[5] = duplicates[5] + 1;
+                    break;
+            }
+        }
+        int score = 0;
+
+        //Score for identical/duplicate objects
+        for(int i = 0; i < (duplicates.length-1); i++){
+
+            switch(duplicates[i]) {
+                case 3://3 of a kind
+                    score = score + 100;
+                    break;
+                case 4://4 of a kind
+                    score = score + 200;
+                    break;
+                case 5://5 of a kind
+                    score = score + 500;
+                    break;
+                case 6://6 of a kind
+                    score = score + 1000;
+                    break;
+                case 7://7 of a kind
+                    score = score + 2000;
+                    break;
+                case 8://8 of a kind
+                    score = score + 4000;
+                    //Full Chest bonus
+                    score = score + 100;
+                    break;
+            }
+        }
+
+        //Score for each diamond and gold
+        score = score + (100 * (duplicates[2] + duplicates[3]));
+
+        return score;
     }
 
 
