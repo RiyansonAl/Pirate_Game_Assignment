@@ -166,6 +166,23 @@ class GameHostTest {
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
+    @Test
+    @DisplayName("Getting Score using a Monkey Business fortune card")
+    void calculateScore4(){
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.MonkeyBusiness;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Monkey};
+        int score = 2100;
+        assertEquals(score, host.calculateScore(player1, card, rolledDice));
+    }
 
 
 
