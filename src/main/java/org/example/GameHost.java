@@ -247,6 +247,10 @@ public class GameHost {
         return diceSet;
     }
 
+    protected int calculateScore(Player player, FortuneCard card, Dice[] rolledDice){
+
+    }
+
 
 
 

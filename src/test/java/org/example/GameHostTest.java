@@ -112,6 +112,25 @@ class GameHostTest {
         assertArrayEquals(FinalRolledDice, host.keepReRollDice(keepDice, rolledDice, riggedDice, false) );
     }
 
+    @Test
+    @DisplayName("Getting Scorce using a captain fortune card")
+    void calculateScore(){
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.TreasureChest;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
+                GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Parrot};
+        int score = 400;
+        assertEquals(score, host.calculateScore(player1, card, rolledDice));
+    }
+
+
 
 
 }
