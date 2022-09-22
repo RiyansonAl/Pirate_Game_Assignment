@@ -132,24 +132,6 @@ class GameHostTest {
 
     @Test
     @DisplayName("Getting Scorce using a Gold fortune card")
-    void calculateScore(){
-        Player player1 = new Player();
-        Player player2 = new Player();
-        Player player3 = new Player();
-        Player[] players = {player1, player2, player3};
-
-        GameHost host = new GameHost(players);
-
-        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
-        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Gold, GameHost.Dice.Gold,
-                GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
-                GameHost.Dice.Gold, GameHost.Dice.Parrot};
-        int score = 1600;
-        assertEquals(score, host.calculateScore(player1, card, rolledDice));
-    }
-
-    @Test
-    @DisplayName("Getting Score using a Gold fortune card")
     void calculateScore2(){
         Player player1 = new Player();
         Player player2 = new Player();
