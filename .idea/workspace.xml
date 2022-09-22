@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for getting the score for when Gold and Diamond cards are obtained">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore">
+  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore4">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -112,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.keepReRollDice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.calculateScore4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +123,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="keepReRollDice" />
+      <option name="METHOD_NAME" value="calculateScore4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest.calculateScore4" />
         <item itemvalue="JUnit.GameHostTest.calculateScore" />
         <item itemvalue="JUnit.GameHostTest.calculateScore2" />
         <item itemvalue="JUnit.GameHostTest.calculateScore3" />
         <item itemvalue="JUnit.GameHostTest" />
-        <item itemvalue="JUnit.GameHostTest.keepReRollDice" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663818177592</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained">
+      <created>1663818445397</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663818445397</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,6 +298,7 @@
     <MESSAGE value="U-TEST: 2 units tests for calculating the Score with a gold Card and then a diamond card" />
     <MESSAGE value="U-TEST: Fixing Bug from last commit" />
     <MESSAGE value="CODE: Wrote code for getting the score for when Gold and Diamond cards are obtained" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for getting the score for when Gold and Diamond cards are obtained" />
+    <MESSAGE value="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained" />
   </component>
 </project>

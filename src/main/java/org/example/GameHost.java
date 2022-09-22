@@ -253,7 +253,7 @@ public class GameHost {
         if(card == FortuneCard.Captain){
             score = scoreFromDice(rolledDice, FortuneCard.None);
             score = score * 2;
-        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) ) {
+        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)) {
             score = scoreFromDice(rolledDice, card);
         }
 
@@ -291,12 +291,30 @@ public class GameHost {
         }
         int score = 0;
 
+        //Check if card is Monkey Business
+        if(card == FortuneCard.MonkeyBusiness){
+            //Make all parrots into monkeys to calculate the score
+            duplicates[0] = duplicates[0] + duplicates[1];
+            duplicates[1] = 0;
+        }
+
+        //TODO: Full Chest for when all eight dice is used for points
         //Check for Full Chest bonus
         boolean isFullChest = false;
+        int count = 0;
         for(int i = 0; i < (duplicates.length-1); i++){
+            //If there is 8 of a kind
             if(duplicates[i] == 8){
                 isFullChest = true;
             }
+            //Count for the dice used to score
+            if(duplicates[i] >=3 ){
+                count = count + duplicates[i];
+            }
+        }
+        //Full chest is true if all 8 dice is used to score
+        if(count == 8){
+            isFullChest = true;
         }
         if(isFullChest){
             //Full Chest bonus
@@ -310,6 +328,7 @@ public class GameHost {
         if(card == FortuneCard.Diamond){
             duplicates[3] = duplicates[3] + 1;
         }
+
 
 
         //Score for identical/duplicate objects
