@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote the code for calculating the Score with a Captain Card">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Fixing Bug from last commit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore2">
+  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -97,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.endRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.calculateScore3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -107,7 +106,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="endRound" />
+      <option name="METHOD_NAME" value="calculateScore3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameHostTest.calculateScore2" />
-        <item itemvalue="JUnit.GameHostTest" />
         <item itemvalue="JUnit.GameHostTest.calculateScore" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore2" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore3" />
+        <item itemvalue="JUnit.GameHostTest" />
         <item itemvalue="JUnit.GameHostTest.keepReRollDice" />
-        <item itemvalue="JUnit.GameHostTest.endRound" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +238,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663813270116</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="U-TEST: 2 units tests for calculating the Score with a gold Card and then a diamond card">
+      <created>1663817335633</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663817335633</updated>
+    </task>
+    <task id="LOCAL-00015" summary="U-TEST: Fixing Bug from last commit">
+      <created>1663817494264</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663817494264</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +280,8 @@
     <MESSAGE value="CODE: Added Code for keeping and rerolling Dice" />
     <MESSAGE value="U-TEST: Unit test for calculating the Score with a Captain Card" />
     <MESSAGE value="CODE: Wrote the code for calculating the Score with a Captain Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote the code for calculating the Score with a Captain Card" />
+    <MESSAGE value="U-TEST: 2 units tests for calculating the Score with a gold Card and then a diamond card" />
+    <MESSAGE value="U-TEST: Fixing Bug from last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Fixing Bug from last commit" />
   </component>
 </project>

@@ -9,7 +9,7 @@ public class GameHost {
     private int winningScore = 3000;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
-        Gold, Diamond, MonkeyBusiness, Skulls
+        Gold, Diamond, MonkeyBusiness, Skulls, None
     }
     public enum Dice {
         Monkey, Parrot, Gold, Diamond,
@@ -251,14 +251,17 @@ public class GameHost {
         int score = 0;
 
         if(card == FortuneCard.Captain){
-            score = scoreFromDice(rolledDice);
+            score = scoreFromDice(rolledDice, FortuneCard.None);
             score = score * 2;
+        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) ) {
+            score = scoreFromDice(rolledDice, card);
         }
 
+        player.updateScore(score);
         return score;
     }
 
-    private int scoreFromDice(Dice[] rolledDice){
+    private int scoreFromDice(Dice[] rolledDice, FortuneCard card){
         //Initializing the array to count duplicates
         int[] duplicates = {0, 0, 0, 0, 0, 0};
 
@@ -288,6 +291,27 @@ public class GameHost {
         }
         int score = 0;
 
+        //Check for Full Chest bonus
+        boolean isFullChest = false;
+        for(int i = 0; i < (duplicates.length-1); i++){
+            if(duplicates[i] == 8){
+                isFullChest = true;
+            }
+        }
+        if(isFullChest){
+            //Full Chest bonus
+            score = score + 500;
+        }
+
+        //Check if card it either Gold or diamond
+        if(card == FortuneCard.Gold){
+            duplicates[2] = duplicates[2] + 1;
+        }
+        if(card == FortuneCard.Diamond){
+            duplicates[3] = duplicates[3] + 1;
+        }
+
+
         //Score for identical/duplicate objects
         for(int i = 0; i < (duplicates.length-1); i++){
 
@@ -309,8 +333,6 @@ public class GameHost {
                     break;
                 case 8://8 of a kind
                     score = score + 4000;
-                    //Full Chest bonus
-                    score = score + 100;
                     break;
             }
         }
