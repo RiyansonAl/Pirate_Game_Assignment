@@ -184,6 +184,64 @@ class GameHostTest {
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
+    @Test
+    @DisplayName("Getting Score using a Treasure Chest fortune card")
+    void playerTurnStart() {
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+        GameHost.FortuneCard riggedCard = GameHost.FortuneCard.TreasureChest;
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
+                GameHost.Dice.Skull, GameHost.Dice.Skull};
+
+        GameHost.Dice[] firstRoll = playerTurnStart(player1, riggedCard, riggedDice);
+        if(firstRoll[0] == GameHost.Dice.None){
+            GameHost.endTurn();
+        }
+        int[] keepDice = {2,4,6,7};
+        GameHost.Dice[] riggedDiceReRolled = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull};
+        GameHost.Dice[] finalRoll = GameHost.keepReRollDice(keepDice, riggedDice, riggedDiceReRolled, false);
+
+        if(finalRoll[0] == GameHost.Dice.None){
+            GameHost.endTurn();
+        }
+
+        int score = 300;
+        assertEquals(score, host.getScores()[0]);
+
+    }
+
+    @Test
+    @DisplayName("Rolling 3 skulls on the first roll and ending turn")
+    void playerTurnStart2() {
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+        GameHost.FortuneCard riggedCard = GameHost.FortuneCard.TreasureChest;
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull};
+
+        GameHost.Dice[] firstRoll = playerTurnStart(player1, riggedCard, riggedDice);
+
+        if(firstRoll[0] = GameHost.Dice.None){
+            GameHost.endTurn();
+        }
+
+        int score = 300;
+        assertEquals(false, host.playerTurnOrder[0]);
+
+    }
+
 
 
 }

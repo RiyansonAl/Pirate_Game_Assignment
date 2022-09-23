@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore4">
+  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore3">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -131,10 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest.calculateScore3" />
         <item itemvalue="JUnit.GameHostTest.calculateScore4" />
         <item itemvalue="JUnit.GameHostTest.calculateScore" />
         <item itemvalue="JUnit.GameHostTest.calculateScore2" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore3" />
         <item itemvalue="JUnit.GameHostTest" />
       </list>
     </recent_temporary>
@@ -267,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663818445397</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method">
+      <created>1663819112298</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663819112298</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +307,8 @@
     <MESSAGE value="U-TEST: Fixing Bug from last commit" />
     <MESSAGE value="CODE: Wrote code for getting the score for when Gold and Diamond cards are obtained" />
     <MESSAGE value="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Unit Test for getting the score for when Monkey Business card is obtained" />
+    <MESSAGE value="CODE: Wrote code for getting the score for when Monkey Business card is obtained" />
+    <MESSAGE value="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method" />
   </component>
 </project>

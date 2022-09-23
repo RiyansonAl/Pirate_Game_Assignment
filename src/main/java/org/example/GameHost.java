@@ -7,6 +7,7 @@ public class GameHost {
 
     private Player[] players;
     private int winningScore = 3000;
+    protected int[] playerTurnOrder;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
         Gold, Diamond, MonkeyBusiness, Skulls, None
@@ -360,6 +361,15 @@ public class GameHost {
         score = score + (100 * (duplicates[2] + duplicates[3]));
 
         return score;
+    }
+
+    protected Dice[] playerTurnStart(Player player, FortuneCard riggedCard, Dice[] riggedDice){
+
+
+    }
+
+    protected void endTurn(){
+
     }
 
 
