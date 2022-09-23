@@ -40,11 +40,11 @@ class GameHostTest {
         Player[] players = {player1, player2, player3};
 
         GameHost host = new GameHost(players);
-        int[] riggedDice = {1,2,3,4,5,6,1,2};
+        //int[] riggedDice = {1,2,3,4,5,6,1,2};
         GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Gold,
                                         GameHost.Dice.Diamond, GameHost.Dice.Sword, GameHost.Dice.Skull,
                                         GameHost.Dice.Monkey, GameHost.Dice.Parrot};
-        assertArrayEquals(rolledDice, host.rollDice(8, riggedDice) );
+        assertArrayEquals(rolledDice, host.rollDice(8, rolledDice) );
     }
     @Test
     @DisplayName("Get Players scores ")
@@ -103,13 +103,13 @@ class GameHostTest {
         GameHost.Dice[] FirstRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Gold,
                 GameHost.Dice.Diamond, GameHost.Dice.Sword, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};
-        GameHost.Dice[] rolledDice = host.rollDice(8, riggedDice);
+        GameHost.Dice[] rolledDice = host.rollDice(8, FirstRolledDice);
         int[] keepDice = {0,6,1,7};
         riggedDice = new int[]{1, 1, 2, 2, 6, 6, 1, 2};
         GameHost.Dice[] FinalRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
                 GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};
-        assertArrayEquals(FinalRolledDice, host.keepReRollDice(keepDice, rolledDice, riggedDice, false) );
+        assertArrayEquals(FinalRolledDice, host.keepReRollDice(keepDice, rolledDice, FinalRolledDice, false) );
     }
 
     @Test
@@ -186,7 +186,7 @@ class GameHostTest {
 
     @Test
     @DisplayName("Getting Score using a Treasure Chest fortune card")
-    void playerTurnStart() {
+    void playerTurnStart1() {
         Player player1 = new Player();
         Player player2 = new Player();
         Player player3 = new Player();
@@ -198,18 +198,18 @@ class GameHostTest {
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Skull, GameHost.Dice.Skull};
 
-        GameHost.Dice[] firstRoll = playerTurnStart(player1, riggedCard, riggedDice);
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, riggedCard, riggedDice);
         if(firstRoll[0] == GameHost.Dice.None){
-            GameHost.endTurn();
+            host.endTurn();
         }
         int[] keepDice = {2,4,6,7};
         GameHost.Dice[] riggedDiceReRolled = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
                 GameHost.Dice.Skull, GameHost.Dice.Skull};
-        GameHost.Dice[] finalRoll = GameHost.keepReRollDice(keepDice, riggedDice, riggedDiceReRolled, false);
+        GameHost.Dice[] finalRoll = host.keepReRollDice(keepDice, riggedDice, riggedDiceReRolled, false);
 
         if(finalRoll[0] == GameHost.Dice.None){
-            GameHost.endTurn();
+            host.endTurn();
         }
 
         int score = 300;
@@ -231,10 +231,10 @@ class GameHostTest {
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
                 GameHost.Dice.Skull, GameHost.Dice.Skull};
 
-        GameHost.Dice[] firstRoll = playerTurnStart(player1, riggedCard, riggedDice);
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, riggedCard, riggedDice);
 
-        if(firstRoll[0] = GameHost.Dice.None){
-            GameHost.endTurn();
+        if(firstRoll[0] == GameHost.Dice.None){
+            host.endTurn();
         }
 
         int score = 300;

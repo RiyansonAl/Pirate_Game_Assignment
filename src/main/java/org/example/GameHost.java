@@ -7,7 +7,7 @@ public class GameHost {
 
     private Player[] players;
     private int winningScore = 3000;
-    protected int[] playerTurnOrder;
+    protected boolean[] playerTurnOrder;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
         Gold, Diamond, MonkeyBusiness, Skulls, None
@@ -20,6 +20,7 @@ public class GameHost {
     //Constructor for GameHost
     public GameHost(Player[] newPlayers){
         players = newPlayers;
+        playerTurnOrder = new boolean[] {true, false, false};
     }
 
     //Returns Number of player in the game
@@ -61,18 +62,16 @@ public class GameHost {
         }
     }
 
-    public Dice[] rollDice(int numOfDice, int[] riggedDice){
+    public Dice[] rollDice(int numOfDice, Dice[] riggedDice){
         Dice[] dices = new Dice[numOfDice];
-        if(riggedDice[0] == 0) {
+        if(riggedDice[0] == Dice.None) {
             int num;
             for (int i = 0; i < numOfDice; i++) {
                 num = (int) (Math.random() * (6 - 1) + 1);
                 dices[i] = rollDiceHelper(num);
             }
         } else {
-            for (int i = 0; i < numOfDice; i++) {
-                dices[i] = rollDiceHelper(riggedDice[i]);
-            }
+            dices = riggedDice;
         }
         return dices;
     }
@@ -189,7 +188,7 @@ public class GameHost {
         return winner;
     }
 
-    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, int[] riggedDice, boolean hasSorceress){
+    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, Dice[] riggedDice, boolean hasSorceress){
         Dice[] diceSet = new Dice[preDice.length];
         //Give default value to the new Dice set
         for(int i = 0; i < diceSet.length; i++){
@@ -224,17 +223,19 @@ public class GameHost {
         //The remaining dice is the amount of dice that will be rolled
         int diceToRoll = preDice.length - counter;
         Dice[] newRoll;
-        if(riggedDice[0] == 0){
-            int[] noRiggedDice = {0,0,0};
+        if(riggedDice[0] == Dice.None){
+            Dice[] noRiggedDice = {Dice.None, Dice.None, Dice.None};
             newRoll = rollDice(diceToRoll, noRiggedDice);
         }else {
             //Get the new set of riggedDice from the orignal rigged Dice set
-            int[] newRiggedDice = new int[diceToRoll];
+
+            Dice[] newRiggedDice = new Dice[diceToRoll];
             int k = 0;
             for(int i = counter; i < riggedDice.length; i++){
                 newRiggedDice[k] = riggedDice[i];
                 k = k + 1;
             }
+
             newRoll = rollDice(diceToRoll, newRiggedDice);
         }
         //Add the new dice to the dice set
@@ -364,8 +365,12 @@ public class GameHost {
     }
 
     protected Dice[] playerTurnStart(Player player, FortuneCard riggedCard, Dice[] riggedDice){
+        //Roll the dice
+        Dice[] firstRoll = rollDice(8, riggedDice);
 
 
+
+        return firstRoll;
     }
 
     protected void endTurn(){
