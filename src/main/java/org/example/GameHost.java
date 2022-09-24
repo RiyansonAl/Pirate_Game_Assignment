@@ -450,6 +450,10 @@ public class GameHost {
         return count;
     }
 
+    protected int getSkullCardType(Player player, int rigged){
+
+    }
+
     private void playerTurnPhase(Player player, boolean isRolled, boolean isUpdatedScore){
         player.setRoll(isRolled);
         player.setUpdateScore(isUpdatedScore);

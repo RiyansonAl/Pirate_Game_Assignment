@@ -276,6 +276,25 @@ class GameHostTest {
 
     }
 
+    @Test
+    @DisplayName("Getting ending turn after getting a skull fortune card with 2 skulls")
+    void calculateScore5(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Skulls;
+        int numOfSkulls = host.getSkullCardType(player1, 2);
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+        int score = 0;
+        assertEquals(score, host.calculateScore(player1, card, rolledDice));
+    }
+
 
 
 }
