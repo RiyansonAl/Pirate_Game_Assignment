@@ -242,7 +242,7 @@ class GameHostTest {
         Player[] players = {player1, player2, player3};
 
         GameHost host = new GameHost(players);
-        GameHost.FortuneCard riggedCard = GameHost.FortuneCard.TreasureChest;
+        GameHost.FortuneCard riggedCard = GameHost.FortuneCard.Captain;
         GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
                 GameHost.Dice.Skull, GameHost.Dice.Skull};
@@ -250,7 +250,7 @@ class GameHostTest {
         GameHost.Dice[] firstRoll = host.playerTurnStart(player1, riggedCard, riggedDice);
 
         int[] keepDice = {5, 6, 7};
-        GameHost.Dice[] finalRoll = new GameHost.Dice[firstRoll.length];
+        GameHost.Dice[] finalRoll = firstRoll;
 
         boolean[] player1TurnPhase = host.getPlayerTurnPhase(player1);
 
