@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code for ending players turn after rolling 3 skulls on first turn unit test">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.playerTurnStart2">
+  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore5">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -66,7 +67,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.drawCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.calculateScore5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -76,7 +77,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="drawCard" />
+      <option name="METHOD_NAME" value="calculateScore5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest.calculateScore5" />
         <item itemvalue="JUnit.GameHostTest.playerTurnStart2" />
         <item itemvalue="JUnit.GameHostTest" />
         <item itemvalue="JUnit.GameHostTest.playerTurnStart1" />
         <item itemvalue="JUnit.GameHostTest.keepReRollDice" />
-        <item itemvalue="JUnit.GameHostTest.drawCard" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664033846580</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
+      <created>1664047771994</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664047771994</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,7 +333,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Initial Commit with a simple socket example" />
     <MESSAGE value="TEST: First Test creating a game and created 2 objects for gamehost and player with empty methods for the test" />
     <MESSAGE value="CODE: Wrote Code for the Test creating a game and adding 3 players" />
     <MESSAGE value="TEST: Test for drawing a card and Rolling the dice" />
@@ -349,6 +356,8 @@
     <MESSAGE value="CODE and REFACTOR Commit: Made Changes to a few different mothods and added how the turns of each player takes place. Test for Treasure Chest fortune card is complete" />
     <MESSAGE value="U-TEST: Modified the Rolling 3 skulls on first turn unit test" />
     <MESSAGE value="CODE: Wrote code for ending players turn after rolling 3 skulls on first turn unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code for ending players turn after rolling 3 skulls on first turn unit test" />
+    <MESSAGE value="U-TEST: Test for getting a skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
+    <MESSAGE value="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
   </component>
 </project>

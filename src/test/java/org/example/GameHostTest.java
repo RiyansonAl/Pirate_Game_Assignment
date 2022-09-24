@@ -287,12 +287,19 @@ class GameHostTest {
         GameHost host = new GameHost(players);
 
         GameHost.FortuneCard card = GameHost.FortuneCard.Skulls;
-        int numOfSkulls = host.getSkullCardType(player1, 2);
-        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
+
+        GameHost.Dice[] riggeddDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Skull};
+
+
+        int numOfSkulls = host.getSkullCardType(player1, 2);
+        player1.setSkullCardNum(numOfSkulls);
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggeddDice);
+
         int score = 0;
-        assertEquals(score, host.calculateScore(player1, card, rolledDice));
+        assertEquals(score, host.calculateScore(player1, card, firstRoll));
     }
 
 

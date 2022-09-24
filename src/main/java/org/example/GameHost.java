@@ -253,6 +253,11 @@ public class GameHost {
         //Check for the number of skulls. If 3 or more skulls then turn ends
         //3 skulls and no Treasure chest card, then rolling ends and score 0 for this round
         int numOfSkulls = countSkulls(diceSet);
+        //if the card is a skulls card, add the number of skulls from the card to the number of skulls rolled
+        if(card == FortuneCard.Skulls){
+            numOfSkulls = numOfSkulls + player.getSkullCardNum();
+        }
+
         if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
             player.setRoll(false);
             player.setUpdateScore(false);
@@ -274,16 +279,22 @@ public class GameHost {
     protected int calculateScore(Player player, FortuneCard card, Dice[] rolledDice){
         int score = 0;
 
-        if(card == FortuneCard.Captain){
-            score = scoreFromDice(rolledDice, FortuneCard.None);
-            score = score * 2;
-        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)
-                    || card == FortuneCard.TreasureChest) {
-            score = scoreFromDice(rolledDice, card);
-        }
 
-        player.updateScore(score);
-        player.setUpdateScore(false);
+        if(player.getUpdateScore() == true) {
+
+            if (card == FortuneCard.Captain) {
+                score = scoreFromDice(rolledDice, FortuneCard.None);
+                score = score * 2;
+            } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)
+                    || (card == FortuneCard.TreasureChest) || (card == FortuneCard.Skulls)) {
+                score = scoreFromDice(rolledDice, card);
+            }
+
+            player.updateScore(score);
+            player.setUpdateScore(false);
+        } else { //Turn must end since they got zero score from too many skulls or lost seabattle
+            score = 0;
+        }
         return score;
     }
 
@@ -392,7 +403,26 @@ public class GameHost {
         //Roll the dice
         Dice[] firstRoll = rollDice(8, riggedDice);
         FortuneCard card = drawCard(riggedCard);
+        player.setFortuneCard(card);
         int numOfSkulls = countSkulls(firstRoll);
+
+        if(card == FortuneCard.Skulls){
+            int numOnSkullCard;
+            if(riggedCard == FortuneCard.None){
+                numOnSkullCard = getSkullCardType(player, 0);
+                player.setSkullCardNum(numOnSkullCard);
+            } else {
+                numOnSkullCard = player.getSkullCardNum();
+
+            }
+            numOfSkulls = numOfSkulls + numOnSkullCard;
+            System.out.println(numOnSkullCard);
+            System.out.println(numOfSkulls);
+        } else if (card == FortuneCard.SeaBattle){
+
+        }
+
+        //TODO: Display the Player, Drawn card and the first roll here, Maybe have a method from printint this infomation
 
         //if number of skulls is exactly 3 then end the round unless there is a Treasure Chest card
         //TODO First if statement should not be here
@@ -451,7 +481,29 @@ public class GameHost {
     }
 
     protected int getSkullCardType(Player player, int rigged){
+        //Random number between 1 and 3
+        int numOfSkulls = 0;
+        //Random number between 1 and 3
+        int num = (int) (Math.random()*(3-1)+ 1);
+        //2x2 Skulls card and 2x1 Skulls card
+        switch (num){
+            case 1:
+                numOfSkulls = 2;
+                break;
+            case 2:
+                numOfSkulls = 2;
+                break;
+            case 3:
+                numOfSkulls = 1;
+                break;
+        }
 
+
+        if (rigged != 0){
+            numOfSkulls = rigged;
+
+        }
+        return numOfSkulls;
     }
 
     private void playerTurnPhase(Player player, boolean isRolled, boolean isUpdatedScore){
