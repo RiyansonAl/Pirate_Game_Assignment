@@ -396,10 +396,11 @@ public class GameHost {
 
         //if number of skulls is exactly 3 then end the round unless there is a Treasure Chest card
         //TODO First if statement should not be here
-        if((numOfSkulls == 3) && (card == FortuneCard.TreasureChest)){
+        /*if((numOfSkulls == 3) && (card == FortuneCard.TreasureChest)){
             //Calculate score based on the kept Dice
             playerTurnPhase(player, false, true);
-        } else if (numOfSkulls == 3) {
+        } */
+        if (numOfSkulls == 3) {
             //End Players Turn and Give score of Zero for Turn
             playerTurnPhase(player, false, false);
         } else if (numOfSkulls >= 4){
