@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test for getting the score for when Treasure Chest card is obtained and ending turn when 3 skulls are rolled on first roll">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE and REFACTOR Commit: Made Changes to a few different mothods and added how the turns of each player takes place. Test for Treasure Chest fortune card is complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +51,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.keepReRollDice">
-    <configuration name="GameHostTest.calculateScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GameHostTest.playerTurnStart2">
+    <configuration name="GameHostTest.drawCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -61,39 +62,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="calculateScore" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostTest.calculateScore3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="calculateScore3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostTest.calculateScore4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="calculateScore4" />
+      <option name="METHOD_NAME" value="drawCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,6 +79,38 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="METHOD_NAME" value="keepReRollDice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostTest.playerTurnStart1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="playerTurnStart1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostTest.playerTurnStart2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="playerTurnStart2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest.playerTurnStart2" />
+        <item itemvalue="JUnit.GameHostTest.playerTurnStart1" />
         <item itemvalue="JUnit.GameHostTest.keepReRollDice" />
+        <item itemvalue="JUnit.GameHostTest.drawCard" />
         <item itemvalue="JUnit.GameHostTest.rollDice" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore3" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore4" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663939131928</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="REFACTOR: Changed the way the rollDice and KeepReRollDice methods worked">
+      <created>1663940786003</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663940786003</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +326,8 @@
     <MESSAGE value="CODE: Wrote code for getting the score for when Monkey Business card is obtained" />
     <MESSAGE value="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method" />
     <MESSAGE value="U-TEST: Test for getting the score for when Treasure Chest card is obtained and ending turn when 3 skulls are rolled on first roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test for getting the score for when Treasure Chest card is obtained and ending turn when 3 skulls are rolled on first roll" />
+    <MESSAGE value="REFACTOR: Changed the way the rollDice and KeepReRollDice methods worked" />
+    <MESSAGE value="CODE and REFACTOR Commit: Made Changes to a few different mothods and added how the turns of each player takes place. Test for Treasure Chest fortune card is complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE and REFACTOR Commit: Made Changes to a few different mothods and added how the turns of each player takes place. Test for Treasure Chest fortune card is complete" />
   </component>
 </project>

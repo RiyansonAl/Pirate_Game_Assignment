@@ -20,7 +20,14 @@ public class GameHost {
     //Constructor for GameHost
     public GameHost(Player[] newPlayers){
         players = newPlayers;
-        playerTurnOrder = new boolean[] {true, false, false};
+        playerTurnOrder = new boolean[newPlayers.length];
+        if(newPlayers.length > 1){
+            //Setting Player one to go first
+            playerTurnOrder[0] = true;
+            for(int i = 1; i < newPlayers.length; i++){
+                playerTurnOrder[i] = false;
+            }
+        }
     }
 
     //Returns Number of player in the game
@@ -28,13 +35,13 @@ public class GameHost {
         return players.length;
     }
 
-    public FortuneCard drawCard(int riggedNum){
+    public FortuneCard drawCard(FortuneCard riggedCard){
         FortuneCard card;
-        if (riggedNum == 0){
+        if (riggedCard == FortuneCard.None){
             int num = (int) (Math.random()*(8-1)+ 1);
             card = drawCardHelper(num);
         } else {
-            card = drawCardHelper(riggedNum);
+            card = riggedCard;
         }
         return card;
     }
@@ -188,7 +195,7 @@ public class GameHost {
         return winner;
     }
 
-    protected Dice[] keepReRollDice(int[] keepDice, Dice[] preDice, Dice[] riggedDice, boolean hasSorceress){
+    protected Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, boolean hasSorceress, FortuneCard card){
         Dice[] diceSet = new Dice[preDice.length];
         //Give default value to the new Dice set
         for(int i = 0; i < diceSet.length; i++){
@@ -202,7 +209,6 @@ public class GameHost {
         for(int i = 0; i < keepDice.length; i++){
             diceSet[counter] = preDice[keepDice[i]];
             counter = counter + 1;
-            preDice[keepDice[i]] = Dice.None; //Place holder to ignore the kept dice
         }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
@@ -244,6 +250,22 @@ public class GameHost {
             diceSet[counter] = newRoll[i];
             counter = counter + 1;
         }
+        //Check for the number of skulls. If 3 or more skulls then turn ends
+        //3 skulls and no Treasure chest card, then rolling ends and score 0 for this round
+        int numOfSkulls = countSkulls(diceSet);
+        if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
+            player.setRoll(false);
+            player.setUpdateScore(false);
+        } else if((numOfSkulls >= 3) && (card == FortuneCard.TreasureChest)){
+            player.setRoll(false);
+            player.setUpdateScore(true);
+            //The returned Diceset is only the kept dice from before the re-Roll
+            Dice[] originalKeepDice = new Dice[keepDice.length];
+            for(int i = 0; i < keepDice.length; i++){
+                originalKeepDice[i] = diceSet[i];
+            }
+            diceSet = originalKeepDice;
+        }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
         return diceSet;
@@ -255,11 +277,13 @@ public class GameHost {
         if(card == FortuneCard.Captain){
             score = scoreFromDice(rolledDice, FortuneCard.None);
             score = score * 2;
-        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)) {
+        } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)
+                    || card == FortuneCard.TreasureChest) {
             score = scoreFromDice(rolledDice, card);
         }
 
         player.updateScore(score);
+        player.setUpdateScore(false);
         return score;
     }
 
@@ -367,14 +391,70 @@ public class GameHost {
     protected Dice[] playerTurnStart(Player player, FortuneCard riggedCard, Dice[] riggedDice){
         //Roll the dice
         Dice[] firstRoll = rollDice(8, riggedDice);
+        FortuneCard card = drawCard(riggedCard);
+        int numOfSkulls = countSkulls(firstRoll);
 
+        //if number of skulls is exactly 3 then end the round unless there is a Treasure Chest card
+        //TODO First if statement should not be here
+        if((numOfSkulls == 3) && (card == FortuneCard.TreasureChest)){
+            //Calculate score based on the kept Dice
+            playerTurnPhase(player, false, true);
+        } else if (numOfSkulls == 3) {
+            //End Players Turn and Give score of Zero for Turn
+            playerTurnPhase(player, false, false);
+        } else if (numOfSkulls >= 4){
+            //Go to Island of the skulls
+        } else {
+            playerTurnPhase(player, true, true);
+        }
 
 
         return firstRoll;
     }
 
-    protected void endTurn(){
+    protected String endTurn(Player player){
+        //Only enter this method if player is done turn and done rolling and score is updated
+        String msg = "";
 
+        //If at the end of the round check if there is a winner
+        //If last player is ending the turn then it is the end of the round
+        if(player.getPlayerNumber() == players.length){
+            msg = endRound();
+        }
+
+        //If there is no winner then set true for next players turn
+        if(msg == ""){
+            if((player.getPlayerNumber() + 1) > players.length){
+                playerTurnOrder[player.getPlayerNumber() - 1] = false;
+                playerTurnOrder[0] = true;
+
+            }else{
+                playerTurnOrder[player.getPlayerNumber() - 1 ] = false;
+                playerTurnOrder[player.getPlayerNumber()] = true;
+            }
+            msg = msg + "Player " + player.getPlayerNumber() + " Turn Ended\n";
+            msg = msg + "Player " + (player.getPlayerNumber() + 1) + " Turn Starting....";
+        }
+
+        return msg;
+    }
+
+    private int countSkulls(Dice[] roll){
+        int count = 0;
+        for(int i = 0; i < roll.length; i++){
+            if(roll[i] == Dice.Skull){
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    private void playerTurnPhase(Player player, boolean isRolled, boolean isUpdatedScore){
+        player.setRoll(isRolled);
+        player.setUpdateScore(isUpdatedScore);
+    }
+    protected boolean[] getPlayerTurnPhase(Player player){
+        return new boolean[]{player.getRoll(), player.getUpdateScore()};
     }
 
 
