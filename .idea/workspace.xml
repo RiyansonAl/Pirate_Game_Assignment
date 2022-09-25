@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore5">
+  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore2">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -61,6 +63,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostTest.calculateScore2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="calculateScore2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -81,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.keepReRollDice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.calculateScore6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -91,13 +109,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="keepReRollDice" />
+      <option name="METHOD_NAME" value="calculateScore6" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.playerTurnStart1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.calculateScore7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -107,23 +125,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="playerTurnStart1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostTest.playerTurnStart2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="playerTurnStart2" />
+      <option name="METHOD_NAME" value="calculateScore7" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameHostTest.calculateScore5" />
-        <item itemvalue="JUnit.GameHostTest.playerTurnStart2" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore2" />
         <item itemvalue="JUnit.GameHostTest" />
-        <item itemvalue="JUnit.GameHostTest.playerTurnStart1" />
-        <item itemvalue="JUnit.GameHostTest.keepReRollDice" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore7" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore6" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore5" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664050501347</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle">
+      <created>1664143538858</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664143538858</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,7 +347,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote Code for the Test creating a game and adding 3 players" />
     <MESSAGE value="TEST: Test for drawing a card and Rolling the dice" />
     <MESSAGE value="CODE: Wrote the code for drawing a card and Rolling the dice" />
     <MESSAGE value="TEST: Test for updating and getting the scores for each player manually" />
@@ -363,6 +371,7 @@
     <MESSAGE value="U-TEST: Test for getting a skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
     <MESSAGE value="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
     <MESSAGE value="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
+    <MESSAGE value="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle" />
   </component>
 </project>

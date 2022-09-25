@@ -258,18 +258,28 @@ public class GameHost {
             numOfSkulls = numOfSkulls + player.getSkullCardNum();
         }
 
-        if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
-            player.setRoll(false);
-            player.setUpdateScore(false);
+        if((numOfSkulls >= 3) && (card == FortuneCard.SeaBattle)){
+            int seabattleCard = player.getSwordCardNum();
+            int score = 0;
+            if(seabattleCard == 2){
+                score = -300;
+            } else if(seabattleCard == 3){
+                score = -500;
+            } else if (seabattleCard == 4){
+                score = -1000;
+            }
+            player.updateScore(score);
+            playerTurnPhase(player, false, false);
         } else if((numOfSkulls >= 3) && (card == FortuneCard.TreasureChest)){
-            player.setRoll(false);
-            player.setUpdateScore(true);
+            playerTurnPhase(player, false, true);
             //The returned Diceset is only the kept dice from before the re-Roll
             Dice[] originalKeepDice = new Dice[keepDice.length];
             for(int i = 0; i < keepDice.length; i++){
                 originalKeepDice[i] = diceSet[i];
             }
             diceSet = originalKeepDice;
+        } else if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
+            playerTurnPhase(player, false, false);
         }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
@@ -285,6 +295,17 @@ public class GameHost {
             if (card == FortuneCard.Captain) {
                 score = scoreFromDice(rolledDice, FortuneCard.None);
                 score = score * 2;
+            } else if(card == FortuneCard.SeaBattle){
+                int seaBattleCardNum = player.getSwordCardNum();
+                if(seaBattleCardNum == 2){
+                    score = 300;
+                } else if (seaBattleCardNum == 3){
+                    score = 500;
+                } else if (seaBattleCardNum == 4){
+                    score = 1000;
+                }
+                score = score + scoreFromDice(rolledDice, card);
+
             } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)
                     || (card == FortuneCard.TreasureChest) || (card == FortuneCard.Skulls)) {
                 score = scoreFromDice(rolledDice, card);
@@ -419,18 +440,30 @@ public class GameHost {
             System.out.println(numOnSkullCard);
             System.out.println(numOfSkulls);
         } else if (card == FortuneCard.SeaBattle){
-
+            if(riggedCard == FortuneCard.None){
+                int numOnSwordCard = getSwordCardType(player, 0);
+                player.setSwordCardNum(numOnSwordCard);
+            }
         }
 
         //TODO: Display the Player, Drawn card and the first roll here, Maybe have a method from printint this infomation
 
         //if number of skulls is exactly 3 then end the round unless there is a Treasure Chest card
         //TODO First if statement should not be here
-        /*if((numOfSkulls == 3) && (card == FortuneCard.TreasureChest)){
-            //Calculate score based on the kept Dice
-            playerTurnPhase(player, false, true);
-        } */
-        if (numOfSkulls == 3) {
+        if((numOfSkulls == 3) && (card == FortuneCard.SeaBattle)){
+            //Lost the sea battle subtrack the score
+            int seabattleCard = player.getSwordCardNum();
+            int score = 0;
+            if(seabattleCard == 2){
+                score = -300;
+            } else if(seabattleCard == 3){
+                score = -500;
+            } else if (seabattleCard == 4){
+                score = -1000;
+            }
+            player.updateScore(score);
+            playerTurnPhase(player, false, false);
+        } else if (numOfSkulls == 3) {
             //End Players Turn and Give score of Zero for Turn
             playerTurnPhase(player, false, false);
         } else if (numOfSkulls >= 4){
@@ -498,12 +531,36 @@ public class GameHost {
                 break;
         }
 
-
         if (rigged != 0){
             numOfSkulls = rigged;
 
         }
         return numOfSkulls;
+    }
+
+    protected int getSwordCardType(Player player, int rigged){
+        //Random number between 1 and 3
+        int numOfSwords = 0;
+        //Random number between 1 and 3
+        int num = (int) (Math.random()*(3-1)+ 1);
+        //2x2 Skulls card and 2x1 Skulls card
+        switch (num){
+            case 1:
+                numOfSwords = 2;
+                break;
+            case 2:
+                numOfSwords = 3;
+                break;
+            case 3:
+                numOfSwords = 4;
+                break;
+        }
+
+        if (rigged != 0){
+            numOfSwords = rigged;
+
+        }
+        return numOfSwords;
     }
 
     private void playerTurnPhase(Player player, boolean isRolled, boolean isUpdatedScore){
