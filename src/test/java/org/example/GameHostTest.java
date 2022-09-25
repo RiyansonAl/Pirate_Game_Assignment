@@ -302,6 +302,64 @@ class GameHostTest {
         assertEquals(score, host.calculateScore(player1, card, firstRoll));
     }
 
+    @Test
+    @DisplayName("Getting a score after getting a SeaBattle fortune card with 2 swords on it")
+    void calculateScore6(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+
+        int numOfSwords = host.getSwordsCardType(player1, 2);
+        player1.setSwordsCardNum(numOfSwords);
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+
+        int score = 600;
+        assertEquals(score, host.calculateScore(player1, card, firstRoll));
+    }
+
+    @Test
+    @DisplayName("Getting a score after getting a SeaBattle fortune card with 2 swords on it")
+    void calculateScore6(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Monkey,
+                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+
+        int numOfSwords = host.getSwordsCardType(player1, 2);
+        player1.setSwordsCardNum(numOfSwords);
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+
+        GameHost.Dice[] newRiggeddDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull};
+
+        int[] keepDice = {0,1,2,3,4,7};
+        GameHost.Dice[] finalRoll;
+        finalRoll = host.keepReRollDice(player1, keepDice, newRiggeddDice, firstRoll, false, card);
+        player1.updateScore(1000);
+        int score = 700;
+        assertEquals(score, host.calculateScore(player1, card, firstRoll));
+    }
+
 
 
 }

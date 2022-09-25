@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -318,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664047771994</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
+      <created>1664050501347</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1664050501347</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -333,7 +338,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TEST: First Test creating a game and created 2 objects for gamehost and player with empty methods for the test" />
     <MESSAGE value="CODE: Wrote Code for the Test creating a game and adding 3 players" />
     <MESSAGE value="TEST: Test for drawing a card and Rolling the dice" />
     <MESSAGE value="CODE: Wrote the code for drawing a card and Rolling the dice" />
@@ -358,6 +362,7 @@
     <MESSAGE value="CODE: Wrote code for ending players turn after rolling 3 skulls on first turn unit test" />
     <MESSAGE value="U-TEST: Test for getting a skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
     <MESSAGE value="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
+    <MESSAGE value="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull" />
   </component>
 </project>
