@@ -114,7 +114,7 @@ class GameHostTest {
     }
 
     @Test
-    @DisplayName("Getting Scorce using a captain fortune card")
+    @DisplayName("Getting Score using a captain fortune card")
     void calculateScore(){
         Player player1 = new Player(1);
         Player player2 = new Player(2);
@@ -128,6 +128,7 @@ class GameHostTest {
                 GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};
         int score = 400;
+        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
@@ -146,6 +147,7 @@ class GameHostTest {
                 GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
                 GameHost.Dice.Gold, GameHost.Dice.Parrot};
         int score = 1600;
+        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
@@ -164,6 +166,7 @@ class GameHostTest {
                 GameHost.Dice.Diamond, GameHost.Dice.Diamond, GameHost.Dice.Diamond,
                 GameHost.Dice.Gold, GameHost.Dice.Diamond};
         int score = 4900;
+        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
@@ -182,6 +185,7 @@ class GameHostTest {
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Monkey};
         int score = 2100;
+        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 

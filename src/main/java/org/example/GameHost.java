@@ -293,7 +293,7 @@ public class GameHost {
         if(player.getUpdateScore() == true) {
 
             if (card == FortuneCard.Captain) {
-                score = scoreFromDice(rolledDice, FortuneCard.None);
+                score = scoreFromDice(rolledDice, card);
                 score = score * 2;
             } else if(card == FortuneCard.SeaBattle){
                 int seaBattleCardNum = player.getSwordCardNum();
