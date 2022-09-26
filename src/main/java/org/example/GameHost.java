@@ -468,10 +468,11 @@ public class GameHost {
             playerTurnPhase(player, false, false);
         } else if (numOfSkulls >= 4){
             //Go to Island of the skulls
+            player.setIsSkullIsland(true);
+            playerTurnPhase(player, false, false);
         } else {
             playerTurnPhase(player, true, true);
         }
-
 
         return firstRoll;
     }
@@ -569,6 +570,74 @@ public class GameHost {
     }
     protected boolean[] getPlayerTurnPhase(Player player){
         return new boolean[]{player.getRoll(), player.getUpdateScore()};
+    }
+
+    protected Dice[] skullIsland(Player player, FortuneCard card, Dice[] roll, Dice[] riggiedDice){
+        int numOfSkulls = countSkulls(roll);
+        //if the card is a skulls card, add the number of skulls from the card to the number of skulls rolled
+        int skullsCard = 0;
+        if(card == FortuneCard.Skulls){
+            skullsCard = player.getSkullCardNum();
+            numOfSkulls = numOfSkulls + skullsCard;
+        }
+
+        if((numOfSkulls <= 3) || ((numOfSkulls - skullsCard) > roll.length)){
+            return roll;
+        }
+        Dice[] newDiceSet = new Dice[roll.length];
+        for(int i = 0; i < (numOfSkulls - skullsCard); i++){
+            newDiceSet[i] = Dice.Skull;
+        }
+
+        if(riggiedDice[0] == Dice.None){
+            //Roll for more skulls
+            Dice[] noRiggedDice = {Dice.None, Dice.None, Dice.None};
+            Dice[] newRoll;
+            int diceToRoll = newDiceSet.length - (numOfSkulls - skullsCard);
+            newRoll = rollDice(diceToRoll, noRiggedDice);
+            int k = (numOfSkulls - skullsCard);
+            for(int i = 0; i < newRoll.length; i++){
+                newDiceSet[k] = newRoll[i];
+                k = k + 1;
+            }
+
+        } else {
+            //Use rigged Dice
+            newDiceSet = riggiedDice;
+        }
+
+        int newNumOfSkulls = countSkulls(newDiceSet);
+        if(card == FortuneCard.Skulls){
+            newNumOfSkulls = newNumOfSkulls + player.getSkullCardNum();
+        }
+        if(numOfSkulls > newNumOfSkulls){
+            player.setIsSkullIsland(true);
+        } else {
+            //No new dice calculate the scores and end turn
+            int playerNum = player.getPlayerNumber();
+            int deducteScore = newNumOfSkulls * 100;
+            //If all 8 dice were used
+            if((newNumOfSkulls - skullsCard) == 8){
+                deducteScore = deducteScore + 500;
+            }
+            if(card == FortuneCard.Captain){
+                deducteScore = deducteScore * 2;
+            }
+
+            //Update all the other players scores
+            for(int i = 0; i < players.length; i++){
+                if(playerNum != players[i].getPlayerNumber()){
+                    players[i].updateScore(-1*deducteScore);
+                }
+            }
+
+            //End the players Turn
+            player.setIsSkullIsland(false);
+            playerTurnPhase(player, false, false);
+        }
+
+
+        return newDiceSet;
     }
 
 

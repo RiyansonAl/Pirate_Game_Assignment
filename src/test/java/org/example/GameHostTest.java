@@ -393,19 +393,21 @@ class GameHostTest {
         player2.updateScore(2000);
         player3.updateScore(700);
 
+        host.displayScores();
+
         GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
         GameHost.Dice[] secondRoll = new GameHost.Dice[8];
         GameHost.Dice[] finalRoll = new GameHost.Dice[8];
 
-        if(player1.getIsSkullIsland ==  true){
+        if(player1.getIsSkullIsland() ==  true){
             secondRoll = host.skullIsland(player1, card, firstRoll, riggedDice2);
         }
-        if(player1.getIsSkullIsland ==  true){
+        if(player1.getIsSkullIsland() ==  true){
             finalRoll = host.skullIsland(player1, card, secondRoll, riggedDice3);
         }
-        if(player1.getIsSkullIsland ==  false){
-            host.displayScores()
-            System.out.println(host.endRound());
+        if(player1.getIsSkullIsland() ==  false){
+            host.displayScores();
+            System.out.println(host.endTurn(player1));
         }
 
         int scores[] = {1000, 1000, 0};
@@ -414,6 +416,7 @@ class GameHostTest {
 
 
     //TODO: Refactor Sorceress card to only work Once per round not once per re-roll
+    //TODO: Sting in GameHost to break down the scoring at the end of the round
 
 
 

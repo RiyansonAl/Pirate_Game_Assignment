@@ -12,11 +12,12 @@ public class Player {
 
     private int SkullCardType;
     private int SwordCardType;
+    private boolean isSkullIsladd;
 
 
     public Player(int playerNum){
         score = 0;
-        finshedRolled = isUpdateScore = false;
+        finshedRolled = isUpdateScore = isSkullIsladd = false;
         playerNumber = playerNum;
 
     }
@@ -46,6 +47,9 @@ public class Player {
 
     protected void setFortuneCard(GameHost.FortuneCard cardToSet){card = cardToSet;}
     protected GameHost.FortuneCard getFortuneCard(){return card;}
+
+    protected void setIsSkullIsland(boolean val){ isSkullIsladd = val; }
+    protected boolean getIsSkullIsland(){ return isSkullIsladd; }
 
 
 }//End Player Class
