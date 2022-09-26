@@ -366,7 +366,6 @@ class GameHostTest {
         assertEquals(score, player1.getScore());
     }
 
-    //TODO: Skull Island Test
     @Test
     @DisplayName("Test for entering Island of the Skulls and deduct opponents scores.")
     void skullIsland(){
@@ -416,6 +415,41 @@ class GameHostTest {
 
 
     //TODO: Refactor Sorceress card to only work Once per round not once per re-roll
+    @Test
+    @DisplayName("Getting a score after getting a Sorceress fortune card and rerolling one of the skull dice")
+    void calculateScore8(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+        int[] keepdice = {0,1,3,6,4};
+
+        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Monkey};
+        int[] keepdice2 = {0,1,3,6,7};
+
+        GameHost.Dice[] riggedDice3 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
+                GameHost.Dice.Monkey, GameHost.Dice.Gold, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Monkey};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+
+        GameHost.Dice[] secondReRoll = host.keepReRollDice(player1, keepdice, firstRoll, riggedDice2, true, card);
+        GameHost.Dice[] thridReRoll = host.keepReRollDice(player1, keepdice2, secondReRoll, riggedDice3, true, card);
+
+        int score = 700;
+        assertEquals(score, host.calculateScore(player1, card, thridReRoll));
+    }
+
     //TODO: Sting in GameHost to break down the scoring at the end of the round
 
 

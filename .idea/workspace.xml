@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Unit test for island of the skulls and deducting points from the opponents.">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote the code for island of the skulls and deducting points from the opponents.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -353,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664157931377</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="CODE: Wrote the code for island of the skulls and deducting points from the opponents.">
+      <created>1664162632577</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1664162632577</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,7 +373,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote code for updating and getting the scores for each player" />
     <MESSAGE value="TEST: Test case for end of the game and player with the highest score over 3000 wins" />
     <MESSAGE value="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins" />
     <MESSAGE value="TEST: Test for keeping and rerolling Dice" />
@@ -393,6 +397,7 @@
     <MESSAGE value="CODE: Wrote code for the 2 unit tests for the seabattle Card." />
     <MESSAGE value="REFACTOR: Refactoring the Unit tests so all the units tests run." />
     <MESSAGE value="U-TEST: Unit test for island of the skulls and deducting points from the opponents." />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Unit test for island of the skulls and deducting points from the opponents." />
+    <MESSAGE value="CODE: Wrote the code for island of the skulls and deducting points from the opponents." />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote the code for island of the skulls and deducting points from the opponents." />
   </component>
 </project>
