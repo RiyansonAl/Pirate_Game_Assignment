@@ -212,6 +212,7 @@ public class GameHost {
         for(int i = 0; i < keepDice.length; i++){
             diceSet[counter] = preDice[keepDice[i]];
             counter = counter + 1;
+            preDice[keepDice[i]] = Dice.None;
         }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
@@ -403,11 +404,11 @@ public class GameHost {
         //Check if card it either Gold or diamond
         if(card == FortuneCard.Gold){
             duplicates[2] = duplicates[2] + 1;
-            player.setScoreBreakDown("Gold Fortune Card (100) + ");
+            player.setScoreBreakDown("Gold Fortune Card added to Dice roll + ");
         }
         if(card == FortuneCard.Diamond){
             duplicates[3] = duplicates[3] + 1;
-            player.setScoreBreakDown("Diamond Fortune Card (100) + ");
+            player.setScoreBreakDown("Diamond Fortune Card added to Dice roll + ");
         }
 
 
