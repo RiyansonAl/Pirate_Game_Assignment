@@ -8,6 +8,8 @@ public class GameHost {
     private Player[] players;
     private int winningScore = 3000;
     protected boolean[] playerTurnOrder;
+
+    private String scoreBreakDown;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
         Gold, Diamond, MonkeyBusiness, Skulls, None
@@ -20,6 +22,7 @@ public class GameHost {
     //Constructor for GameHost
     public GameHost(Player[] newPlayers){
         players = newPlayers;
+        scoreBreakDown = "";
         playerTurnOrder = new boolean[newPlayers.length];
         if(newPlayers.length > 1){
             //Setting Player one to go first
@@ -490,16 +493,20 @@ public class GameHost {
             int score = 0;
             if(seabattleCard == 2){
                 score = -300;
+                player.setScoreBreakDown("-300 Lost Sea Battle");
             } else if(seabattleCard == 3){
                 score = -500;
+                player.setScoreBreakDown("-500 Lost Sea Battle");
             } else if (seabattleCard == 4){
                 score = -1000;
+                player.setScoreBreakDown("-1000 Lost Sea Battle");
             }
             player.updateScore(score);
             playerTurnPhase(player, false, false);
         } else if (numOfSkulls == 3) {
             //End Players Turn and Give score of Zero for Turn
             playerTurnPhase(player, false, false);
+            player.setScoreBreakDown("3 skulls. Score = 0");
         } else if (numOfSkulls >= 4){
             //Go to Island of the skulls
             player.setIsSkullIsland(true);
@@ -531,6 +538,8 @@ public class GameHost {
                 playerTurnOrder[player.getPlayerNumber() - 1 ] = false;
                 playerTurnOrder[player.getPlayerNumber()] = true;
             }
+            msg = msg + "Player " + player.getPlayerNumber() + " score breakDown:\n";
+            msg = msg + player.getScoreBreakDown() + "\n";
             player.endPlayerTurn();
             msg = msg + "Player " + player.getPlayerNumber() + " Turn Ended\n";
             msg = msg + "Player " + (player.getPlayerNumber() + 1) + " Turn Starting....";

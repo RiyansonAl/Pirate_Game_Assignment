@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed so all unit tests work in one shot">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Test for rolling 3 skulls on first roll and ending turn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664249629436</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="A-TEST: Test for rolling 3 skulls on first roll and ending turn">
+      <created>1664291694475</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664291694475</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -394,7 +401,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Added Code for keeping and rerolling Dice" />
     <MESSAGE value="U-TEST: Unit test for calculating the Score with a Captain Card" />
     <MESSAGE value="CODE: Wrote the code for calculating the Score with a Captain Card" />
     <MESSAGE value="U-TEST: 2 units tests for calculating the Score with a gold Card and then a diamond card" />
@@ -419,6 +425,7 @@
     <MESSAGE value="U-TEST: Unit test for the Sorceress card" />
     <MESSAGE value="CODE: Wrote Test for the Sorceress card and added a print to break down the score" />
     <MESSAGE value="REFACTOR: Fixed so all unit tests work in one shot" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed so all unit tests work in one shot" />
+    <MESSAGE value="A-TEST: Test for rolling 3 skulls on first roll and ending turn" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Test for rolling 3 skulls on first roll and ending turn" />
   </component>
 </project>
