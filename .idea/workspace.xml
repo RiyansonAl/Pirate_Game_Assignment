@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Test Line 45">
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine45">
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine46">
     <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -97,6 +96,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine46" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine46" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostAcceptanceTests.dieWith3Skulls" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -113,29 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.calculateScore8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="calculateScore8" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine46" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine45" />
         <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.dieWith3Skulls" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine44" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore8" />
       </list>
     </recent_temporary>
   </component>
@@ -393,7 +392,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664292428045</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="A-TEST: Acceptance Test Line 45">
+      <created>1664294641578</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664294641578</updated>
+    </task>
+    <task id="LOCAL-00037" summary="A-TEST: Acceptance Test Line 45">
+      <created>1664294757364</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664294757364</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -408,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote the code for calculating the Score with a Captain Card" />
     <MESSAGE value="U-TEST: 2 units tests for calculating the Score with a gold Card and then a diamond card" />
     <MESSAGE value="U-TEST: Fixing Bug from last commit" />
     <MESSAGE value="CODE: Wrote code for getting the score for when Gold and Diamond cards are obtained" />
@@ -433,6 +445,7 @@
     <MESSAGE value="REFACTOR: Fixed so all unit tests work in one shot" />
     <MESSAGE value="A-TEST: Test for rolling 3 skulls on first roll and ending turn" />
     <MESSAGE value="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn" />
+    <MESSAGE value="A-TEST: Acceptance Test Line 45" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Test Line 45" />
   </component>
 </project>
