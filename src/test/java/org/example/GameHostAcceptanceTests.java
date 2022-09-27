@@ -195,4 +195,39 @@ class GameHostAcceptanceTests {
         assertEquals(score, ObtainedScore);
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 52")
+    void acceptanceTestLine52(){
+        System.out.println("A-TEST: Acceptance Test Line 52\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Skull,
+                GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Skull, GameHost.Dice.Parrot};
+
+        int[] keepDice = {0,1};
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        GameHost.Dice[] secondRoll = host.keepReRollDice(player1, keepDice, firstRoll, riggedDice, card);
+
+        int ObtainedScore = host.calculateScore(player1, card, secondRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 200;
+        assertEquals(score, ObtainedScore);
+    }
+
 }
