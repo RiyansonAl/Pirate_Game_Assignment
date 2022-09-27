@@ -50,6 +50,21 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine45">
+    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostAcceptanceTests.acceptanceTestLine44" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -98,21 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameHostTest.calculateScore8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -132,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine45" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.dieWith3Skulls" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine44" />
         <item itemvalue="JUnit.GameHostTest.calculateScore8" />
-        <item itemvalue="JUnit.GameHostTest" />
       </list>
     </recent_temporary>
   </component>

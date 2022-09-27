@@ -33,9 +33,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("roll 1 skull, 4 parrots, 3 swords, hold parrots, reroll 3 swords, get 2 skulls 1 sword  die")
+    @DisplayName("Acceptance Test Line 45")
     void acceptanceTestLine45(){
-        System.out.println("A-TEST: roll 1 skull, 4 parrots, 3 swords, hold parrots, reroll 3 swords, get 2 skulls 1 sword  die\n");
+        System.out.println("A-TEST Line 45\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
