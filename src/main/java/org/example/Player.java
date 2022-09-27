@@ -12,12 +12,16 @@ public class Player {
 
     private int SkullCardType;
     private int SwordCardType;
-    private boolean isSkullIsladd;
+    private boolean isSkullIsland;
+    private boolean isSorceress;
+    private String scoreBreakDown;
+
 
 
     public Player(int playerNum){
         score = 0;
-        finshedRolled = isUpdateScore = isSkullIsladd = false;
+        finshedRolled = isUpdateScore = isSkullIsland = isSorceress = false;
+        scoreBreakDown = "";
         playerNumber = playerNum;
 
     }
@@ -48,8 +52,20 @@ public class Player {
     protected void setFortuneCard(GameHost.FortuneCard cardToSet){card = cardToSet;}
     protected GameHost.FortuneCard getFortuneCard(){return card;}
 
-    protected void setIsSkullIsland(boolean val){ isSkullIsladd = val; }
-    protected boolean getIsSkullIsland(){ return isSkullIsladd; }
+    protected void setIsSkullIsland(boolean val){ isSkullIsland = val; }
+    protected boolean getIsSkullIsland(){ return isSkullIsland; }
+
+    protected void setIsSorceress(boolean val){ isSorceress = val; }
+    protected boolean getIsSorceress(){ return isSorceress; }
+
+    protected void setScoreBreakDown(String breakDown){ scoreBreakDown = scoreBreakDown + breakDown; }
+
+    protected String getScoreBreakDown(){ return scoreBreakDown; }
+
+    protected void endPlayerTurn(){
+        finshedRolled = isUpdateScore = isSkullIsland = isSorceress = false;
+        scoreBreakDown = "";
+    }
 
 
 }//End Player Class

@@ -195,7 +195,7 @@ public class GameHost {
         return winner;
     }
 
-    protected Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, boolean hasSorceress, FortuneCard card){
+    protected Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, FortuneCard card){
         Dice[] diceSet = new Dice[preDice.length];
         //Give default value to the new Dice set
         for(int i = 0; i < diceSet.length; i++){
@@ -214,12 +214,17 @@ public class GameHost {
         System.out.println(Arrays.toString(diceSet));
 
         //Keep the skulls since that cannot be re-rolled unless the sorceress fortune card
+        boolean hasSorceress = false;
+        if (card == FortuneCard.Sorceress){
+            hasSorceress = player.getIsSorceress();
+        }
         for(int i = 0; i < preDice.length; i++){
             if((preDice[i] == Dice.Skull) && !hasSorceress){ //Found one skull dice and don't have Sorceress Card
                 diceSet[counter] = preDice[i];
                 counter = counter + 1;
             } else if((preDice[i] == Dice.Skull) && (hasSorceress)) { //found one skull dice and have Sorceress Card
                 hasSorceress = false;
+                player.setIsSorceress(false);
             }
         }
 
@@ -263,23 +268,29 @@ public class GameHost {
             int score = 0;
             if(seabattleCard == 2){
                 score = -300;
+                player.setScoreBreakDown("-300 Lost Sea Battle");
             } else if(seabattleCard == 3){
                 score = -500;
+                player.setScoreBreakDown("-500 Lost Sea Battle");
             } else if (seabattleCard == 4){
                 score = -1000;
+                player.setScoreBreakDown("-1000 Lost Sea Battle");
             }
+            System.out.println(player.getScoreBreakDown());
             player.updateScore(score);
             playerTurnPhase(player, false, false);
         } else if((numOfSkulls >= 3) && (card == FortuneCard.TreasureChest)){
             playerTurnPhase(player, false, true);
-            //The returned Diceset is only the kept dice from before the re-Roll
+            //The returned Dice set is only the kept dice from before the re-Roll
             Dice[] originalKeepDice = new Dice[keepDice.length];
             for(int i = 0; i < keepDice.length; i++){
                 originalKeepDice[i] = diceSet[i];
             }
             diceSet = originalKeepDice;
+            player.setScoreBreakDown("(3 or more skulls with Treasure Chest card score based on kept dice)  ");
         } else if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
             playerTurnPhase(player, false, false);
+            player.setScoreBreakDown("3 or more skulls score this turn is 0");
         }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
@@ -293,24 +304,30 @@ public class GameHost {
         if(player.getUpdateScore() == true) {
 
             if (card == FortuneCard.Captain) {
-                score = scoreFromDice(rolledDice, card);
+                score = scoreFromDice(player, rolledDice, card);
                 score = score * 2;
+                player.setScoreBreakDown("(Captain Fortune Card) x 2 score ");
             } else if(card == FortuneCard.SeaBattle){
                 int seaBattleCardNum = player.getSwordCardNum();
+                score = score + scoreFromDice(player, rolledDice, card);
                 if(seaBattleCardNum == 2){
-                    score = 300;
+                    score = score + 300;
+                    player.setScoreBreakDown(" 300 (SeaBattle won) ");
                 } else if (seaBattleCardNum == 3){
-                    score = 500;
+                    score = score + 500;
+                    player.setScoreBreakDown(" 500 (SeaBattle won) ");
                 } else if (seaBattleCardNum == 4){
-                    score = 1000;
+                    score = score + 1000;
+                    player.setScoreBreakDown(" 1000 (SeaBattle won) ");
                 }
-                score = score + scoreFromDice(rolledDice, card);
 
             } else if ((card == FortuneCard.Gold) || (card == FortuneCard.Diamond) || (card == FortuneCard.MonkeyBusiness)
-                    || (card == FortuneCard.TreasureChest) || (card == FortuneCard.Skulls)) {
-                score = scoreFromDice(rolledDice, card);
+                    || (card == FortuneCard.TreasureChest) || (card == FortuneCard.Skulls) || (card == FortuneCard.Sorceress)) {
+                score = scoreFromDice(player, rolledDice, card);
             }
 
+            player.setScoreBreakDown(" = " + score);
+            System.out.println(player.getScoreBreakDown());
             player.updateScore(score);
             player.setUpdateScore(false);
         } else { //Turn must end since they got zero score from too many skulls or lost seabattle
@@ -319,7 +336,7 @@ public class GameHost {
         return score;
     }
 
-    private int scoreFromDice(Dice[] rolledDice, FortuneCard card){
+    private int scoreFromDice(Player player, Dice[] rolledDice, FortuneCard card){
         //Initializing the array to count duplicates
         int[] duplicates = {0, 0, 0, 0, 0, 0};
 
@@ -377,14 +394,17 @@ public class GameHost {
         if(isFullChest){
             //Full Chest bonus
             score = score + 500;
+            player.setScoreBreakDown("Full Chest bonus (500) + ");
         }
 
         //Check if card it either Gold or diamond
         if(card == FortuneCard.Gold){
             duplicates[2] = duplicates[2] + 1;
+            player.setScoreBreakDown("Gold Fortune Card (100) + ");
         }
         if(card == FortuneCard.Diamond){
             duplicates[3] = duplicates[3] + 1;
+            player.setScoreBreakDown("Diamond Fortune Card (100) + ");
         }
 
 
@@ -395,27 +415,39 @@ public class GameHost {
             switch(duplicates[i]) {
                 case 3://3 of a kind
                     score = score + 100;
+                    player.setScoreBreakDown("3 of a kind (100) + ");
                     break;
                 case 4://4 of a kind
                     score = score + 200;
+                    player.setScoreBreakDown("4 of a kind (200) + ");
                     break;
                 case 5://5 of a kind
                     score = score + 500;
+                    player.setScoreBreakDown("5 of a kind (500) + ");
                     break;
                 case 6://6 of a kind
                     score = score + 1000;
+                    player.setScoreBreakDown("6 of a kind (1000) + ");
                     break;
                 case 7://7 of a kind
                     score = score + 2000;
+                    player.setScoreBreakDown("7 of a kind (2000) + ");
                     break;
                 case 8://8 of a kind
                     score = score + 4000;
+                    player.setScoreBreakDown("8 of a kind (4000) + ");
                     break;
             }
         }
 
         //Score for each diamond and gold
         score = score + (100 * (duplicates[2] + duplicates[3]));
+        if(duplicates[2] > 0){
+            player.setScoreBreakDown("Gold dice rolled (100 * " + duplicates[2] + ") + ");
+        }
+        if(duplicates[3] > 0){
+            player.setScoreBreakDown("Diamond dice rolled (100 * " + duplicates[3] + ") + ");
+        }
 
         return score;
     }
@@ -444,6 +476,8 @@ public class GameHost {
                 int numOnSwordCard = getSwordCardType(player, 0);
                 player.setSwordCardNum(numOnSwordCard);
             }
+        } else if (card == FortuneCard.Sorceress){
+            player.setIsSorceress(true);
         }
 
         //TODO: Display the Player, Drawn card and the first roll here, Maybe have a method from printint this infomation
@@ -497,6 +531,7 @@ public class GameHost {
                 playerTurnOrder[player.getPlayerNumber() - 1 ] = false;
                 playerTurnOrder[player.getPlayerNumber()] = true;
             }
+            player.endPlayerTurn();
             msg = msg + "Player " + player.getPlayerNumber() + " Turn Ended\n";
             msg = msg + "Player " + (player.getPlayerNumber() + 1) + " Turn Starting....";
         }
@@ -616,12 +651,15 @@ public class GameHost {
             //No new dice calculate the scores and end turn
             int playerNum = player.getPlayerNumber();
             int deducteScore = newNumOfSkulls * 100;
+            player.setScoreBreakDown( "-100 * "+ newNumOfSkulls+" (Number of skulls rolled in island of the skulls) + ");
             //If all 8 dice were used
             if((newNumOfSkulls - skullsCard) == 8){
                 deducteScore = deducteScore + 500;
+                player.setScoreBreakDown( "Full Ches bonus -500 to opponents + ");
             }
             if(card == FortuneCard.Captain){
                 deducteScore = deducteScore * 2;
+                player.setScoreBreakDown( " x 2 total deduction (Captain Fortune Card) ");
             }
 
             //Update all the other players scores
@@ -630,7 +668,8 @@ public class GameHost {
                     players[i].updateScore(-1*deducteScore);
                 }
             }
-
+            player.setScoreBreakDown( " = " + -1*deducteScore + " To all other players");
+            System.out.println(player.getScoreBreakDown());
             //End the players Turn
             player.setIsSkullIsland(false);
             playerTurnPhase(player, false, false);

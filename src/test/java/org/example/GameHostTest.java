@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -110,7 +112,8 @@ class GameHostTest {
         GameHost.Dice[] FinalRolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
                 GameHost.Dice.Parrot, GameHost.Dice.Skull, GameHost.Dice.Skull,
                 GameHost.Dice.Monkey, GameHost.Dice.Parrot};
-        assertArrayEquals(FinalRolledDice, host.keepReRollDice(player1, keepDice, rolledDice, FinalRolledDice, false, GameHost.FortuneCard.None) );
+        player1.setIsSorceress(true);
+        assertArrayEquals(FinalRolledDice, host.keepReRollDice(player1, keepDice, rolledDice, FinalRolledDice, GameHost.FortuneCard.None) );
     }
 
     @Test
@@ -185,7 +188,6 @@ class GameHostTest {
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Monkey};
         int score = 2100;
-        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
@@ -220,7 +222,7 @@ class GameHostTest {
 
             if((player1TurnPhase[0] == true) && (player1TurnPhase[1] == true)){
                 //Turn is not finished and Player is not finished rolling, So player can keep re-rolling the dice
-                finalRoll = host.keepReRollDice(player1, keepDice, riggedDice, riggedDiceReRolled, false, riggedCard);
+                finalRoll = host.keepReRollDice(player1, keepDice, riggedDice, riggedDiceReRolled, riggedCard);
             }else if ( (player1TurnPhase[0] == false) && (player1TurnPhase[1] == true)){
                 //Finished rolling now calculate score
                 host.calculateScore(player1, riggedCard, finalRoll);
@@ -264,7 +266,7 @@ class GameHostTest {
 
             if((player1TurnPhase[0] == true) && (player1TurnPhase[1] == true)){
                 //Turn is not finished and Player is not finished rolling, So player can keep re-rolling the dice
-                finalRoll = host.keepReRollDice(player1, keepDice, riggedDice, firstRoll, false, riggedCard);
+                finalRoll = host.keepReRollDice(player1, keepDice, riggedDice, firstRoll, riggedCard);
             }else if ( (player1TurnPhase[0] == false) && (player1TurnPhase[1] == true)){
                 //Finished rolling now calculate score
                 host.calculateScore(player1, riggedCard, finalRoll);
@@ -360,7 +362,7 @@ class GameHostTest {
 
         int[] keepDice = {0,1,2,3,4,7};
         GameHost.Dice[] finalRoll;
-        finalRoll = host.keepReRollDice(player1, keepDice, firstRoll, newRiggeddDice, false, card);
+        finalRoll = host.keepReRollDice(player1, keepDice, firstRoll, newRiggeddDice, card);
 
         int score = 700;
         assertEquals(score, player1.getScore());
@@ -425,26 +427,33 @@ class GameHostTest {
 
         GameHost host = new GameHost(players);
 
-        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+        GameHost.FortuneCard card = GameHost.FortuneCard.Sorceress;
 
         GameHost.Dice[] riggedDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
                 GameHost.Dice.Monkey, GameHost.Dice.Skull};
         int[] keepdice = {0,1,3,6,4};
 
-        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Monkey,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Skull,
-                GameHost.Dice.Monkey, GameHost.Dice.Monkey};
-        int[] keepdice2 = {0,1,3,6,7};
+                GameHost.Dice.Monkey, GameHost.Dice.Sword};
+        int[] keepdice2 = {0,1,2,3,6};
 
-        GameHost.Dice[] riggedDice3 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Gold,
-                GameHost.Dice.Monkey, GameHost.Dice.Gold, GameHost.Dice.Skull,
-                GameHost.Dice.Monkey, GameHost.Dice.Monkey};
+        GameHost.Dice[] riggedDice3 = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Monkey,
+                GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Skull,
+                GameHost.Dice.Gold, GameHost.Dice.Gold};
 
         GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+        System.out.println("First Roll:");
+        System.out.println(Arrays.toString(firstRoll));
 
-        GameHost.Dice[] secondReRoll = host.keepReRollDice(player1, keepdice, firstRoll, riggedDice2, true, card);
-        GameHost.Dice[] thridReRoll = host.keepReRollDice(player1, keepdice2, secondReRoll, riggedDice3, true, card);
+        GameHost.Dice[] secondReRoll = host.keepReRollDice(player1, keepdice, firstRoll, riggedDice2, card);
+        System.out.println("Second Roll:");
+        System.out.println(Arrays.toString(secondReRoll));
+
+        GameHost.Dice[] thridReRoll = host.keepReRollDice(player1, keepdice2, secondReRoll, riggedDice3, card);
+        System.out.println("Third Roll:");
+        System.out.println(Arrays.toString(thridReRoll));
 
         int score = 700;
         assertEquals(score, host.calculateScore(player1, card, thridReRoll));
