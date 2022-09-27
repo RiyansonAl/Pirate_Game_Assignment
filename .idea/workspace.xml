@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Unit test for the Sorceress card">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote Test for the Sorceress card and added a print to break down the score">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +49,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.calculateScore8">
+  <component name="RunManager" selected="JUnit.GameHostTest">
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -67,6 +65,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostTest.calculateScore4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="calculateScore4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostTest.calculateScore6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -78,22 +92,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="METHOD_NAME" value="calculateScore6" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostTest.calculateScore7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="calculateScore7" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest" />
+        <item itemvalue="JUnit.GameHostTest.calculateScore4" />
         <item itemvalue="JUnit.GameHostTest.calculateScore8" />
         <item itemvalue="JUnit.GameHostTest.skullIsland" />
         <item itemvalue="JUnit.GameHostTest.calculateScore6" />
-        <item itemvalue="JUnit.GameHostTest.calculateScore7" />
-        <item itemvalue="JUnit.GameHostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664235251209</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="CODE: Wrote Test for the Sorceress card and added a print to break down the score">
+      <created>1664249508249</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664249508249</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,7 +387,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins" />
     <MESSAGE value="TEST: Test for keeping and rerolling Dice" />
     <MESSAGE value="CODE: Added Code for keeping and rerolling Dice" />
     <MESSAGE value="U-TEST: Unit test for calculating the Score with a Captain Card" />
@@ -407,6 +411,7 @@
     <MESSAGE value="U-TEST: Unit test for island of the skulls and deducting points from the opponents." />
     <MESSAGE value="CODE: Wrote the code for island of the skulls and deducting points from the opponents." />
     <MESSAGE value="U-TEST: Unit test for the Sorceress card" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Unit test for the Sorceress card" />
+    <MESSAGE value="CODE: Wrote Test for the Sorceress card and added a print to break down the score" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote Test for the Sorceress card and added a print to break down the score" />
   </component>
 </project>

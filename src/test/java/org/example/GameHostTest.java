@@ -188,6 +188,7 @@ class GameHostTest {
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Monkey};
         int score = 2100;
+        player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
 
