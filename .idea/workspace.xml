@@ -49,38 +49,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine68">
-    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine65" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine65" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine71">
     <configuration name="GameHostAcceptanceTests.acceptanceTestLine66" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -92,22 +61,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
       <option name="METHOD_NAME" value="acceptanceTestLine66" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine67" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine67" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,13 +82,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine69" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine69" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine70" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine70" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine71" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine71" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine71" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine70" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine69" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine68" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine66" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine67" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine65" />
       </list>
     </recent_temporary>
   </component>
