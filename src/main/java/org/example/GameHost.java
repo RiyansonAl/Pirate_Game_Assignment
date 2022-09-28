@@ -419,7 +419,7 @@ public class GameHost {
         //Check if it's a seabattle card and if the sword dice are being used
         if((card == FortuneCard.SeaBattle) && (!isSword)){
             int numOfSwords = player.getSwordCardNum();
-            if(numOfSwords == duplicates[4]){
+            if(duplicates[4] >= numOfSwords){
                 count = count + duplicates[4];
             }
         }

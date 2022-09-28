@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Tests Line 99-100">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Code to pass Acceptance Test Line 100">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests">
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine100">
     <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -131,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine100" />
         <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine99" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine100" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine98" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine97" />
       </list>
@@ -147,13 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00012" summary="U-TEST: Unit test for calculating the Score with a Captain Card">
-      <created>1663810967032</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1663810967032</updated>
     </task>
     <task id="LOCAL-00013" summary="CODE: Wrote the code for calculating the Score with a Captain Card">
       <created>1663813270116</created>
@@ -491,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664371330118</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="CODE: Code to pass Acceptance Test Line 100">
+      <created>1664376225012</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1664376225012</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn" />
     <MESSAGE value="A-TEST: Acceptance Test Line 45" />
     <MESSAGE value="A-TEST: Acceptance Test Line 46" />
     <MESSAGE value="A-TEST: Acceptance Test Line 47" />
@@ -531,6 +529,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
     <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 98" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 99-100" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Tests Line 99-100" />
+    <MESSAGE value="CODE: Code to pass Acceptance Test Line 100" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Code to pass Acceptance Test Line 100" />
   </component>
 </project>
