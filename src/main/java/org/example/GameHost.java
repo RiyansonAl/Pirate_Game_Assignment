@@ -391,6 +391,11 @@ public class GameHost {
                 count = count + duplicates[i];
             }
         }
+        //Include the Gold and Diamonds for the Full Chest
+        //Gold
+        count = count + duplicates[2];
+        //Diamonds
+        count = count + duplicates[3];
         //Full chest is true if all 8 dice is used to score
         if(count == 8){
             isFullChest = true;

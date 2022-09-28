@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Tests Line 91">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Tests Line 97-98">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00009" summary="CODE: Wrote code for the end of the game and player with the highest score over 3000 wins">
-      <created>1663642054047</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1663642054047</updated>
     </task>
     <task id="LOCAL-00010" summary="TEST: Test for keeping and rerolling Dice">
       <created>1663695569913</created>
@@ -491,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664369784339</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="A-TEST: Acceptance Tests Line 97-98">
+      <created>1664370275098</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1664370275098</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -506,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote Test for the Sorceress card and added a print to break down the score" />
     <MESSAGE value="REFACTOR: Fixed so all unit tests work in one shot" />
     <MESSAGE value="A-TEST: Test for rolling 3 skulls on first roll and ending turn" />
     <MESSAGE value="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn" />
@@ -531,6 +530,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 81 - 83" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 86" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 91" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Tests Line 91" />
+    <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Tests Line 97-98" />
   </component>
 </project>
