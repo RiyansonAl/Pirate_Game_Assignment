@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameHostAcceptanceTests {
@@ -838,6 +840,135 @@ class GameHostAcceptanceTests {
         int score = 600;
         assertEquals(score, ObtainedScore);
     }
+
+    @Test
+    @DisplayName("Acceptance Test Line 76")
+    void acceptanceTestLine76(){
+        System.out.println("A-TEST: Acceptance Test Line 76\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Sorceress;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Skull, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Sword, GameHost.Dice.Skull, GameHost.Dice.Parrot,
+                GameHost.Dice.Gold, GameHost.Dice.Parrot};
+
+        int[] keepDice = {1,2};
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Sword, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+        System.out.println("First Roll:");
+        System.out.println(Arrays.toString(firstRoll));
+        GameHost.Dice[] secondRoll = host.keepReRollDice(player1, keepDice, firstRoll, riggedDice, card);
+        System.out.println("Second Roll:");
+        System.out.println(Arrays.toString(secondRoll));
+
+        int ObtainedScore = host.calculateScore(player1, card, secondRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 200;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 77")
+    void acceptanceTestLine77(){
+        System.out.println("A-TEST: Acceptance Test Line 77\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Sorceress;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Gold, GameHost.Dice.Parrot};
+        int[] keepDice = {1,2};
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Sword, GameHost.Dice.Parrot};
+        int[] keepDice2 = {0,1};
+
+        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Diamond,
+                GameHost.Dice.Monkey, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Sword, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+        System.out.println("First Roll:");
+        System.out.println(Arrays.toString(firstRoll));
+        GameHost.Dice[] secondRoll = host.keepReRollDice(player1, keepDice, firstRoll, riggedDice, card);
+        System.out.println("Second Roll:");
+        System.out.println(Arrays.toString(secondRoll));
+        GameHost.Dice[] thridRoll = host.keepReRollDice(player1, keepDice2, secondRoll, riggedDice2, card);
+        System.out.println("Thrid Roll:");
+        System.out.println(Arrays.toString(thridRoll));
+
+        int ObtainedScore = host.calculateScore(player1, card, thridRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 300;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 78")
+    void acceptanceTestLine78(){
+        System.out.println("A-TEST: Acceptance Test Line 78\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Sorceress;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Gold, GameHost.Dice.Parrot};
+        int[] keepDice = {1,2};
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Sword, GameHost.Dice.Parrot,
+                GameHost.Dice.Sword, GameHost.Dice.Parrot};
+        int[] keepDice2 = {0,1};
+
+        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Parrot,
+                GameHost.Dice.Sword, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+        System.out.println("First Roll:");
+        System.out.println(Arrays.toString(firstRoll));
+        GameHost.Dice[] secondRoll = host.keepReRollDice(player1, keepDice, firstRoll, riggedDice, card);
+        System.out.println("Second Roll:");
+        System.out.println(Arrays.toString(secondRoll));
+        GameHost.Dice[] thridRoll = host.keepReRollDice(player1, keepDice2, secondRoll, riggedDice2, card);
+        System.out.println("Thrid Roll:");
+        System.out.println(Arrays.toString(thridRoll));
+
+        int ObtainedScore = host.calculateScore(player1, card, thridRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 0;
+        assertEquals(score, ObtainedScore);
+    }
+
 
 
 
