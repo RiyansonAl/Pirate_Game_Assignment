@@ -441,6 +441,10 @@ public class GameHost {
                     score = score + 4000;
                     player.setScoreBreakDown("8 of a kind (4000) + ");
                     break;
+                case 9://8 of a kind
+                    score = score + 4000;
+                    player.setScoreBreakDown("8 of a kind (4000) + ");
+                    break;
             }
         }
 
