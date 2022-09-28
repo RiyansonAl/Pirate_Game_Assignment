@@ -1167,6 +1167,60 @@ class GameHostAcceptanceTests {
         assertEquals(score, ObtainedScore);
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 97")
+    void acceptanceTestLine97(){
+        System.out.println("A-TEST: Acceptance Test Line 97\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Monkey,
+                GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Sword,
+                GameHost.Dice.Diamond, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 400;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 98")
+    void acceptanceTestLine98(){
+        System.out.println("A-TEST: Acceptance Test Line 98\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Captain;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Monkey,
+                GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Sword,
+                GameHost.Dice.Gold, GameHost.Dice.Gold};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 1800;
+        assertEquals(score, ObtainedScore);
+    }
+
 
 
 
