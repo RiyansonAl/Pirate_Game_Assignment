@@ -1427,7 +1427,7 @@ class GameHostAcceptanceTests {
             System.out.println(host.endTurn(player1));
         }
 
-        int scores[] = {1000, 1000, 0};
+        int scores[] = {1000, 1300, 0};
         assertArrayEquals(scores, host.getScores());
     }
 

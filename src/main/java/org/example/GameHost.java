@@ -692,7 +692,7 @@ public class GameHost {
         if(card == FortuneCard.Skulls){
             newNumOfSkulls = newNumOfSkulls + player.getSkullCardNum();
         }
-        if(numOfSkulls > newNumOfSkulls){
+        if(newNumOfSkulls > numOfSkulls){
             player.setIsSkullIsland(true);
         } else {
             //No new dice calculate the scores and end turn
