@@ -48,7 +48,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine100">
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine103">
     <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -80,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine97" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine103" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +90,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine97" />
+      <option name="METHOD_NAME" value="acceptanceTestLine103" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine103" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine100" />
         <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine99" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine98" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine97" />
       </list>
     </recent_temporary>
   </component>

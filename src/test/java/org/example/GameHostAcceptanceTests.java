@@ -1286,6 +1286,33 @@ class GameHostAcceptanceTests {
         assertEquals(score, ObtainedScore);
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 103")
+    void acceptanceTestLine103(){
+        System.out.println("A-TEST: Acceptance Test Line 103\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.MonkeyBusiness;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Parrot,
+                GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Diamond,
+                GameHost.Dice.Diamond, GameHost.Dice.Diamond};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 1200;
+        assertEquals(score, ObtainedScore);
+    }
+
 
 
 
