@@ -380,6 +380,9 @@ public class GameHost {
         //TODO: Full Chest for when all eight dice is used for points
         //Check for Full Chest bonus
         boolean isFullChest = false;
+        boolean isGold = false;
+        boolean isDiamond = false;
+        boolean isSword = false;
         int count = 0;
         for(int i = 0; i < (duplicates.length-1); i++){
             //If there is 8 of a kind
@@ -389,13 +392,38 @@ public class GameHost {
             //Count for the dice used to score
             if(duplicates[i] >=3 ){
                 count = count + duplicates[i];
+                //Cases for if the gold, diamond and Swords are already included in the count
+                switch (i){
+                    case 2:
+                        isGold = true;
+                        break;
+                    case 3:
+                        isDiamond = true;
+                        break;
+                    case 4:
+                        isSword = true;
+                        break;
+                }
             }
         }
         //Include the Gold and Diamonds for the Full Chest
         //Gold
-        count = count + duplicates[2];
+        if(!isGold){
+            count = count + duplicates[2];
+        }
         //Diamonds
-        count = count + duplicates[3];
+        if(!isDiamond){
+            count = count + duplicates[3];
+        }
+
+        //Check if it's a seabattle card and if the sword dice are being used
+        if((card == FortuneCard.SeaBattle) && (!isSword)){
+            int numOfSwords = player.getSwordCardNum();
+            if(numOfSwords == duplicates[4]){
+                count = count + duplicates[4];
+            }
+        }
+
         //Full chest is true if all 8 dice is used to score
         if(count == 8){
             isFullChest = true;

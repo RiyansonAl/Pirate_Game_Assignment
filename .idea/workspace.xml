@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to pass Acceptance Tests Line 98">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Tests Line 99-100">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,22 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine100">
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests">
+    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostAcceptanceTests.acceptanceTestLine100" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -61,22 +76,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
       <option name="METHOD_NAME" value="acceptanceTestLine100" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine91" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine91" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine100" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine99" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine100" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine98" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine97" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine91" />
       </list>
     </recent_temporary>
   </component>
@@ -148,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00011" summary="CODE: Added Code for keeping and rerolling Dice">
-      <created>1663704387427</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1663704387427</updated>
     </task>
     <task id="LOCAL-00012" summary="U-TEST: Unit test for calculating the Score with a Captain Card">
       <created>1663810967032</created>
@@ -492,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664370629255</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="A-TEST: Acceptance Tests Line 99-100">
+      <created>1664371330118</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1664371330118</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Test for rolling 3 skulls on first roll and ending turn" />
     <MESSAGE value="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn" />
     <MESSAGE value="A-TEST: Acceptance Test Line 45" />
     <MESSAGE value="A-TEST: Acceptance Test Line 46" />
@@ -532,6 +530,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 91" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
     <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 98" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to pass Acceptance Tests Line 98" />
+    <MESSAGE value="A-TEST: Acceptance Tests Line 99-100" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Tests Line 99-100" />
   </component>
 </project>
