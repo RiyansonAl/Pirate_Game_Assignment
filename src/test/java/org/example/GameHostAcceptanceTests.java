@@ -1373,6 +1373,64 @@ class GameHostAcceptanceTests {
         assertEquals(score, ObtainedScore);
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 108")
+    void acceptanceTestLine108(){
+        System.out.println("A-TEST: Acceptance Test Line 108\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Skulls;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Parrot,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+        GameHost.Dice[] riggedDice2 = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+        GameHost.Dice[] riggedDice3 = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+        GameHost.Dice[] riggedDice4 = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+
+        int numOfSkulls = host.getSkullCardType(player1, 2);
+        player1.setSkullCardNum(numOfSkulls);
+
+        player1.updateScore(1000);
+        player2.updateScore(2000);
+        player3.updateScore(700);
+
+        host.displayScores();
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+        GameHost.Dice[] secondRoll = new GameHost.Dice[8];
+        GameHost.Dice[] thirdRoll = new GameHost.Dice[8];
+        GameHost.Dice[] fourthRoll = new GameHost.Dice[8];
+
+        if(player1.getIsSkullIsland() ==  true){
+            secondRoll = host.skullIsland(player1, card, firstRoll, riggedDice2);
+        }
+        if(player1.getIsSkullIsland() ==  true){
+            thirdRoll = host.skullIsland(player1, card, secondRoll, riggedDice3);
+        }
+        if(player1.getIsSkullIsland() ==  true){
+            fourthRoll = host.skullIsland(player1, card, thirdRoll, riggedDice4);
+        }
+        if(player1.getIsSkullIsland() ==  false){
+            host.displayScores();
+            System.out.println(host.endTurn(player1));
+        }
+
+        int scores[] = {1000, 1000, 0};
+        assertArrayEquals(scores, host.getScores());
+    }
+
 
 
 
