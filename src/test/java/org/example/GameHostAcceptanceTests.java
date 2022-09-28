@@ -1530,6 +1530,117 @@ class GameHostAcceptanceTests {
         assertArrayEquals(scores, host.getScores());
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 113")
+    void acceptanceTestLine113(){
+        System.out.println("A-TEST: Acceptance Test Line 113\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+
+        int numOfSwords = host.getSwordCardType(player1, 2);
+        player1.setSwordCardNum(numOfSwords);
+
+        player1.updateScore(1000);
+        player2.updateScore(2000);
+        player3.updateScore(700);
+
+        host.displayScores();
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+        GameHost.Dice[] secondRoll = new GameHost.Dice[8];
+
+        System.out.println(host.endTurn(player1));
+        host.displayScores();
+
+
+        int scores[] = {700, 2000, 700};
+        assertArrayEquals(scores, host.getScores());
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 114")
+    void acceptanceTestLine114(){
+        System.out.println("A-TEST: Acceptance Test Line 114\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+
+        int numOfSwords = host.getSwordCardType(player1, 3);
+        player1.setSwordCardNum(numOfSwords);
+
+        player1.updateScore(1000);
+        player2.updateScore(2000);
+        player3.updateScore(700);
+
+        host.displayScores();
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+        GameHost.Dice[] secondRoll = new GameHost.Dice[8];
+
+        System.out.println(host.endTurn(player1));
+        host.displayScores();
+
+
+        int scores[] = {500, 2000, 700};
+        assertArrayEquals(scores, host.getScores());
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 115")
+    void acceptanceTestLine115(){
+        System.out.println("A-TEST: Acceptance Test Line 115\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.SeaBattle;
+
+        GameHost.Dice[] riggedDice = {GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond};
+
+        int numOfSwords = host.getSwordCardType(player1, 4);
+        player1.setSwordCardNum(numOfSwords);
+
+        player1.updateScore(1000);
+        player2.updateScore(2000);
+        player3.updateScore(700);
+
+        host.displayScores();
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, riggedDice);
+        GameHost.Dice[] secondRoll = new GameHost.Dice[8];
+
+        System.out.println(host.endTurn(player1));
+        host.displayScores();
+
+
+        int scores[] = {0, 2000, 700};
+        assertArrayEquals(scores, host.getScores());
+    }
+
 
 
 

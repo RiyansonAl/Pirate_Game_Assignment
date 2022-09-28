@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to padd Acceptance Tests Line 108" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Tests Line 109 - 110">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,55 +49,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine110">
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine106" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine106" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine107" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine107" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine108" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine108" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests.acceptanceTestLine115">
     <configuration name="GameHostAcceptanceTests.acceptanceTestLine109" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -127,13 +82,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine113" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine113" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine114" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine114" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameHostAcceptanceTests.acceptanceTestLine115" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="METHOD_NAME" value="acceptanceTestLine115" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine115" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine114" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine113" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine110" />
         <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine109" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine108" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine107" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine106" />
       </list>
     </recent_temporary>
   </component>
@@ -145,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00018" summary="CODE: Wrote code for getting the score for when Monkey Business card is obtained and updated the scoreFromDice method">
-      <created>1663819112298</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1663819112298</updated>
     </task>
     <task id="LOCAL-00019" summary="U-TEST: Test for getting the score for when Treasure Chest card is obtained and ending turn when 3 skulls are rolled on first roll">
       <created>1663939131928</created>
@@ -489,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664397005636</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="A-TEST: Acceptance Tests Line 109 - 110">
+      <created>1664397288511</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1664397288511</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Test Line 51" />
     <MESSAGE value="A-TEST: Acceptance Test Line 52" />
     <MESSAGE value="A-TEST: Acceptance Test Line 53 and Acceptance Test Line 53" />
     <MESSAGE value="A-TEST: Acceptance Test Line 53 and Acceptance Test Line 54" />
@@ -529,6 +531,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 106 - 107" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 108" />
     <MESSAGE value="CODE: Wrote code to padd Acceptance Tests Line 108" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to padd Acceptance Tests Line 108" />
+    <MESSAGE value="A-TEST: Acceptance Tests Line 109 - 110" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Tests Line 109 - 110" />
   </component>
 </project>
