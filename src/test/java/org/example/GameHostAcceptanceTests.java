@@ -292,6 +292,87 @@ class GameHostAcceptanceTests {
         assertEquals(score, ObtainedScore);
     }
 
+    @Test
+    @DisplayName("Acceptance Test Line 55")
+    void acceptanceTestLine55(){
+        System.out.println("A-TEST: Acceptance Test Line 55\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Diamond, GameHost.Dice.Diamond, GameHost.Dice.Diamond,
+                GameHost.Dice.Parrot, GameHost.Dice.Parrot, GameHost.Dice.Skull,
+                GameHost.Dice.Sword, GameHost.Dice.Monkey};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 500;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 56")
+    void acceptanceTestLine56(){
+        System.out.println("A-TEST: Acceptance Test Line 56\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Diamond;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Gold, GameHost.Dice.Parrot, GameHost.Dice.Skull,
+                GameHost.Dice.Sword, GameHost.Dice.Monkey};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 700;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 57")
+    void acceptanceTestLine57(){
+        System.out.println("A-TEST: Acceptance Test Line 57\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Sword,
+                GameHost.Dice.Skull, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
+                GameHost.Dice.Parrot, GameHost.Dice.Parrot};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 400;
+        assertEquals(score, ObtainedScore);
+    }
+
 
 
 
