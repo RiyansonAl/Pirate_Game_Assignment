@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.net.InetAddress;
+import java.net.Socket;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -416,8 +418,6 @@ class GameHostTest {
         assertArrayEquals(scores, host.getScores());
     }
 
-
-    //TODO: Refactor Sorceress card to only work Once per round not once per re-roll
     @Test
     @DisplayName("Getting a score after getting a Sorceress fortune card and rerolling one of the skull dice")
     void calculateScore8(){
@@ -460,7 +460,24 @@ class GameHostTest {
         assertEquals(score, host.calculateScore(player1, card, thridReRoll));
     }
 
-    //TODO: Sting in GameHost to break down the scoring at the end of the round
+    @Test
+    @DisplayName("Starting the pirateServer and creating a gameHost instance")
+    void pirateServerStart(){
+        int port = 54321;
+        try{
+            Socket player1Socket = new Socket("localhost", port);
+            Socket player2Socket = new Socket("localhost", port);
+            Socket player3Socket = new Socket("localhost", port);
+            Socket player4Socket = new Socket("localhost", port);
+            Socket[] playerSockets = {player1Socket,player2Socket,player3Socket, player4Socket};
+
+            PirateServer server = new PirateServer(playerSockets);
+
+        }catch(Exception e){System.out.println(e);}
+
+    }
+
+
 
 
 

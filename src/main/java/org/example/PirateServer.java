@@ -21,6 +21,9 @@ public class PirateServer {
 
 
     }
+    public PirateServer(Socket[] PlayerSocket){
+
+    }
 
 
 
