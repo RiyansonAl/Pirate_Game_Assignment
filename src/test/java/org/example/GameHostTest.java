@@ -468,10 +468,34 @@ class GameHostTest {
             Socket player1Socket = new Socket("localhost", port);
             Socket player2Socket = new Socket("localhost", port);
             Socket player3Socket = new Socket("localhost", port);
-            Socket player4Socket = new Socket("localhost", port);
-            Socket[] playerSockets = {player1Socket,player2Socket,player3Socket, player4Socket};
+            Socket[] playerSockets = {player1Socket,player2Socket,player3Socket};
 
             PirateServer server = new PirateServer(playerSockets);
+
+        }catch(Exception e){System.out.println(e);}
+
+    }
+
+    @Test
+    @DisplayName("Starting the First Round of the Pirate Game")
+    void pirateServerStartFirstRound(){
+        int port = 54321;
+        try{
+            Socket player1Socket = new Socket("localhost", port);
+            Socket player2Socket = new Socket("localhost", port);
+            Socket player3Socket = new Socket("localhost", port);
+            Socket[] playerSockets = {player1Socket,player2Socket,player3Socket};
+
+            PirateServer server = new PirateServer(playerSockets);
+
+            Player player1 = new Player(1);
+            Player player2 = new Player(2);
+            Player player3 = new Player(3);
+            Player[] players = {player1, player2, player3};
+
+            GameHost host = new GameHost(players);
+
+            server.startRound(host);
 
         }catch(Exception e){System.out.println(e);}
 

@@ -95,6 +95,10 @@ public class PirateServer {
 
     }
 
+    protected void startRound(GameHost host){
+
+    }
+
 
 
 

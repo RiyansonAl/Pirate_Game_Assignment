@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Creating a Socket for the playable game">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to open sockets for players 2 and 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.PirateClient">
-    <configuration name="PirateClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="PirateClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.PirateClient" />
       <module name="Pirate" />
       <extension name="coverage">
@@ -124,6 +124,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.PirateClient" />
+      <item itemvalue="Application.PirateServer" />
+      <item itemvalue="JUnit.GameHostAcceptanceTests" />
+      <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine123" />
+      <item itemvalue="JUnit.GameHostTest.pirateServerStart" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PirateClient" />
@@ -142,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00025" summary="CODE: Wrote the code for getting skulls card with 2 skulls and ending the players turn after rolling 1 skull">
-      <created>1664050501347</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1664050501347</updated>
     </task>
     <task id="LOCAL-00026" summary="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle">
       <created>1664143538858</created>
@@ -486,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664479104516</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="CODE: Wrote code to open sockets for players 2 and 3">
+      <created>1664499386742</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1664499386742</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -501,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 61 - 63" />
     <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 63" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 64 - 65" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 66 - 68" />
@@ -526,6 +532,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 120-121" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 123-124" />
     <MESSAGE value="U-TEST: Creating a Socket for the playable game" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Creating a Socket for the playable game" />
+    <MESSAGE value="CODE: Wrote code to open sockets for players 2 and 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to open sockets for players 2 and 3" />
   </component>
 </project>
