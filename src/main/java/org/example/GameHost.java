@@ -121,7 +121,7 @@ public class GameHost {
         int numOfPlayers = players.length;
 
         //String for the final print
-        String scoreBoard = "";
+        String scoreBoard = "SCOREBOARD: \n";
         //Player numbers
         switch(numOfPlayers) {
             case 1:
@@ -146,7 +146,7 @@ public class GameHost {
         //Add an end of line
         scoreBoard = scoreBoard + "\n\n";
         //Print out the Score board
-        System.out.print(scoreBoard);
+        //System.out.print(scoreBoard);
 
         return scoreBoard;
     }
@@ -652,6 +652,15 @@ public class GameHost {
     }
     protected boolean[] getPlayerTurnPhase(Player player){
         return new boolean[]{player.getRoll(), player.getUpdateScore()};
+    }
+    protected int getCurrentPlayerTurn(){
+        int playerNum = 0;
+        for(int i = 0; i < playerTurnOrder.length; i++){
+            if(playerTurnOrder[i] == true){
+                playerNum = i+1;
+            }
+        }
+        return playerNum;
     }
 
     protected Dice[] skullIsland(Player player, FortuneCard card, Dice[] roll, Dice[] riggiedDice){

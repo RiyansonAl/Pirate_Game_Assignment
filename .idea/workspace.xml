@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to open sockets for players 2 and 3">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test for playing the first round of the game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,22 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostAcceptanceTests.acceptanceTestLine123" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="METHOD_NAME" value="acceptanceTestLine123" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameHostTest.pirateServerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -124,20 +109,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostTest.pirateServerStartFirstRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="pirateServerStartFirstRound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.PirateClient" />
       <item itemvalue="Application.PirateServer" />
+      <item itemvalue="JUnit.GameHostTest.pirateServerStartFirstRound" />
       <item itemvalue="JUnit.GameHostAcceptanceTests" />
-      <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine123" />
       <item itemvalue="JUnit.GameHostTest.pirateServerStart" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PirateClient" />
         <item itemvalue="Application.PirateServer" />
+        <item itemvalue="JUnit.GameHostTest.pirateServerStartFirstRound" />
         <item itemvalue="JUnit.GameHostTest.pirateServerStart" />
         <item itemvalue="JUnit.GameHostAcceptanceTests" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests.acceptanceTestLine123" />
       </list>
     </recent_temporary>
   </component>
@@ -149,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00026" summary="U-TEST: two test for Sea Battel card where in the first test player wins battle and in the second test the player loses the battle">
-      <created>1664143538858</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1664143538858</updated>
     </task>
     <task id="LOCAL-00027" summary="CODE: Wrote code for the 2 unit tests for the seabattle Card.">
       <created>1664145296375</created>
@@ -493,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664499386742</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="U-TEST: Test for playing the first round of the game">
+      <created>1664500138360</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1664500138360</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 63" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 64 - 65" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 66 - 68" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 69 - 71" />
@@ -533,6 +533,7 @@
     <MESSAGE value="A-TEST: Acceptance Tests Line 123-124" />
     <MESSAGE value="U-TEST: Creating a Socket for the playable game" />
     <MESSAGE value="CODE: Wrote code to open sockets for players 2 and 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to open sockets for players 2 and 3" />
+    <MESSAGE value="U-TEST: Test for playing the first round of the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test for playing the first round of the game" />
   </component>
 </project>

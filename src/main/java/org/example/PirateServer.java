@@ -3,6 +3,7 @@ import java.io.*;
 //import java.net.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PirateServer {
@@ -14,6 +15,11 @@ public class PirateServer {
     private static DataInputStream player3In;
     private static DataOutputStream player2Out;
     private static DataOutputStream player3Out;
+
+    private static Player player1;
+    private static Player player2;
+    private static Player player3;
+    private static Player[] allPlayers;
 
     private static int numOfPlayers;
 
@@ -71,6 +77,21 @@ public class PirateServer {
              String msg ="All Players are connected\n";
              msg = msg + "Starting Pirate Game.....";
              writeToPlayers(msg);
+
+             //initialize Game host class
+             player1 = new Player(1);
+             player2 = new Player(2);
+             player3 = new Player(3);
+             allPlayers = new Player[]{player1, player2};
+             if(numOfPlayers == 3){
+                 allPlayers = new Player[]{player1, player2,  player3};
+             }
+             GameHost host = new GameHost(allPlayers);
+
+             //Start first Round
+             startRound(host);
+
+
              //clientSocket = serverSocket.accept();
              //DataInputStream dis=new DataInputStream(clientSocket.getInputStream());
              //String  str=(String)dis.readUTF();
@@ -95,11 +116,41 @@ public class PirateServer {
 
     }
 
-    protected void startRound(GameHost host){
+    private static String getPlayerInput(int playerNum){
+        String msg = "";
+        if(playerNum == 1){
+            Scanner keyboard = new Scanner(System.in);
+            msg = keyboard.nextLine();
+        } else if (playerNum == 2){
+            try {
+                msg = (String) player2In.readUTF();
+            }catch(Exception e){System.out.println(e);}
+        } else if (playerNum == 3) {
+            try {
+                msg = (String) player3In.readUTF();
+            }catch(Exception e){System.out.println(e);}
+        }
+        return msg;
+    }
+
+    protected static void startRound(GameHost host){
+        int currentPlayerNum = host.getCurrentPlayerTurn();
+        String msg = host.displayScores();
+        msg = msg + "Starting Player " + currentPlayerNum + " Turn...\n";
+        msg = msg + "Drawing Card....\n";
+        GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
+        GameHost.Dice[] fakedice = {GameHost.Dice.None};
+        GameHost.Dice[] dice = host.rollDice(8, fakedice);
+
+        dice = host.playerTurnStart(allPlayers[currentPlayerNum-1],GameHost.FortuneCard.None, fakedice);
+        msg = msg + "Fortune Card = " + allPlayers[currentPlayerNum-1].getFortuneCard().toString() + " \n";
+        msg = msg + "Rolling Dice....\n";
+        msg = msg + "Dice Roll = " + Arrays.toString(dice) + " \n";
+        writeToPlayers(msg);
 
     }
 
 
 
 
-    }
+    }//End PirateServer Class

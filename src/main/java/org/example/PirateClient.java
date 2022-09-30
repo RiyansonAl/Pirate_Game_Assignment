@@ -18,6 +18,8 @@ public class PirateClient {
             System.out.println(str);
             str=(String)serverIn.readUTF();
             System.out.println(str);
+            str=(String)serverIn.readUTF();
+            System.out.println(str);
             dout.writeUTF("Hello Server");
             dout.flush();
             dout.close();
