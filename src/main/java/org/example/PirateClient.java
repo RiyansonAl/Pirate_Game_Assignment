@@ -36,7 +36,7 @@ public class PirateClient {
                     String playerCommand = "[Player " + playerNum + " re-Roll Phase]";
                     String playerSkullIslandCommand = "[Player " + playerNum + " Skull Island Phase]";
                     if((serverCommand[0].equals(playerCommand)) || (serverCommand[0].equals(playerSkullIslandCommand))){
-                        System.out.println("equals");
+                        System.out.println("Your true. Waiting for input");
                         Scanner keyboard = new Scanner(System.in);
                         String playerInput = keyboard.nextLine();
                         playerOut.writeUTF(playerInput);

@@ -157,8 +157,8 @@ public class PirateServer {
 
             //TODO: Finish the regex
             //TODO: End game condition
+            //TODO: Fix the format of the console statements
 
-            //TODO: Island of the Skulls
             boolean[] playerTurnPhase = host.getPlayerTurnPhase(allPlayers[currentPlayerNum - 1]);
             //Check if player can continue re-rolling and not on skull island
             if ((playerTurnPhase[0] == true) && (allPlayers[currentPlayerNum - 1].getIsSkullIsland() == false)) {
@@ -251,11 +251,15 @@ public class PirateServer {
             if(playerTurnPhase[1] == true) {
                 int score = host.calculateScore(allPlayers[currentPlayerNum - 1], card, dice);
                 msg = "[Player " + currentPlayerNum + "]: Score = " + score + "\n";
+                writeToPlayers(msg);
             }
 
             //End the players turn
+            msg = "SCORE UPDATE: \n";
+            msg = msg + host.displayScores();
+            writeToPlayers(msg);
             String endMessage = host.endTurn(allPlayers[currentPlayerNum - 1]);
-            msg = msg + endMessage;
+            msg = endMessage;
             writeToPlayers(msg);
 
             //When there is a winner
