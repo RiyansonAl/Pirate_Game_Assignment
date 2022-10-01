@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test to determine the winner after other player have a turn">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
@@ -151,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00031" summary="U-TEST: Unit test for the Sorceress card">
-      <created>1664235251209</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1664235251209</updated>
     </task>
     <task id="LOCAL-00032" summary="CODE: Wrote Test for the Sorceress card and added a print to break down the score">
       <created>1664249508249</created>
@@ -495,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664649689293</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game">
+      <created>1664654752632</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1664654752632</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 81 - 83" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 86" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 91" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
@@ -535,6 +532,7 @@
     <MESSAGE value="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice" />
     <MESSAGE value="REFACTOR: Fixed some of the messages printed to the console" />
     <MESSAGE value="U-TEST: Test to determine the winner after other player have a turn" />
-    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test to determine the winner after other player have a turn" />
+    <MESSAGE value="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game" />
+    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game" />
   </component>
 </project>

@@ -162,7 +162,7 @@ public class PirateServer {
 
 
             //TODO: Finish the regex
-            //TODO: End game condition
+            //TODO: Check of there is at least 2 dice being re-rolled
             //TODO: Fix the format of the console statements
 
             boolean[] playerTurnPhase = host.getPlayerTurnPhase(allPlayers[currentPlayerNum - 1]);
@@ -281,6 +281,10 @@ public class PirateServer {
         }
 
 
+
+    }
+
+    protected static boolean isInputValid(String input){
 
     }
 

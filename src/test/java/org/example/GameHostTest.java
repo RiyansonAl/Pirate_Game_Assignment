@@ -516,26 +516,41 @@ class GameHostTest {
 
         GameHost host = new GameHost(players);
 
-        player1.updateScore(1500);
-        player2.updateScore(1500);
-        player3.updateScore(2000);
 
-        //No winner
-        System.out.println("1: " + host.checkForWinner());
-        //Updated scare for Player 2 to be winner
-        player2.updateScore(2000);
-        System.out.println("2: "+ host.checkForWinner());
-
-        //end round needs to be done 2 more times for the other players to have a turn
-        System.out.println("3: "+ host.checkForWinner());
-        System.out.println("4: " +  host.checkForWinner());
-
-        String winningPlayer = "";
-        if (host.isWinner == true){
-            winningPlayer = host.getWinner();
-        }
-        String expected = "Player 2 wins";
         assertEquals(expected, winningPlayer);
+    }
+
+    @Test
+    @DisplayName("Testing user input for a valid input")
+    void testingUserInput(){
+
+        String input1 = "1";
+        String input2 = "1,2";
+        String input3 = "1,2,3";
+        String input4 = "1,2,3,4";
+        String input5 = "1,2,3,4,5";
+        String input6 = "1,2,3,4,5,6";
+
+        String[] inputs = {input1, input2, input3, input4, input5, input6};
+        boolean[] results = {false, false, false, false, false, false};
+        int counter = 0;
+        for (int i = 0; i < inputs.length; i++){
+            if(PirateServer.isInputValid(inputs[i])){
+                results[i] = true;
+                System.out.println("input "+ i + "= true");
+                counter = counter + 1;
+            } else {
+                System.out.println("input "+ i + "= false");
+            }
+        }
+        boolean finalResult = false;
+        if(counter == results.length){
+            finalResult = true;
+        }
+
+
+        boolean expected = true;
+        assertEquals(expected, finalResult);
     }
 
 
