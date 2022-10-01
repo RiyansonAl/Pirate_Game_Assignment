@@ -501,6 +501,38 @@ class GameHostTest {
 
     }
 
+    @Test
+    @DisplayName("Test for one winner after")
+    void finalWinner(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
+        player1.updateScore(1500);
+        player2.updateScore(1500);
+        player3.updateScore(2000);
+
+        //No winner
+        System.out.println(host.endRound());
+        //Updated scare for Player 2 to be winner
+        player2.updateScore(2000);
+        System.out.println(host.endRound());
+
+        //end round needs to be done 2 more times for the other players to have a turn
+        System.out.println(host.endRound());
+        System.out.println(host.endRound());
+
+        String winningPlayer = "";
+        if (host.isWinner == true){
+            winningPlayer = host.getWinner();
+        }
+        String expected = "Player 2 wins";
+        assertEquals(expected, winningPlayer);
+    }
+
 
 
 

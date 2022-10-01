@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed some of the messages printed to the console">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,13 +149,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00029" summary="U-TEST: Unit test for island of the skulls and deducting points from the opponents.">
-      <created>1664157931377</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1664157931377</updated>
     </task>
     <task id="LOCAL-00030" summary="CODE: Wrote the code for island of the skulls and deducting points from the opponents.">
       <created>1664162632577</created>
@@ -493,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664641243998</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="REFACTOR: Fixed some of the messages printed to the console">
+      <created>1664648052932</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1664648052932</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +508,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 69 - 71" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 76 - 78" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 81 - 83" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 86" />
@@ -533,6 +532,7 @@
     <MESSAGE value="U-TEST: Test for playing the first round of the game" />
     <MESSAGE value="CODE: Started to wrote code for testing the first round of the game" />
     <MESSAGE value="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice" />
+    <MESSAGE value="REFACTOR: Fixed some of the messages printed to the console" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed some of the messages printed to the console" />
   </component>
 </project>
