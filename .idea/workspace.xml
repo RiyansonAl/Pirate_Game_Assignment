@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed some of the messages printed to the console">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Test to determine the winner after other player have a turn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +52,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PirateClient">
+  <component name="RunManager" selected="JUnit.GameHostTest">
     <configuration name="PirateClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.PirateClient" />
       <module name="Pirate" />
@@ -77,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +88,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.pirateServerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.endRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +104,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="pirateServerStart" />
+      <option name="METHOD_NAME" value="endRound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.pirateServerStartFirstRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest.finalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +120,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="pirateServerStartFirstRound" />
+      <option name="METHOD_NAME" value="finalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,17 +129,17 @@
     <list>
       <item itemvalue="Application.PirateClient" />
       <item itemvalue="Application.PirateServer" />
-      <item itemvalue="JUnit.GameHostTest.pirateServerStartFirstRound" />
-      <item itemvalue="JUnit.GameHostAcceptanceTests" />
-      <item itemvalue="JUnit.GameHostTest.pirateServerStart" />
+      <item itemvalue="JUnit.GameHostTest" />
+      <item itemvalue="JUnit.GameHostTest.endRound" />
+      <item itemvalue="JUnit.GameHostTest.finalWinner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest" />
+        <item itemvalue="JUnit.GameHostTest.endRound" />
         <item itemvalue="Application.PirateClient" />
         <item itemvalue="Application.PirateServer" />
-        <item itemvalue="JUnit.GameHostTest.pirateServerStartFirstRound" />
-        <item itemvalue="JUnit.GameHostTest.pirateServerStart" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests" />
+        <item itemvalue="JUnit.GameHostTest.finalWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -149,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00030" summary="CODE: Wrote the code for island of the skulls and deducting points from the opponents.">
-      <created>1664162632577</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1664162632577</updated>
     </task>
     <task id="LOCAL-00031" summary="U-TEST: Unit test for the Sorceress card">
       <created>1664235251209</created>
@@ -493,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664648052932</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="U-TEST: Test to determine the winner after other player have a turn">
+      <created>1664649689293</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1664649689293</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 76 - 78" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 81 - 83" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 86" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 91" />
@@ -533,6 +534,7 @@
     <MESSAGE value="CODE: Started to wrote code for testing the first round of the game" />
     <MESSAGE value="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice" />
     <MESSAGE value="REFACTOR: Fixed some of the messages printed to the console" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed some of the messages printed to the console" />
+    <MESSAGE value="U-TEST: Test to determine the winner after other player have a turn" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Test to determine the winner after other player have a turn" />
   </component>
 </project>

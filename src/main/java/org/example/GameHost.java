@@ -9,6 +9,10 @@ public class GameHost {
     private int winningScore = 3000;
     protected boolean[] playerTurnOrder;
 
+    protected boolean isWinner;
+    private int trackWinner;
+    private int currentWinner;
+
     private String scoreBreakDown;
     public enum FortuneCard {
         TreasureChest, Captain, Sorceress, SeaBattle,
@@ -23,6 +27,8 @@ public class GameHost {
     public GameHost(Player[] newPlayers){
         players = newPlayers;
         scoreBreakDown = "";
+        isWinner = false;
+        trackWinner = currentWinner =  0;
         playerTurnOrder = new boolean[newPlayers.length];
         if(newPlayers.length > 1){
             //Setting Player one to go first
@@ -151,7 +157,7 @@ public class GameHost {
         return scoreBoard;
     }
 
-    protected String endRound(){
+    protected String checkForWinner(){
         int[] scores = getScores();
         int max = 0;
         int player = 0;
@@ -167,6 +173,23 @@ public class GameHost {
         String winner = "";
         //Check if the max value is a winning score
         if(max >= winningScore){
+            if(currentWinner == player) {
+                currentWinner = player;
+                trackWinner = trackWinner + 1;
+            } else {
+                currentWinner = player;
+                trackWinner = 0;
+            }
+
+            //Check to see if the other players had a turn since current winner had a winning score
+            if(trackWinner >= (players.length-1)){
+                isWinner = true;
+                winner = getWinner();
+            } else {
+                isWinner = false;
+            }
+
+            /*
             //Check if there are duplicate scores for multiple winners.
             int count = 0;
             for(int i = 0; i < scores.length; i++){
@@ -193,9 +216,33 @@ public class GameHost {
                     winner = winner + "Player " + wonPlayers[i] + " wins\n";
                 }
             }
+
+            */
         }
-        System.out.print(winner);
         return winner;
+    }
+
+    protected String getWinner(){
+        String winnerOutput = "";
+        if(isWinner){
+            int[] scores = getScores();
+            int max = 0;
+            int player = 0;
+
+            //Check for highest score
+            for(int i = 0; i < scores.length; i++){
+                if(scores[i] >= max){
+                    max = scores[i];
+                    player = i + 1;
+                }
+            }
+            winnerOutput = "Player " + player + " wins";
+
+        } else {
+            winnerOutput = "There is no winner game continues";
+        }
+
+        return winnerOutput;
     }
 
     protected Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, FortuneCard card){
@@ -560,11 +607,9 @@ public class GameHost {
         //Only enter this method if player is done turn and done rolling and score is updated
         String msg = "";
 
-        //If at the end of the round check if there is a winner
-        //If last player is ending the turn then it is the end of the round
-        if(player.getPlayerNumber() == players.length){
-            msg = endRound();
-        }
+        //Check for winner
+        msg = checkForWinner();
+
 
         //If there is no winner then set true for next players turn
         if(msg == ""){

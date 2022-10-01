@@ -85,12 +85,17 @@ class GameHostTest {
         host.updateScore(player2, 200);
         host.updateScore(player3, 150);
         host.displayScores();
+        //No winner yet
+        System.out.println("1: " +  host.checkForWinner());
         host.updateScore(player1, 2500);
         host.updateScore(player2, 1000);
         host.updateScore(player3, 1500);
+        System.out.println("2: " +  host.checkForWinner());
+        System.out.println("3: " +  host.checkForWinner());
+        System.out.println("4: " +  host.checkForWinner());
         host.displayScores();
-        String winner = "Player 1 wins\n";
-        assertEquals(winner, host.endRound());
+        String winner = "Player 1 wins";
+        assertEquals(winner, host.checkForWinner());
 
     }
 
@@ -170,7 +175,7 @@ class GameHostTest {
         GameHost.Dice[] rolledDice = {GameHost.Dice.Diamond, GameHost.Dice.Diamond, GameHost.Dice.Diamond,
                 GameHost.Dice.Diamond, GameHost.Dice.Diamond, GameHost.Dice.Diamond,
                 GameHost.Dice.Gold, GameHost.Dice.Diamond};
-        int score = 4900;
+        int score = 5400;
         player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
@@ -189,7 +194,7 @@ class GameHostTest {
         GameHost.Dice[] rolledDice = {GameHost.Dice.Monkey, GameHost.Dice.Parrot, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Parrot,
                 GameHost.Dice.Monkey, GameHost.Dice.Monkey};
-        int score = 2100;
+        int score = 2600;
         player1.setUpdateScore(true);
         assertEquals(score, host.calculateScore(player1, card, rolledDice));
     }
@@ -516,14 +521,14 @@ class GameHostTest {
         player3.updateScore(2000);
 
         //No winner
-        System.out.println(host.endRound());
+        System.out.println("1: " + host.checkForWinner());
         //Updated scare for Player 2 to be winner
         player2.updateScore(2000);
-        System.out.println(host.endRound());
+        System.out.println("2: "+ host.checkForWinner());
 
         //end round needs to be done 2 more times for the other players to have a turn
-        System.out.println(host.endRound());
-        System.out.println(host.endRound());
+        System.out.println("3: "+ host.checkForWinner());
+        System.out.println("4: " +  host.checkForWinner());
 
         String winningPlayer = "";
         if (host.isWinner == true){

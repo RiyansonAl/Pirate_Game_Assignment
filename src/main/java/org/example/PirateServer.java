@@ -121,6 +121,7 @@ public class PirateServer {
     private static String getPlayerInput(int playerNum){
         String msg = "";
         if(playerNum == 1){
+            System.out.println("Your true. Waiting for input");
             Scanner keyboard = new Scanner(System.in);
             msg = keyboard.nextLine();
         } else if (playerNum == 2){
@@ -141,7 +142,12 @@ public class PirateServer {
         while (!isGameEnd) {
             int currentPlayerNum = host.getCurrentPlayerTurn();
             String playerInput = "";
-            String msg = host.displayScores();
+            //Track the round number
+            if(currentPlayerNum == 1){
+                counter = counter + 1;
+            }
+            String msg = "\n\n\n[ROUND " + counter + "]\n";
+            msg = msg + host.displayScores();
             msg = msg + "Starting Player " + currentPlayerNum + " Turn...\n";
             msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Drawing Card....\n";
             GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
@@ -173,14 +179,18 @@ public class PirateServer {
                     writeToPlayers(msg);
                     //Wait for Players Input
                     playerInput = getPlayerInput(currentPlayerNum);
-                    System.out.println(playerInput);
+                    //System.out.println(playerInput);
                     //Error checking on the playerInput
                     String regx = "\\d,\\d,\\d,\\d";
-                    System.out.println(playerInput.matches(regx));
+                    //System.out.println(playerInput.matches(regx));
                     //Quiting the game
                     if (playerInput.equals("quit")) {
                         isGameEnd = true;
                         keepReRolling = false;
+                        msg = "[GAME OVER]: Player quit the game\n";
+                        msg = msg + host.displayScores();
+                        writeToPlayers(msg);
+
                     }
                     if (playerInput.matches(regx)) {
                         //TODO: Check of there is at least 2 dice being re-rolled
@@ -189,8 +199,8 @@ public class PirateServer {
                         for (int i = 0; i < input.length; i++) {
                             keepdice[i] = (Integer.valueOf(input[i]) - 1);
                         }
-                        System.out.println(Arrays.toString(input));
-                        System.out.println(Arrays.toString(keepdice));
+                        //System.out.println(Arrays.toString(input));
+                        //System.out.println(Arrays.toString(keepdice));
                         //keep and ReRoll rest of the dice
                         dice = host.keepReRollDice(allPlayers[currentPlayerNum - 1], keepdice, dice, fakedice, GameHost.FortuneCard.None);
 
@@ -199,7 +209,7 @@ public class PirateServer {
                         writeToPlayers(msg);
 
                     } else if (playerInput.equals("")) {
-                        System.out.println("Continue to scoring");
+                        //System.out.println("Continue to scoring");
                         msg = "[Player " + currentPlayerNum + " Scoring Phase]: Calculating Score \n";
                         writeToPlayers(msg);
                         keepReRolling = false;
@@ -263,9 +273,10 @@ public class PirateServer {
             writeToPlayers(msg);
 
             //When there is a winner
-            counter = counter + 1;
-            if (counter == 3){
+            if (host.isWinner){
                 isGameEnd = true;
+                msg = "[GAME OVER]: " + host.getWinner();
+                writeToPlayers(msg);
             }
         }
 

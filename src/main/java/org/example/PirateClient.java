@@ -26,27 +26,32 @@ public class PirateClient {
 
             //Keeping reading until the server sends a command for input
             int count = 0;
-            while (count < 20){
+            boolean isGameOver = false;
+            while (!isGameOver){
                 try {
                     str = (String) serverIn.readUTF();
                     System.out.println(str);
                     String[] serverCommand = str.split(":", 5);
                     //System.out.println(Arrays.toString(serverCommand));
-                    System.out.println(serverCommand[0]);
+                    //System.out.println(serverCommand[0]);
                     String playerCommand = "[Player " + playerNum + " re-Roll Phase]";
                     String playerSkullIslandCommand = "[Player " + playerNum + " Skull Island Phase]";
+                    String gameOverCommand = "[GAME OVER]";
                     if((serverCommand[0].equals(playerCommand)) || (serverCommand[0].equals(playerSkullIslandCommand))){
-                        System.out.println("Your true. Waiting for input");
+                        System.out.println("Your turn. Waiting for input");
                         Scanner keyboard = new Scanner(System.in);
                         String playerInput = keyboard.nextLine();
                         playerOut.writeUTF(playerInput);
                         playerOut.flush();
                     }
+                    if((serverCommand[0].equals(gameOverCommand))){
+                        isGameOver = true;
+                    }
                 } catch (IOException error){
 
                 }
                 count = count + 1;
-                System.out.println(count);
+                //System.out.println(count);
             }
             /*str=(String)serverIn.readUTF();
             System.out.println(str);
