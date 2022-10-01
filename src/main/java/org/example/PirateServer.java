@@ -55,16 +55,16 @@ public class PirateServer {
                      System.out.println("Player 2 to connected");
                      player2In = new DataInputStream(playerSockets[count].getInputStream());
                      player2Out = new DataOutputStream(playerSockets[count].getOutputStream());
-                     player2Out.writeUTF("Connected to the Pirate Game");
+                     player2Out.writeUTF("You are Player 2 \nYou are connected to the Pirate Game Server");
                      player2Out.flush();
                      count = count + 1;
                  } else if (count == 1){
                      System.out.println("Waiting for Player 3 to connect");
                      playerSockets[count] = serverSocket.accept();
                      System.out.println("Player 3 to connected");
-                     player2In = new DataInputStream(playerSockets[count].getInputStream());
+                     player3In = new DataInputStream(playerSockets[count].getInputStream());
                      player3Out = new DataOutputStream(playerSockets[count].getOutputStream());
-                     player3Out.writeUTF("Connected to the Pirate Game");
+                     player3Out.writeUTF("You are Player 3 \nYou are connected to the Pirate Game Server");
                      player3Out.flush();
                      count = count + 1;
                  }
@@ -109,8 +109,10 @@ public class PirateServer {
         System.out.println(msg);
         try {
             player2Out.writeUTF(msg);
-            if(numOfPlayers > 3){
+            player2Out.flush();
+            if(numOfPlayers >= 3){
                 player3Out.writeUTF(msg);
+                player3Out.flush();
             }
         }catch(Exception e){System.out.println(e);}
 
@@ -134,19 +136,136 @@ public class PirateServer {
     }
 
     protected static void startRound(GameHost host){
-        int currentPlayerNum = host.getCurrentPlayerTurn();
-        String msg = host.displayScores();
-        msg = msg + "Starting Player " + currentPlayerNum + " Turn...\n";
-        msg = msg + "Drawing Card....\n";
-        GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
-        GameHost.Dice[] fakedice = {GameHost.Dice.None};
-        GameHost.Dice[] dice = host.rollDice(8, fakedice);
+        int counter = 0;
+        boolean isGameEnd = false;
+        while (!isGameEnd) {
+            int currentPlayerNum = host.getCurrentPlayerTurn();
+            String playerInput = "";
+            String msg = host.displayScores();
+            msg = msg + "Starting Player " + currentPlayerNum + " Turn...\n";
+            msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Drawing Card....\n";
+            GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
+            GameHost.Dice[] fakedice = {GameHost.Dice.None};
+            GameHost.Dice[] dice;
 
-        dice = host.playerTurnStart(allPlayers[currentPlayerNum-1],GameHost.FortuneCard.None, fakedice);
-        msg = msg + "Fortune Card = " + allPlayers[currentPlayerNum-1].getFortuneCard().toString() + " \n";
-        msg = msg + "Rolling Dice....\n";
-        msg = msg + "Dice Roll = " + Arrays.toString(dice) + " \n";
-        writeToPlayers(msg);
+            dice = host.playerTurnStart(allPlayers[currentPlayerNum - 1], GameHost.FortuneCard.None, fakedice);
+            msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Fortune Card = " + allPlayers[currentPlayerNum - 1].getFortuneCard().toString() + " \n";
+            msg = msg + "[Player " + currentPlayerNum + " Rolling Phase]: Rolling Dice....\n";
+            msg = msg + "Dice Roll = " + Arrays.toString(dice) + " \n";
+            writeToPlayers(msg);
+
+
+            //TODO: Finish the regex
+            //TODO: End game condition
+
+            //TODO: Island of the Skulls
+            boolean[] playerTurnPhase = host.getPlayerTurnPhase(allPlayers[currentPlayerNum - 1]);
+            //Check if player can continue re-rolling and not on skull island
+            if ((playerTurnPhase[0] == true) && (allPlayers[currentPlayerNum - 1].getIsSkullIsland() == false)) {
+
+                boolean keepReRolling = true;
+                while (keepReRolling) {
+
+                    //Prompt player to either keep dice and reroll the rest or move on to scoring
+                    msg = "[Player " + currentPlayerNum + " re-Roll Phase]: Choose the dice you keep. For Example: 1,2,3 will pick the first 3 dice.\n";
+                    msg = msg + "[Player " + currentPlayerNum + "]: If you want to keep all the dice press Enter to continue\n\n";
+                    msg = msg + "[Player " + currentPlayerNum + " Dice]:" + Arrays.toString(dice) + " \n";
+                    writeToPlayers(msg);
+                    //Wait for Players Input
+                    playerInput = getPlayerInput(currentPlayerNum);
+                    System.out.println(playerInput);
+                    //Error checking on the playerInput
+                    String regx = "\\d,\\d,\\d,\\d";
+                    System.out.println(playerInput.matches(regx));
+                    //Quiting the game
+                    if (playerInput.equals("quit")) {
+                        isGameEnd = true;
+                        keepReRolling = false;
+                    }
+                    if (playerInput.matches(regx)) {
+                        //TODO: Check of there is at least 2 dice being re-rolled
+                        String[] input = playerInput.split(",", 8);
+                        int[] keepdice = new int[input.length];
+                        for (int i = 0; i < input.length; i++) {
+                            keepdice[i] = (Integer.valueOf(input[i]) - 1);
+                        }
+                        System.out.println(Arrays.toString(input));
+                        System.out.println(Arrays.toString(keepdice));
+                        //keep and ReRoll rest of the dice
+                        dice = host.keepReRollDice(allPlayers[currentPlayerNum - 1], keepdice, dice, fakedice, GameHost.FortuneCard.None);
+
+                        keepReRolling = true;
+                        msg = "[Player " + currentPlayerNum + "]: keeping dice: " + playerInput + ". The rest are being rerolled  \n";
+                        writeToPlayers(msg);
+
+                    } else if (playerInput.equals("")) {
+                        System.out.println("Continue to scoring");
+                        msg = "[Player " + currentPlayerNum + " Scoring Phase]: Calculating Score \n";
+                        writeToPlayers(msg);
+                        keepReRolling = false;
+
+                    }
+
+                    //keepReRolling = false;
+                }//Re-Rolling loop
+
+            } else if ((playerTurnPhase[0] == true) && (allPlayers[currentPlayerNum - 1].getIsSkullIsland() == true)) {
+                //Enter Skull island
+                msg = "[Player " + currentPlayerNum + "]: Player " + currentPlayerNum + " Has entered the islands of the Skulls\n";
+                writeToPlayers(msg);
+                while (allPlayers[currentPlayerNum - 1].getIsSkullIsland() == true){
+                    int numOfSkull = host.countSkulls(dice);
+                    msg = "[Player " + currentPlayerNum + " Skull Island Phase]: Player " + currentPlayerNum + " has " + numOfSkull + "Skulls\n";
+                    msg = msg + "[Player " + currentPlayerNum + "]: Please press \"1\" to continue rolling for skulls. Press Enter for move on to scoring\n";
+                    writeToPlayers(msg);
+                    //Wait for Players Input
+                    playerInput = getPlayerInput(currentPlayerNum);
+                    boolean rollSkull = true;
+                    if (playerInput.equals("quit")) {
+                        isGameEnd = true;
+                        allPlayers[currentPlayerNum - 1].setIsSkullIsland(false);
+                        rollSkull = false;
+                    }
+                    if(playerInput.equals("")){
+                        allPlayers[currentPlayerNum - 1].setIsSkullIsland(false);
+                        rollSkull = false;
+                    }
+                    if(playerInput.equals("1")){
+                        rollSkull = true;
+                    } else {
+                        rollSkull = false;
+                    }
+
+                    if(rollSkull == true) {
+                        dice = host.skullIsland(allPlayers[currentPlayerNum - 1], card, dice, fakedice);
+                    }
+                }
+
+                msg = msg + "[Player " + currentPlayerNum + "]: No more skulls were rolled moving on the scoring\n";
+                writeToPlayers(msg);
+
+            }
+
+            //Get the Score
+            playerTurnPhase = host.getPlayerTurnPhase(allPlayers[currentPlayerNum - 1]);
+            if(playerTurnPhase[1] == true) {
+                int score = host.calculateScore(allPlayers[currentPlayerNum - 1], card, dice);
+                msg = "[Player " + currentPlayerNum + "]: Score = " + score + "\n";
+            }
+
+            //End the players turn
+            String endMessage = host.endTurn(allPlayers[currentPlayerNum - 1]);
+            msg = msg + endMessage;
+            writeToPlayers(msg);
+
+            //When there is a winner
+            counter = counter + 1;
+            if (counter == 3){
+                isGameEnd = true;
+            }
+        }
+
+
 
     }
 

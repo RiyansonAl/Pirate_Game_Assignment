@@ -525,7 +525,7 @@ public class GameHost {
 
         //if number of skulls is exactly 3 then end the round unless there is a Treasure Chest card
         //TODO First if statement should not be here
-        if((numOfSkulls == 3) && (card == FortuneCard.SeaBattle)){
+        if((numOfSkulls >= 3) && (card == FortuneCard.SeaBattle)){
             //Lost the sea battle subtrack the score
             int seabattleCard = player.getSwordCardNum();
             int score = 0;
@@ -580,13 +580,17 @@ public class GameHost {
             msg = msg + player.getScoreBreakDown() + "\n";
             player.endPlayerTurn();
             msg = msg + "Player " + player.getPlayerNumber() + " Turn Ended\n";
-            msg = msg + "Player " + (player.getPlayerNumber() + 1) + " Turn Starting....";
+            if((player.getPlayerNumber() + 1) > players.length){
+                msg = msg + "Player 1 Turn Starting....";
+            }else {
+                msg = msg + "Player " + (player.getPlayerNumber() + 1) + " Turn Starting....";
+            }
         }
 
         return msg;
     }
 
-    private int countSkulls(Dice[] roll){
+    protected int countSkulls(Dice[] roll){
         int count = 0;
         for(int i = 0; i < roll.length; i++){
             if(roll[i] == Dice.Skull){
