@@ -516,7 +516,26 @@ class GameHostTest {
 
         GameHost host = new GameHost(players);
 
+        player1.updateScore(1500);
+        player2.updateScore(1500);
+        player3.updateScore(2000);
 
+        //No winner
+        System.out.println("1: " + host.checkForWinner());
+        //Updated scare for Player 2 to be winner
+        player2.updateScore(2000);
+        System.out.println("2: "+ host.checkForWinner());
+
+        //end round needs to be done 2 more times for the other players to have a turn
+        System.out.println("3: "+ host.checkForWinner());
+        System.out.println("4: " +  host.checkForWinner());
+
+        String winningPlayer = "";
+        if (host.isWinner == true) {
+            winningPlayer = host.getWinner();
+        }
+
+        String expected = "Player 2 wins";
         assertEquals(expected, winningPlayer);
     }
 

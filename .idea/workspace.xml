@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Testing for valid user inputs for playable game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
@@ -50,22 +50,9 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest">
+  <component name="RunManager" selected="Application.PirateClient">
     <configuration name="PirateClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.PirateClient" />
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PirateServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.PirateServer" />
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -124,20 +111,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostTest.testingUserInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="testingUserInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.PirateClient" />
-      <item itemvalue="Application.PirateServer" />
       <item itemvalue="JUnit.GameHostTest" />
       <item itemvalue="JUnit.GameHostTest.endRound" />
       <item itemvalue="JUnit.GameHostTest.finalWinner" />
+      <item itemvalue="JUnit.GameHostTest.testingUserInput" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PirateClient" />
+        <item itemvalue="JUnit.GameHostTest.testingUserInput" />
+        <item itemvalue="JUnit.GameHostTest.finalWinner" />
         <item itemvalue="JUnit.GameHostTest" />
         <item itemvalue="JUnit.GameHostTest.endRound" />
-        <item itemvalue="Application.PirateClient" />
-        <item itemvalue="Application.PirateServer" />
-        <item itemvalue="JUnit.GameHostTest.finalWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -149,13 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00032" summary="CODE: Wrote Test for the Sorceress card and added a print to break down the score">
-      <created>1664249508249</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1664249508249</updated>
     </task>
     <task id="LOCAL-00033" summary="REFACTOR: Fixed so all unit tests work in one shot">
       <created>1664249629436</created>
@@ -493,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664654752632</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="U-TEST: Testing for valid user inputs for playable game">
+      <created>1664656035483</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1664656035483</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 86" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 91" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
     <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 98" />
@@ -533,6 +535,7 @@
     <MESSAGE value="REFACTOR: Fixed some of the messages printed to the console" />
     <MESSAGE value="U-TEST: Test to determine the winner after other player have a turn" />
     <MESSAGE value="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game" />
+    <MESSAGE value="U-TEST: Testing for valid user inputs for playable game" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Testing for valid user inputs for playable game" />
   </component>
 </project>

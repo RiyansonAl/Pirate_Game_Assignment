@@ -181,8 +181,6 @@ public class PirateServer {
                     playerInput = getPlayerInput(currentPlayerNum);
                     //System.out.println(playerInput);
                     //Error checking on the playerInput
-                    String regx = "\\d,\\d,\\d,\\d";
-                    //System.out.println(playerInput.matches(regx));
                     //Quiting the game
                     if (playerInput.equals("quit")) {
                         isGameEnd = true;
@@ -192,7 +190,7 @@ public class PirateServer {
                         writeToPlayers(msg);
 
                     }
-                    if (playerInput.matches(regx)) {
+                    if (isInputValid(playerInput)) {
                         //TODO: Check of there is at least 2 dice being re-rolled
                         String[] input = playerInput.split(",", 8);
                         int[] keepdice = new int[input.length];
@@ -285,7 +283,14 @@ public class PirateServer {
     }
 
     protected static boolean isInputValid(String input){
+        String regx = "\\d,\\d,\\d,\\d";
+        regx = "([1-8],){0,5}[1-8]";
 
+        if (input.matches(regx)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
