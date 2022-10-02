@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Wrote code to pass unit test for testing if the user input is valid">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="U-TEST: Testing to see if there is at least 2 dice to reroll">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PirateServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
     </list>
@@ -78,22 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.endRound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="endRound" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameHostTest.finalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -126,20 +111,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostTest.testingUserInput2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
+      <option name="METHOD_NAME" value="testingUserInput2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.PirateClient" />
       <item itemvalue="JUnit.GameHostTest" />
-      <item itemvalue="JUnit.GameHostTest.endRound" />
       <item itemvalue="JUnit.GameHostTest.finalWinner" />
       <item itemvalue="JUnit.GameHostTest.testingUserInput" />
+      <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PirateClient" />
+        <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
         <item itemvalue="JUnit.GameHostTest.testingUserInput" />
         <item itemvalue="JUnit.GameHostTest.finalWinner" />
         <item itemvalue="JUnit.GameHostTest" />
-        <item itemvalue="JUnit.GameHostTest.endRound" />
       </list>
     </recent_temporary>
   </component>
@@ -151,13 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00034" summary="A-TEST: Test for rolling 3 skulls on first roll and ending turn">
-      <created>1664291694475</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1664291694475</updated>
     </task>
     <task id="LOCAL-00035" summary="CODE: Wrote code to print score breakdown on the first roll and padding the test for rolling 3 skulls on first roll and ending turn">
       <created>1664292428045</created>
@@ -495,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664688559469</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="U-TEST: Testing to see if there is at least 2 dice to reroll">
+      <created>1664688840587</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1664688840587</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 97-98" />
     <MESSAGE value="CODE: Wrote code to pass Acceptance Tests Line 98" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 99-100" />
     <MESSAGE value="CODE: Code to pass Acceptance Test Line 100" />
@@ -535,6 +535,7 @@
     <MESSAGE value="CODE: Wrote code to determine the winner after other player have a turn and updated the playable game" />
     <MESSAGE value="U-TEST: Testing for valid user inputs for playable game" />
     <MESSAGE value="CODE: Wrote code to pass unit test for testing if the user input is valid" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Wrote code to pass unit test for testing if the user input is valid" />
+    <MESSAGE value="U-TEST: Testing to see if there is at least 2 dice to reroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="U-TEST: Testing to see if there is at least 2 dice to reroll" />
   </component>
 </project>

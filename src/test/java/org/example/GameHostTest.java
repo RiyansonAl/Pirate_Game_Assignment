@@ -575,14 +575,23 @@ class GameHostTest {
     @Test
     @DisplayName("Testing If there is 2 or more dice to re-Roll")
     void testingUserInput2(){
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
 
-        GameHost.Dice[] dice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
-                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
-                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+        GameHost host = new GameHost(players);
+
+        GameHost.FortuneCard card = GameHost.FortuneCard.Sorceress;
+        player1.setIsSorceress(true);
+
+        GameHost.Dice[] dice = {GameHost.Dice.Skull, GameHost.Dice.Monkey, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull, GameHost.Dice.Skull,
+                GameHost.Dice.Skull, GameHost.Dice.Skull};
 
         int[] keepdice = {1,2,3,4};
 
-        boolean finalResult = PirateServer.isreRollPossible(dice, keepdice);
+        boolean finalResult = PirateServer.isreRollPossible(dice, keepdice, card, host, player1);
 
 
         boolean expected = true;

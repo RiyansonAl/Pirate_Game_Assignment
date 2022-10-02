@@ -150,19 +150,39 @@ public class PirateServer {
             msg = msg + host.displayScores();
             msg = msg + "Starting Player " + currentPlayerNum + " Turn...\n";
             msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Drawing Card....\n";
-            GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
+            //GameHost.FortuneCard card = host.drawCard(GameHost.FortuneCard.None);
             GameHost.Dice[] fakedice = {GameHost.Dice.None};
             GameHost.Dice[] dice;
 
             dice = host.playerTurnStart(allPlayers[currentPlayerNum - 1], GameHost.FortuneCard.None, fakedice);
-            msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Fortune Card = " + allPlayers[currentPlayerNum - 1].getFortuneCard().toString() + " \n";
+            GameHost.FortuneCard card = allPlayers[currentPlayerNum - 1].getFortuneCard();
+            //Get the extra information on the card if there is any
+            String cardInfo = "";
+            if(card == GameHost.FortuneCard.SeaBattle){
+                int num = allPlayers[currentPlayerNum - 1].getSwordCardNum();
+                if(num == 2){
+                    cardInfo = " " + num + " Swords (300)";
+                } else if (num == 3) {
+                    cardInfo = " " + num + " Swords (500)";
+                } else if (num == 4) {
+                    cardInfo = " " + num + " Swords (1000)";
+                }
+            } else if (card == GameHost.FortuneCard.Skulls) {
+                int num = allPlayers[currentPlayerNum - 1].getSkullCardNum();
+                if(num == 1){
+                    cardInfo = " " + num + " Skulls";
+                } else if (num == 2) {
+                    cardInfo = " " + num + " Skulls";
+                }
+            }
+
+
+            msg = msg + "[Player " + currentPlayerNum + " Drawing Phase]: Fortune Card = " + card.toString() + cardInfo +" \n";
             msg = msg + "[Player " + currentPlayerNum + " Rolling Phase]: Rolling Dice....\n";
             msg = msg + "Dice Roll = " + Arrays.toString(dice) + " \n";
             writeToPlayers(msg);
 
 
-            //TODO: Finish the regex
-            //TODO: Check of there is at least 2 dice being re-rolled
             //TODO: Fix the format of the console statements
 
             boolean[] playerTurnPhase = host.getPlayerTurnPhase(allPlayers[currentPlayerNum - 1]);
@@ -200,11 +220,12 @@ public class PirateServer {
                         //System.out.println(Arrays.toString(input));
                         //System.out.println(Arrays.toString(keepdice));
                         //keep and ReRoll rest of the dice
-                        dice = host.keepReRollDice(allPlayers[currentPlayerNum - 1], keepdice, dice, fakedice, GameHost.FortuneCard.None);
-
-                        keepReRolling = true;
-                        msg = "[Player " + currentPlayerNum + "]: keeping dice: " + playerInput + ". The rest are being rerolled  \n";
-                        writeToPlayers(msg);
+                        if(isreRollPossible(dice, keepdice,card,host, allPlayers[currentPlayerNum - 1])) {
+                            dice = host.keepReRollDice(allPlayers[currentPlayerNum - 1], keepdice, dice, fakedice, GameHost.FortuneCard.None);
+                            keepReRolling = true;
+                            msg = "[Player " + currentPlayerNum + "]: keeping dice: " + playerInput + ". The rest are being rerolled  \n";
+                            writeToPlayers(msg);
+                        }
 
                     } else if (playerInput.equals("")) {
                         //System.out.println("Continue to scoring");
@@ -293,9 +314,51 @@ public class PirateServer {
         }
     }
 
-    protected static boolean isreRollPossible(GameHost.Dice[] dice, int[] keepdice){
+    protected static boolean isreRollPossible(GameHost.Dice[] dice, int[] keepdice, GameHost.FortuneCard card, GameHost host, Player player){
+        //Check length of keep dice if its 7 or more than there is less than 2 dice left to roll
+        int length = keepdice.length;
+        if(length >= 7){
+            String msg = "Player did not leave 2 or more dice to roll";
+            writeToPlayers(msg);
+            return false;
+        }
 
-    }
+        //Check if the leftover rolling dice is a skull that does not het rolled
+        int numOfSkulls = host.countSkulls(dice);
+        int skullsInKeptDice = 0;
+        for(int i = 0; i < keepdice.length; i++){
+            if(dice[keepdice[i]] == GameHost.Dice.Skull){
+                skullsInKeptDice = skullsInKeptDice + 1;
+            }
+        }
+        //More skulls in count means less dice to roll. This check will see if there is at least 2 dice left to roll
+        String msg = "";
+        if(numOfSkulls > skullsInKeptDice) {
+            int leftoverSkulls = numOfSkulls - skullsInKeptDice;
+            if (card == GameHost.FortuneCard.Sorceress) {
+                if (player.getIsSorceress() == true) {
+                    if ((skullsInKeptDice + leftoverSkulls - 1) >= 7) {
+                        msg = " Only one skull can be re-rolled and there are less then 2 dice trying to be rolled";
+                        writeToPlayers(msg);
+                        return false;
+                    }
+                } else if (player.getIsSorceress() == false) {
+                    if ((skullsInKeptDice + leftoverSkulls) >= 7) {
+                        msg = "Already used Sorceress and re-rolled a Skull.";
+                        msg = msg + "The rest of the skulls cannot be re-rolled and there are less then 2 dice trying to be rolled";
+                        writeToPlayers(msg);
+                        return false;
+                    }
+                }
+            } else if ((skullsInKeptDice + leftoverSkulls) >= 7) {
+                msg = "Skulls cannot be re-rolled and there are less then 2 dice trying to be rolled";
+                writeToPlayers(msg);
+                return false;
+            }
+        }
+
+        return true;
+    }//End of method
 
 
 
