@@ -293,6 +293,10 @@ public class PirateServer {
         }
     }
 
+    protected static boolean isreRollPossible(GameHost.Dice[] dice, int[] keepdice){
+
+    }
+
 
 
 

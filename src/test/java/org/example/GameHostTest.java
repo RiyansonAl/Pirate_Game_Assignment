@@ -572,6 +572,23 @@ class GameHostTest {
         assertEquals(expected, finalResult);
     }
 
+    @Test
+    @DisplayName("Testing If there is 2 or more dice to re-Roll")
+    void testingUserInput2(){
+
+        GameHost.Dice[] dice = {GameHost.Dice.Monkey, GameHost.Dice.Monkey, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Diamond, GameHost.Dice.Sword,
+                GameHost.Dice.Monkey, GameHost.Dice.Skull};
+
+        int[] keepdice = {1,2,3,4};
+
+        boolean finalResult = PirateServer.isreRollPossible(dice, keepdice);
+
+
+        boolean expected = true;
+        assertEquals(expected, finalResult);
+    }
+
 
 
 
