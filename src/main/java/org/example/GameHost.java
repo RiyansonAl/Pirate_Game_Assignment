@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class GameHost {
 
     private Player[] players;
-    private int winningScore = 3000;
+    protected int winningScore = 3000;
     protected boolean[] playerTurnOrder;
 
     protected boolean isWinner;
