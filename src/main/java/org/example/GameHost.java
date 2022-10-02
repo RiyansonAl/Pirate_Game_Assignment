@@ -47,7 +47,7 @@ public class GameHost {
     public FortuneCard drawCard(FortuneCard riggedCard){
         FortuneCard card;
         if (riggedCard == FortuneCard.None){
-            int num = (int) (Math.random()*(8-1)+ 1);
+            int num = (int) (Math.random()*(9-1)+ 1);
             card = drawCardHelper(num);
         } else {
             card = riggedCard;
@@ -83,7 +83,7 @@ public class GameHost {
         if(riggedDice[0] == Dice.None) {
             int num;
             for (int i = 0; i < numOfDice; i++) {
-                num = (int) (Math.random() * (6 - 1) + 1);
+                num = (int) (Math.random() * (7 - 1) + 1);
                 dices[i] = rollDiceHelper(num);
             }
         } else {
@@ -649,7 +649,7 @@ public class GameHost {
         //Random number between 1 and 3
         int numOfSkulls = 0;
         //Random number between 1 and 3
-        int num = (int) (Math.random()*(3-1)+ 1);
+        int num = (int) (Math.random()*(4-1)+ 1);
         //2x2 Skulls card and 2x1 Skulls card
         switch (num){
             case 1:
@@ -674,7 +674,7 @@ public class GameHost {
         //Random number between 1 and 3
         int numOfSwords = 0;
         //Random number between 1 and 3
-        int num = (int) (Math.random()*(3-1)+ 1);
+        int num = (int) (Math.random()*(4-1)+ 1);
         //2x2 Skulls card and 2x1 Skulls card
         switch (num){
             case 1:
