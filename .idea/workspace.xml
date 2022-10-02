@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Test Line 134">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Test Line 139">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" afterDir="false" />
     </list>
@@ -50,22 +50,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139">
-    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144">
     <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -114,6 +99,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
+      <option name="METHOD_NAME" value="acceptanceTestLine144" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -133,16 +134,16 @@
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
+      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
       <item itemvalue="JUnit.GameHostTest" />
-      <item itemvalue="JUnit.GameHostAcceptanceTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
         <item itemvalue="JUnit.GameHostTest" />
-        <item itemvalue="JUnit.GameHostAcceptanceTests" />
       </list>
     </recent_temporary>
   </component>
@@ -154,13 +155,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00040" summary="A-TEST: Acceptance Test Line 48">
-      <created>1664306262448</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1664306262448</updated>
     </task>
     <task id="LOCAL-00041" summary="CODE: Fixed code to pass Acceptance Test Line 48">
       <created>1664306559485</created>
@@ -498,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664740877128</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="A-TEST: Acceptance Test Line 139">
+      <created>1664742214825</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1664742214825</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -513,7 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 106 - 107" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 108" />
     <MESSAGE value="CODE: Wrote code to padd Acceptance Tests Line 108" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 109 - 110" />
@@ -538,6 +538,7 @@
     <MESSAGE value="REFACTOR: Fixed the numbering of the acceptance tests" />
     <MESSAGE value="A-TEST: Acceptance Test Line 131" />
     <MESSAGE value="A-TEST: Acceptance Test Line 134" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Test Line 134" />
+    <MESSAGE value="A-TEST: Acceptance Test Line 139" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Test Line 139" />
   </component>
 </project>
