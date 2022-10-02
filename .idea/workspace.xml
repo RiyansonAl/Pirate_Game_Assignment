@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed the numbering of the acceptance tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Test Line 131">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131">
+  <component name="RunManager" selected="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134">
     <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -83,6 +82,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pirate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
+      <option name="METHOD_NAME" value="acceptanceTestLine134" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
@@ -94,22 +109,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameHostTest.testingUserInput2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pirate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="testingUserInput2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,18 +131,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
+      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
       <item itemvalue="JUnit.GameHostTest" />
-      <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
       <item itemvalue="JUnit.GameHostTest.testingUserInput3" />
       <item itemvalue="JUnit.GameHostAcceptanceTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
         <item itemvalue="JUnit.GameHostTest" />
         <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostTest.testingUserInput3" />
-        <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
       </list>
     </recent_temporary>
   </component>
@@ -155,13 +154,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00038" summary="A-TEST: Acceptance Test Line 46">
-      <created>1664294964785</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1664294964785</updated>
     </task>
     <task id="LOCAL-00039" summary="A-TEST: Acceptance Test Line 47">
       <created>1664301580594</created>
@@ -499,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664733397953</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="A-TEST: Acceptance Test Line 131">
+      <created>1664736981919</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1664736981919</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -514,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="REFACTOR: Small change to logic from last commit" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 103" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 106 - 107" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 108" />
@@ -539,6 +537,7 @@
     <MESSAGE value="CODE: Code for checking there are at least 2 dice to reroll" />
     <MESSAGE value="REFACTOR: Fixed issue rolling for skulls" />
     <MESSAGE value="REFACTOR: Fixed the numbering of the acceptance tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed the numbering of the acceptance tests" />
+    <MESSAGE value="A-TEST: Acceptance Test Line 131" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Test Line 131" />
   </component>
 </project>
