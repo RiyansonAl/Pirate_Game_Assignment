@@ -50,8 +50,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144">
-    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests">
+    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -60,14 +60,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
-      <option name="METHOD_NAME" value="acceptanceTestLine131" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostMultiPlayerAcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -77,8 +76,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
-      <option name="METHOD_NAME" value="acceptanceTestLine134" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,19 +129,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
-      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
+      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest" />
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
       <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
       <item itemvalue="JUnit.GameHostTest" />
+      <item itemvalue="JUnit.GameHostAcceptanceTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostAcceptanceTests" />
+        <item itemvalue="JUnit.GameHostTest" />
+        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
         <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
-        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine134" />
-        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine131" />
-        <item itemvalue="JUnit.GameHostTest" />
       </list>
     </recent_temporary>
   </component>

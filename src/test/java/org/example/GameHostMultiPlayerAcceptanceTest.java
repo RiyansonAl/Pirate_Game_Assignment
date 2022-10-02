@@ -91,9 +91,9 @@ class GameHostMultiPlayerAcceptanceTest {
             System.out.println(msg);
 
             //Create a text file to write the steps to this test
-            File test131 = new File("TestLine131.txt");
+            File test131 = new File("row131.txt");
 
-            FileWriter writer = new FileWriter("TestLine131.txt");
+            FileWriter writer = new FileWriter("row131.txt");
             writer.write(msg);
             writer.close();
 
@@ -194,9 +194,9 @@ class GameHostMultiPlayerAcceptanceTest {
             System.out.println(msg);
 
             //Create a text file to write the steps to this test
-            File test131 = new File("TestLine134.txt");
+            File test131 = new File("row134.txt");
 
-            FileWriter writer = new FileWriter("TestLine134.txt");
+            FileWriter writer = new FileWriter("row134.txt");
             writer.write(msg);
             writer.close();
 
@@ -332,9 +332,9 @@ class GameHostMultiPlayerAcceptanceTest {
             msg = msg + host.displayScores();
 
             //Create a text file to write the steps to this test
-            File test131 = new File("TestLine139.txt");
+            File test131 = new File("row139.txt");
 
-            FileWriter writer = new FileWriter("TestLine139.txt");
+            FileWriter writer = new FileWriter("row139.txt");
             writer.write(msg);
             writer.close();
 
@@ -436,9 +436,9 @@ class GameHostMultiPlayerAcceptanceTest {
             System.out.println(msg);
 
             //Create a text file to write the steps to this test
-            File test131 = new File("TestLine144.txt");
+            File test131 = new File("row144.txt");
 
-            FileWriter writer = new FileWriter("TestLine144.txt");
+            FileWriter writer = new FileWriter("row144.txt");
             writer.write(msg);
             writer.close();
 
