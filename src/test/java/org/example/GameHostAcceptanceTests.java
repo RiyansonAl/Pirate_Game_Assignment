@@ -35,9 +35,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 45")
-    void acceptanceTestLine45(){
-        System.out.println("A-TEST Line 45\n");
+    @DisplayName("Acceptance Test Line 46")
+    void acceptanceTestLine46(){
+        System.out.println("A-TEST Line 46\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -65,9 +65,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 46")
-    void acceptanceTestLine46(){
-        System.out.println("A-TEST Line 46\n");
+    @DisplayName("Acceptance Test Line 47")
+    void acceptanceTestLine47(){
+        System.out.println("A-TEST Line 47\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -95,9 +95,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 47")
-    void acceptanceTestLine47(){
-        System.out.println("A-TEST Line 47\n");
+    @DisplayName("Acceptance Test Line 48")
+    void acceptanceTestLine48(){
+        System.out.println("A-TEST Line 48\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -130,9 +130,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 49")
-    void acceptanceTestLine49(){
-        System.out.println("A-TEST Line 49\n");
+    @DisplayName("Acceptance Test Line 50")
+    void acceptanceTestLine50(){
+        System.out.println("A-TEST Line 50\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -171,9 +171,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 51")
-    void acceptanceTestLine51(){
-        System.out.println("A-TEST: Acceptance Test Line 51\n");
+    @DisplayName("Acceptance Test Line 52")
+    void acceptanceTestLine52(){
+        System.out.println("A-TEST: Acceptance Test Line 52\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -198,9 +198,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 52")
-    void acceptanceTestLine52(){
-        System.out.println("A-TEST: Acceptance Test Line 52\n");
+    @DisplayName("Acceptance Test Line 53")
+    void acceptanceTestLine53(){
+        System.out.println("A-TEST: Acceptance Test Line 53\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -233,9 +233,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 53")
-    void acceptanceTestLine53(){
-        System.out.println("A-TEST: Acceptance Test Line 53\n");
+    @DisplayName("Acceptance Test Line 54")
+    void acceptanceTestLine54(){
+        System.out.println("A-TEST: Acceptance Test Line 54\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -260,9 +260,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 54")
-    void acceptanceTestLine54(){
-        System.out.println("A-TEST: Acceptance Test Line 54\n");
+    @DisplayName("Acceptance Test Line 55")
+    void acceptanceTestLine55(){
+        System.out.println("A-TEST: Acceptance Test Line 55\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -295,9 +295,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 55")
-    void acceptanceTestLine55(){
-        System.out.println("A-TEST: Acceptance Test Line 55\n");
+    @DisplayName("Acceptance Test Line 56")
+    void acceptanceTestLine56(){
+        System.out.println("A-TEST: Acceptance Test Line 56\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -322,9 +322,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 56")
-    void acceptanceTestLine56(){
-        System.out.println("A-TEST: Acceptance Test Line 56\n");
+    @DisplayName("Acceptance Test Line 57")
+    void acceptanceTestLine57(){
+        System.out.println("A-TEST: Acceptance Test Line 57\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -349,9 +349,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 57")
-    void acceptanceTestLine57(){
-        System.out.println("A-TEST: Acceptance Test Line 57\n");
+    @DisplayName("Acceptance Test Line 58")
+    void acceptanceTestLine58(){
+        System.out.println("A-TEST: Acceptance Test Line 58\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -376,9 +376,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 58")
-    void acceptanceTestLine58(){
-        System.out.println("A-TEST Line 58\n");
+    @DisplayName("Acceptance Test Line 59")
+    void acceptanceTestLine59(){
+        System.out.println("A-TEST Line 59\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -417,9 +417,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 59")
-    void acceptanceTestLine59(){
-        System.out.println("A-TEST Line 59\n");
+    @DisplayName("Acceptance Test Line 60")
+    void acceptanceTestLine60(){
+        System.out.println("A-TEST Line 60\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -458,9 +458,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 60")
-    void acceptanceTestLine60(){
-        System.out.println("A-TEST Line 60\n");
+    @DisplayName("Acceptance Test Line 61")
+    void acceptanceTestLine61(){
+        System.out.println("A-TEST Line 61\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -499,9 +499,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 61")
-    void acceptanceTestLine61(){
-        System.out.println("A-TEST: Acceptance Test Line 61\n");
+    @DisplayName("Acceptance Test Line 62")
+    void acceptanceTestLine62(){
+        System.out.println("A-TEST: Acceptance Test Line 62\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -526,9 +526,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 62")
-    void acceptanceTestLine62(){
-        System.out.println("A-TEST: Acceptance Test Line 62\n");
+    @DisplayName("Acceptance Test Line 63")
+    void acceptanceTestLine63(){
+        System.out.println("A-TEST: Acceptance Test Line 63\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -553,33 +553,6 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 63")
-    void acceptanceTestLine63(){
-        System.out.println("A-TEST: Acceptance Test Line 63\n");
-        Player player1 = new Player(1);
-        Player player2 = new Player(2);
-        Player player3 = new Player(3);
-        Player[] players = {player1, player2, player3};
-
-        GameHost host = new GameHost(players);
-
-        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
-        GameHost.Dice[] rolledDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
-                GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
-                GameHost.Dice.Gold, GameHost.Dice.Gold};
-
-        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
-
-        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
-
-        System.out.println(host.endTurn(player1));
-        System.out.println("\n\n\n");
-
-        int score = 5400;
-        assertEquals(score, ObtainedScore);
-    }
-
-    @Test
     @DisplayName("Acceptance Test Line 64")
     void acceptanceTestLine64(){
         System.out.println("A-TEST: Acceptance Test Line 64\n");
@@ -590,7 +563,7 @@ class GameHostAcceptanceTests {
 
         GameHost host = new GameHost(players);
 
-        GameHost.FortuneCard card = GameHost.FortuneCard.Diamond;
+        GameHost.FortuneCard card = GameHost.FortuneCard.Gold;
         GameHost.Dice[] rolledDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
                 GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
                 GameHost.Dice.Gold, GameHost.Dice.Gold};
@@ -617,6 +590,33 @@ class GameHostAcceptanceTests {
 
         GameHost host = new GameHost(players);
 
+        GameHost.FortuneCard card = GameHost.FortuneCard.Diamond;
+        GameHost.Dice[] rolledDice = {GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Gold, GameHost.Dice.Gold, GameHost.Dice.Gold,
+                GameHost.Dice.Gold, GameHost.Dice.Gold};
+
+        GameHost.Dice[] firstRoll = host.playerTurnStart(player1, card, rolledDice);
+
+        int ObtainedScore = host.calculateScore(player1, card, firstRoll);
+
+        System.out.println(host.endTurn(player1));
+        System.out.println("\n\n\n");
+
+        int score = 5400;
+        assertEquals(score, ObtainedScore);
+    }
+
+    @Test
+    @DisplayName("Acceptance Test Line 66")
+    void acceptanceTestLine66(){
+        System.out.println("A-TEST: Acceptance Test Line 66\n");
+        Player player1 = new Player(1);
+        Player player2 = new Player(2);
+        Player player3 = new Player(3);
+        Player[] players = {player1, player2, player3};
+
+        GameHost host = new GameHost(players);
+
         GameHost.FortuneCard card = GameHost.FortuneCard.Captain;
         GameHost.Dice[] rolledDice = {GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Sword,
                 GameHost.Dice.Sword, GameHost.Dice.Sword, GameHost.Dice.Sword,
@@ -634,9 +634,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 66")
-    void acceptanceTestLine66(){
-        System.out.println("A-TEST Line 66\n");
+    @DisplayName("Acceptance Test Line 67")
+    void acceptanceTestLine67(){
+        System.out.println("A-TEST Line 67\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -675,9 +675,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 67")
-    void acceptanceTestLine67(){
-        System.out.println("A-TEST: Acceptance Test Line 67\n");
+    @DisplayName("Acceptance Test Line 68")
+    void acceptanceTestLine68(){
+        System.out.println("A-TEST: Acceptance Test Line 68\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -710,9 +710,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 68")
-    void acceptanceTestLine68(){
-        System.out.println("A-TEST: Acceptance Test Line 68\n");
+    @DisplayName("Acceptance Test Line 69")
+    void acceptanceTestLine69(){
+        System.out.println("A-TEST: Acceptance Test Line 69\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -745,9 +745,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 69")
-    void acceptanceTestLine69(){
-        System.out.println("A-TEST: Acceptance Test Line 69\n");
+    @DisplayName("Acceptance Test Line 70")
+    void acceptanceTestLine70(){
+        System.out.println("A-TEST: Acceptance Test Line 70\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -780,9 +780,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 70")
-    void acceptanceTestLine70(){
-        System.out.println("A-TEST: Acceptance Test Line 70\n");
+    @DisplayName("Acceptance Test Line 71")
+    void acceptanceTestLine71(){
+        System.out.println("A-TEST: Acceptance Test Line 71\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -815,9 +815,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 71")
-    void acceptanceTestLine71(){
-        System.out.println("A-TEST: Acceptance Test Line 71\n");
+    @DisplayName("Acceptance Test Line 72")
+    void acceptanceTestLine72(){
+        System.out.println("A-TEST: Acceptance Test Line 72\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -842,9 +842,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 76")
-    void acceptanceTestLine76(){
-        System.out.println("A-TEST: Acceptance Test Line 76\n");
+    @DisplayName("Acceptance Test Line 77")
+    void acceptanceTestLine77(){
+        System.out.println("A-TEST: Acceptance Test Line 77\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -880,9 +880,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 77")
-    void acceptanceTestLine77(){
-        System.out.println("A-TEST: Acceptance Test Line 77\n");
+    @DisplayName("Acceptance Test Line 78")
+    void acceptanceTestLine78(){
+        System.out.println("A-TEST: Acceptance Test Line 78\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -925,9 +925,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 78")
-    void acceptanceTestLine78(){
-        System.out.println("A-TEST: Acceptance Test Line 78\n");
+    @DisplayName("Acceptance Test Line 79")
+    void acceptanceTestLine79(){
+        System.out.println("A-TEST: Acceptance Test Line 79\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -970,9 +970,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 81")
-    void acceptanceTestLine81(){
-        System.out.println("A-TEST: Acceptance Test Line 81\n");
+    @DisplayName("Acceptance Test Line 82")
+    void acceptanceTestLine82(){
+        System.out.println("A-TEST: Acceptance Test Line 82\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -997,9 +997,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 82")
-    void acceptanceTestLine82(){
-        System.out.println("A-TEST: Acceptance Test Line 82\n");
+    @DisplayName("Acceptance Test Line 83")
+    void acceptanceTestLine83(){
+        System.out.println("A-TEST: Acceptance Test Line 83\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1042,9 +1042,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 83")
-    void acceptanceTestLine83(){
-        System.out.println("A-TEST: Acceptance Test Line 83\n");
+    @DisplayName("Acceptance Test Line 84")
+    void acceptanceTestLine84(){
+        System.out.println("A-TEST: Acceptance Test Line 84\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1084,9 +1084,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 86")
-    void acceptanceTestLine86(){
-        System.out.println("A-TEST: Acceptance Test Line 86\n");
+    @DisplayName("Acceptance Test Line 87")
+    void acceptanceTestLine87(){
+        System.out.println("A-TEST: Acceptance Test Line 87\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1126,9 +1126,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 91")
-    void acceptanceTestLine91(){
-        System.out.println("A-TEST: Acceptance Test Line 91\n");
+    @DisplayName("Acceptance Test Line 92")
+    void acceptanceTestLine92(){
+        System.out.println("A-TEST: Acceptance Test Line 92\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1168,9 +1168,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 97")
-    void acceptanceTestLine97(){
-        System.out.println("A-TEST: Acceptance Test Line 97\n");
+    @DisplayName("Acceptance Test Line 98")
+    void acceptanceTestLine98(){
+        System.out.println("A-TEST: Acceptance Test Line 98\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1195,9 +1195,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 98")
-    void acceptanceTestLine98(){
-        System.out.println("A-TEST: Acceptance Test Line 98\n");
+    @DisplayName("Acceptance Test Line 99")
+    void acceptanceTestLine99(){
+        System.out.println("A-TEST: Acceptance Test Line 99\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1222,9 +1222,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 99")
-    void acceptanceTestLine99(){
-        System.out.println("A-TEST: Acceptance Test Line 99\n");
+    @DisplayName("Acceptance Test Line 100")
+    void acceptanceTestLine100(){
+        System.out.println("A-TEST: Acceptance Test Line 100\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1249,9 +1249,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 100")
-    void acceptanceTestLine100(){
-        System.out.println("A-TEST: Acceptance Test Line 100\n");
+    @DisplayName("Acceptance Test Line 101")
+    void acceptanceTestLine101(){
+        System.out.println("A-TEST: Acceptance Test Line 101\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1287,9 +1287,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 103")
-    void acceptanceTestLine103(){
-        System.out.println("A-TEST: Acceptance Test Line 103\n");
+    @DisplayName("Acceptance Test Line 104")
+    void acceptanceTestLine104(){
+        System.out.println("A-TEST: Acceptance Test Line 104\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1314,9 +1314,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 106")
-    void acceptanceTestLine106(){
-        System.out.println("A-TEST: Acceptance Test Line 106\n");
+    @DisplayName("Acceptance Test Line 107")
+    void acceptanceTestLine107(){
+        System.out.println("A-TEST: Acceptance Test Line 107\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1344,9 +1344,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 107")
-    void acceptanceTestLine107(){
-        System.out.println("A-TEST: Acceptance Test Line 107\n");
+    @DisplayName("Acceptance Test Line 108")
+    void acceptanceTestLine108(){
+        System.out.println("A-TEST: Acceptance Test Line 108\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1374,9 +1374,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 108")
-    void acceptanceTestLine108(){
-        System.out.println("A-TEST: Acceptance Test Line 108\n");
+    @DisplayName("Acceptance Test Line 109")
+    void acceptanceTestLine109(){
+        System.out.println("A-TEST: Acceptance Test Line 109\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1432,9 +1432,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 109")
-    void acceptanceTestLine109(){
-        System.out.println("A-TEST: Acceptance Test Line 109\n");
+    @DisplayName("Acceptance Test Line 110")
+    void acceptanceTestLine110(){
+        System.out.println("A-TEST: Acceptance Test Line 110\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1477,9 +1477,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 110")
-    void acceptanceTestLine110(){
-        System.out.println("A-TEST: Acceptance Test Line 110\n");
+    @DisplayName("Acceptance Test Line 111")
+    void acceptanceTestLine111(){
+        System.out.println("A-TEST: Acceptance Test Line 111\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1531,9 +1531,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 113")
-    void acceptanceTestLine113(){
-        System.out.println("A-TEST: Acceptance Test Line 113\n");
+    @DisplayName("Acceptance Test Line 114")
+    void acceptanceTestLine114(){
+        System.out.println("A-TEST: Acceptance Test Line 114\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1568,9 +1568,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 114")
-    void acceptanceTestLine114(){
-        System.out.println("A-TEST: Acceptance Test Line 114\n");
+    @DisplayName("Acceptance Test Line 115")
+    void acceptanceTestLine115(){
+        System.out.println("A-TEST: Acceptance Test Line 115\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1605,9 +1605,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 115")
-    void acceptanceTestLine115(){
-        System.out.println("A-TEST: Acceptance Test Line 115\n");
+    @DisplayName("Acceptance Test Line 116")
+    void acceptanceTestLine116(){
+        System.out.println("A-TEST: Acceptance Test Line 116\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1642,9 +1642,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 116")
-    void acceptanceTestLine116(){
-        System.out.println("A-TEST: Acceptance Test Line 116\n");
+    @DisplayName("Acceptance Test Line 117")
+    void acceptanceTestLine117(){
+        System.out.println("A-TEST: Acceptance Test Line 117\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1679,9 +1679,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 117")
-    void acceptanceTestLine117(){
-        System.out.println("A-TEST: Acceptance Test Line 117\n");
+    @DisplayName("Acceptance Test Line 118")
+    void acceptanceTestLine118(){
+        System.out.println("A-TEST: Acceptance Test Line 118\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1709,9 +1709,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 118")
-    void acceptanceTestLine118(){
-        System.out.println("A-TEST: Acceptance Test Line 118\n");
+    @DisplayName("Acceptance Test Line 119")
+    void acceptanceTestLine119(){
+        System.out.println("A-TEST: Acceptance Test Line 119\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1745,9 +1745,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 120")
-    void acceptanceTestLine120(){
-        System.out.println("A-TEST: Acceptance Test Line 120\n");
+    @DisplayName("Acceptance Test Line 121")
+    void acceptanceTestLine121(){
+        System.out.println("A-TEST: Acceptance Test Line 121\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1775,9 +1775,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 121")
-    void acceptanceTestLine121(){
-        System.out.println("A-TEST: Acceptance Test Line 121\n");
+    @DisplayName("Acceptance Test Line 122")
+    void acceptanceTestLine122(){
+        System.out.println("A-TEST: Acceptance Test Line 122\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1814,9 +1814,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 123")
-    void acceptanceTestLine123(){
-        System.out.println("A-TEST: Acceptance Test Line 123\n");
+    @DisplayName("Acceptance Test Line 124")
+    void acceptanceTestLine124(){
+        System.out.println("A-TEST: Acceptance Test Line 124\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);
@@ -1844,9 +1844,9 @@ class GameHostAcceptanceTests {
     }
 
     @Test
-    @DisplayName("Acceptance Test Line 124")
-    void acceptanceTestLine124(){
-        System.out.println("A-TEST: Acceptance Test Line 124\n");
+    @DisplayName("Acceptance Test Line 125")
+    void acceptanceTestLine125(){
+        System.out.println("A-TEST: Acceptance Test Line 125\n");
         Player player1 = new Player(1);
         Player player2 = new Player(2);
         Player player3 = new Player(3);

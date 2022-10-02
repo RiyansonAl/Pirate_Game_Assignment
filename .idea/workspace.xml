@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="CODE: Code for checking there are at least 2 dice to reroll">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostTest.java" afterDir="false" />
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed issue rolling for skulls">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostAcceptanceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/Users/Riyanson/Documents/School/Masters/Fall 2022/COMP 5104/Assignments/Assignment 1/Download Repo/Pirate_Game_Assignment-master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -48,7 +50,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostTest.testingUserInput3">
+  <component name="RunManager" selected="JUnit.GameHostTest">
     <configuration name="PirateClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.PirateClient" />
       <module name="Pirate" />
@@ -62,7 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.finalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -71,14 +73,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="finalWinner" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest.testingUserInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pirate" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +89,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="METHOD_NAME" value="testingUserInput" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,18 +128,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.PirateClient" />
-      <item itemvalue="JUnit.GameHostTest.finalWinner" />
-      <item itemvalue="JUnit.GameHostTest.testingUserInput" />
+      <item itemvalue="JUnit.GameHostTest" />
       <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
       <item itemvalue="JUnit.GameHostTest.testingUserInput3" />
+      <item itemvalue="JUnit.GameHostAcceptanceTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameHostTest" />
+        <item itemvalue="JUnit.GameHostAcceptanceTests" />
         <item itemvalue="JUnit.GameHostTest.testingUserInput3" />
         <item itemvalue="JUnit.GameHostTest.testingUserInput2" />
         <item itemvalue="Application.PirateClient" />
-        <item itemvalue="JUnit.GameHostTest.testingUserInput" />
-        <item itemvalue="JUnit.GameHostTest.finalWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -151,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00036" summary="A-TEST: Acceptance Test Line 45">
-      <created>1664294641578</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1664294641578</updated>
     </task>
     <task id="LOCAL-00037" summary="A-TEST: Acceptance Test Line 45">
       <created>1664294757364</created>
@@ -495,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664724102775</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="REFACTOR: Fixed issue rolling for skulls">
+      <created>1664724574614</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1664724574615</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 99-100" />
     <MESSAGE value="CODE: Code to pass Acceptance Test Line 100" />
     <MESSAGE value="REFACTOR: Small change to logic from last commit" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 103" />
@@ -535,6 +534,7 @@
     <MESSAGE value="CODE: Wrote code to pass unit test for testing if the user input is valid" />
     <MESSAGE value="U-TEST: Testing to see if there is at least 2 dice to reroll" />
     <MESSAGE value="CODE: Code for checking there are at least 2 dice to reroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="CODE: Code for checking there are at least 2 dice to reroll" />
+    <MESSAGE value="REFACTOR: Fixed issue rolling for skulls" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed issue rolling for skulls" />
   </component>
 </project>
