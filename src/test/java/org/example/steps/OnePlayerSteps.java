@@ -66,9 +66,14 @@ public class OnePlayerSteps {
 
     @Then("I die and get a score of {int}")
     public void iDieAndGetAScoreOf(int score) {
-        System.out.println("Printing the string" + score);
-        host.endTurn(player1);
-        assertEquals(score, host.calculateScore(currentPlayer, card, roll));
+        boolean[] playerTurnPhase = host.getPlayerTurnPhase(currentPlayer);
+        int obtainScore = 0;
+        if(playerTurnPhase[1] == true){
+            obtainScore = host.calculateScore(currentPlayer, card, roll);
+        }
+        System.out.println("Printing the string " + score);
+        System.out.println(host.endTurn(player1));
+        assertEquals(score, obtainScore);
 
     }
 
@@ -108,7 +113,7 @@ public class OnePlayerSteps {
         int[] keepDice = new int[keepDiceStringSpilt.length];
 
         for (int i = 0; i < keepDiceStringSpilt.length; i++){
-            keepDice[i] = Integer.valueOf(keepDiceStringSpilt[i]);
+            keepDice[i] = (Integer.valueOf(keepDiceStringSpilt[i]) - 1);
         }
         System.out.println(Arrays.toString(keepDice));
 

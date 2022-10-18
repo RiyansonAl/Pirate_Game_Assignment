@@ -743,7 +743,7 @@ public class GameHost {
         player.setRoll(isRolled);
         player.setUpdateScore(isUpdatedScore);
     }
-    protected boolean[] getPlayerTurnPhase(Player player){
+    public boolean[] getPlayerTurnPhase(Player player){
         return new boolean[]{player.getRoll(), player.getUpdateScore()};
     }
     protected int getCurrentPlayerTurn(){

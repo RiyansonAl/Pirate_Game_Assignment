@@ -25,9 +25,18 @@ Feature: Tests for One player and check score
 
   Scenario:Acceptance Test Line 40
     Given that the host is initialized
-    When I roll "Skull, Parrot, Parrot, Parrot, Sword, Parrot, Sword, Sword"
+    When I roll "Skull, Parrot, Parrot, Parrot, Parrot, Sword, Sword, Sword"
     And  I draw a "Gold" card
     And Player 1 starts there turn
     And Player 1 keeps dice "1,2,3,4,5" and re-rolls the rest and gets "Skull, Parrot, Parrot, Parrot, Parrot, Skull, Monkey, Monkey"
     And Player 1 keeps dice "1,2,3,4,5,6" and re-rolls the rest and gets "Skull, Parrot, Parrot, Parrot, Parrot, Skull, Skull, Monkey"
     Then I die and get a score of 0
+
+  Scenario:Acceptance Test Line 42
+    Given that the host is initialized
+    When I roll "Skull, Parrot, Parrot, Sword, Sword, Sword, Gold, Gold"
+    And  I draw a "Gold" card
+    And Player 1 starts there turn
+    And Player 1 keeps dice "1,4,5,6,7,8" and re-rolls the rest and gets "Skull, Sword, Sword, Sword, Gold, Gold, Gold, Gold"
+    And Player 1 keeps dice "1,5,6,7,8" and re-rolls the rest and gets "Skull, Gold, Gold, Gold, Gold, Gold, Gold, Gold"
+    Then I die and get a score of 4800
