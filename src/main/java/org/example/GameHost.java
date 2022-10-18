@@ -78,6 +78,29 @@ public class GameHost {
         }
     }
 
+    public FortuneCard getCardByName(String name){
+        switch(name){
+            case "TreasureChest":
+                return FortuneCard.TreasureChest;
+            case "Captain":
+                return FortuneCard.Captain;
+            case "Sorceress":
+                return FortuneCard.Sorceress;
+            case "SeaBattle":
+                return FortuneCard.SeaBattle;
+            case "Gold":
+                return FortuneCard.Gold;
+            case "Diamond":
+                return FortuneCard.Diamond;
+            case "MonkeyBusiness":
+                return FortuneCard.MonkeyBusiness;
+            case "Skulls":
+                return FortuneCard.Skulls;
+            default:
+                return FortuneCard.Skulls;
+        }
+    }
+
     public Dice[] rollDice(int numOfDice, Dice[] riggedDice){
         Dice[] dices = new Dice[numOfDice];
         if(riggedDice[0] == Dice.None) {
@@ -110,6 +133,27 @@ public class GameHost {
         }
 
     }
+
+    public Dice getRollByName(String name){
+        switch(name) {
+            case "Monkey":
+                return Dice.Monkey;
+            case "Parrot":
+                return Dice.Parrot;
+            case "Gold":
+                return Dice.Gold;
+            case "Diamond":
+                return Dice.Diamond;
+            case "Sword":
+                return Dice.Sword;
+            case "Skull":
+                return Dice.Skull;
+            default:
+                return Dice.Skull;
+        }
+
+    }
+
     protected void updateScore(Player player, int score){
         player.updateScore(score);
     }
@@ -245,7 +289,7 @@ public class GameHost {
         return winnerOutput;
     }
 
-    protected Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, FortuneCard card){
+    public Dice[] keepReRollDice(Player player, int[] keepDice, Dice[] preDice, Dice[] riggedDice, FortuneCard card){
         Dice[] diceSet = new Dice[preDice.length];
         //Give default value to the new Dice set
         for(int i = 0; i < diceSet.length; i++){
@@ -348,7 +392,7 @@ public class GameHost {
         return diceSet;
     }
 
-    protected int calculateScore(Player player, FortuneCard card, Dice[] rolledDice){
+    public int calculateScore(Player player, FortuneCard card, Dice[] rolledDice){
         int score = 0;
 
 
@@ -540,7 +584,7 @@ public class GameHost {
         return score;
     }
 
-    protected Dice[] playerTurnStart(Player player, FortuneCard riggedCard, Dice[] riggedDice){
+    public Dice[] playerTurnStart(Player player, FortuneCard riggedCard, Dice[] riggedDice){
         //Roll the dice
         Dice[] firstRoll = rollDice(8, riggedDice);
         FortuneCard card = drawCard(riggedCard);
@@ -603,7 +647,7 @@ public class GameHost {
         return firstRoll;
     }
 
-    protected String endTurn(Player player){
+    public String endTurn(Player player){
         //Only enter this method if player is done turn and done rolling and score is updated
         String msg = "";
 

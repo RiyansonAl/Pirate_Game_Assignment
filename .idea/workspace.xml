@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: Acceptance Test Line 139">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="REFACTOR: Fixed the names for the multi-player output files">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/RunnerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/OnePlayerSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameHostMultiPlayerAcceptanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -27,121 +31,150 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2EvGvDjpApvKsoOoGq6oRXmcEaU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/Users/Riyanson/Documents/School/Masters/Fall 2022/COMP 5104/Assignments/Assignment 1/Download Repo/Pirate_Game_Assignment-master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Users/Riyanson/Documents/School/Masters/Fall 2022/COMP 5104/Assignments/Assignment 1/Download Repo/Pirate_Game_Assignment-master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Riyanson\Documents\School\Masters\Fall 2022\COMP 5104\Assignments\Assignment 1\Pirate Game JUnit\Pirate\src\test\java\org\example\features" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameHostAcceptanceTests">
-    <configuration name="GameHostAcceptanceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: OnePlayerCucumber (1)">
+    <configuration name="Feature: OnePlayerCucumber (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: OnePlayerCucumber" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostAcceptanceTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostMultiPlayerAcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 38" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 38$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 38$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 38" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 39" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 39$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 39$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 39" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
-      <option name="METHOD_NAME" value="acceptanceTestLine139" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 40" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 40$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 40$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 40" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostMultiPlayerAcceptanceTest" />
-      <option name="METHOD_NAME" value="acceptanceTestLine144" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameHostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Die with 3 skulls" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="NAME_FILTER" value="^Die with 3 skulls$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Die with 3 skulls$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Die with 3 skulls" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GameHostTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest" />
-      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
-      <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
-      <item itemvalue="JUnit.GameHostTest" />
-      <item itemvalue="JUnit.GameHostAcceptanceTests" />
+      <item itemvalue="Cucumber Java.Feature: OnePlayerCucumber (1)" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 38" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 39" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 40" />
+      <item itemvalue="Cucumber Java.Scenario: Die with 3 skulls" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameHostAcceptanceTests" />
-        <item itemvalue="JUnit.GameHostTest" />
-        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest" />
-        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine144" />
-        <item itemvalue="JUnit.GameHostMultiPlayerAcceptanceTest.acceptanceTestLine139" />
+        <item itemvalue="Cucumber Java.Feature: OnePlayerCucumber (1)" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 40" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 39" />
+        <item itemvalue="Cucumber Java.Scenario: Die with 3 skulls" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 38" />
       </list>
     </recent_temporary>
   </component>
@@ -153,20 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00041" summary="CODE: Fixed code to pass Acceptance Test Line 48">
-      <created>1664306559485</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1664306559485</updated>
-    </task>
-    <task id="LOCAL-00042" summary="A-TEST: Acceptance Test Line 51">
-      <created>1664313841444</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1664313841444</updated>
     </task>
     <task id="LOCAL-00043" summary="A-TEST: Acceptance Test Line 52">
       <created>1664314101404</created>
@@ -497,7 +516,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664742214825</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="A-TEST: Acceptance Test Line 144">
+      <created>1664747147432</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1664747147432</updated>
+    </task>
+    <task id="LOCAL-00091" summary="REFACTOR: Fixed the names for the multi-player output files">
+      <created>1664747358092</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1664747358092</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -512,8 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 108" />
-    <MESSAGE value="CODE: Wrote code to padd Acceptance Tests Line 108" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 109 - 110" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 113 - 115" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 116" />
@@ -537,6 +568,8 @@
     <MESSAGE value="A-TEST: Acceptance Test Line 131" />
     <MESSAGE value="A-TEST: Acceptance Test Line 134" />
     <MESSAGE value="A-TEST: Acceptance Test Line 139" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: Acceptance Test Line 139" />
+    <MESSAGE value="A-TEST: Acceptance Test Line 144" />
+    <MESSAGE value="REFACTOR: Fixed the names for the multi-player output files" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR: Fixed the names for the multi-player output files" />
   </component>
 </project>
