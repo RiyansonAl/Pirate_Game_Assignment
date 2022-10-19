@@ -382,10 +382,10 @@ public class GameHost {
                 originalKeepDice[i] = diceSet[i];
             }
             diceSet = originalKeepDice;
-            player.setScoreBreakDown("(3 or more skulls with Treasure Chest card score based on kept dice)  ");
+            player.setScoreBreakDown("(I Die with 3 or more skulls, however, with Treasure Chest card score based on kept dice)  ");
         } else if((numOfSkulls >= 3) && (card != FortuneCard.TreasureChest)){
             playerTurnPhase(player, false, false);
-            player.setScoreBreakDown("3 or more skulls score this turn is 0");
+            player.setScoreBreakDown("I Die with 3 or more skulls, however, score this turn is 0");
         }
         //Debug line
         System.out.println(Arrays.toString(diceSet));
@@ -632,6 +632,10 @@ public class GameHost {
             }
             player.updateScore(score);
             playerTurnPhase(player, false, false);
+        } else if ((numOfSkulls == 3) && (card == FortuneCard.Sorceress)) {
+            //Do Nothing since one of the skulls can still be reRolled
+            playerTurnPhase(player, true, true);
+
         } else if (numOfSkulls == 3) {
             //End Players Turn and Give score of Zero for Turn
             playerTurnPhase(player, false, false);

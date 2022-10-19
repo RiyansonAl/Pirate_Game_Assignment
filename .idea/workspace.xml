@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the acceptance test for line 42">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the acceptance tests for lines 44-64">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GameHost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/OnePlayerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/OnePlayerSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,16 +59,16 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Acceptance Test Line 64">
-    <configuration name="Scenario: Acceptance Test Line 60" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Acceptance Test Line 91">
+    <configuration name="Scenario: Acceptance Test Line 79" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
       <option name="GLUE" value="org.example.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 60$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 60$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 60" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 79$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 79$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 79" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -78,15 +80,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Acceptance Test Line 61" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 84" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
       <option name="GLUE" value="org.example.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 61$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 61$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 61" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 84$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 84$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 84" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -98,15 +100,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Acceptance Test Line 62" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 89" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
       <option name="GLUE" value="org.example.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 62$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 62$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 62" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 89$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 89$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 89" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -118,15 +120,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Acceptance Test Line 63" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 90" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
       <option name="GLUE" value="org.example.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 63$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 63$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 63" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 90$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 90$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 90" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -138,15 +140,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Acceptance Test Line 64" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Acceptance Test Line 91" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/OnePlayerCucumber.feature" />
       <option name="GLUE" value="org.example.steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 64$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 64$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 64" />
+      <option name="NAME_FILTER" value="^Acceptance Test Line 91$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 91$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 91" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -159,19 +161,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 60" />
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 61" />
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 62" />
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 63" />
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 64" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 79" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 84" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 89" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 90" />
+      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 91" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 64" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 63" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 62" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 61" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 60" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 91" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 90" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 89" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 84" />
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 79" />
       </list>
     </recent_temporary>
   </component>
@@ -183,13 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00045" summary="A-TEST: Acceptance Tests Line 55 - 57">
-      <created>1664332426692</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1664332426692</updated>
     </task>
     <task id="LOCAL-00046" summary="A-TEST: Acceptance Tests Line 58 - 59">
       <created>1664333508873</created>
@@ -527,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666064753311</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="A-TEST: wrote the acceptance tests for lines 44-64">
+      <created>1666112029085</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1666112029085</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -542,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="A-TEST: Acceptance Tests Line 116" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 117-118" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 120-121" />
     <MESSAGE value="A-TEST: Acceptance Tests Line 123-124" />
@@ -567,6 +568,7 @@
     <MESSAGE value="REFACTOR: Fixed the names for the multi-player output files" />
     <MESSAGE value="CODE: Added Cucumber to the project and wrote the acceptance tests for lines 37-40" />
     <MESSAGE value="A-TEST: wrote the acceptance test for line 42" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the acceptance test for line 42" />
+    <MESSAGE value="A-TEST: wrote the acceptance tests for lines 44-64" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the acceptance tests for lines 44-64" />
   </component>
 </project>

@@ -68,6 +68,7 @@ public class OnePlayerSteps {
     public void iDieAndGetAScoreOf(int score) {
         boolean[] playerTurnPhase = host.getPlayerTurnPhase(currentPlayer);
         int obtainScore = 0;
+        System.out.println("PlayerTurnPhase = " + playerTurnPhase[1] );
         if(playerTurnPhase[1] == true){
             obtainScore = host.calculateScore(currentPlayer, card, roll);
         }
@@ -120,5 +121,18 @@ public class OnePlayerSteps {
 
         roll = host.keepReRollDice(currentPlayer, keepDice, preDice, gotRoll, card);
 
+    }
+
+    @Then("I get a score of {int}")
+    public void iGetAScoreOf(int score) {
+        boolean[] playerTurnPhase = host.getPlayerTurnPhase(currentPlayer);
+        int obtainScore = 0;
+        System.out.println("PlayerTurnPhase = " + playerTurnPhase[1] );
+        if(playerTurnPhase[1] == true){
+            obtainScore = host.calculateScore(currentPlayer, card, roll);
+        }
+        System.out.println("Printing the string " + score);
+        System.out.println(host.endTurn(player1));
+        assertEquals(score, obtainScore);
     }
 }
