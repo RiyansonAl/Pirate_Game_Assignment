@@ -760,7 +760,7 @@ public class GameHost {
         return playerNum;
     }
 
-    protected Dice[] skullIsland(Player player, FortuneCard card, Dice[] roll, Dice[] riggiedDice){
+    public Dice[] skullIsland(Player player, FortuneCard card, Dice[] roll, Dice[] riggiedDice){
         int numOfSkulls = countSkulls(roll);
         //if the card is a skulls card, add the number of skulls from the card to the number of skulls rolled
         int skullsCard = 0;

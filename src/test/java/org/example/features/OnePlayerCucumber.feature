@@ -278,3 +278,129 @@ Feature: Tests for One player and check score
     And  I draw a "Gold" card
     And Player 1 starts there turn
     Then I get a score of 1000
+
+  Scenario: Acceptance Test Line 92
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Monkey, Sword, Parrot, Parrot, Gold"
+    And  Player 1 draws a "SeaBattle" card with "2 Swords"
+    And Player 1 starts there turn
+    And Player 1 keeps dice "1,2,3,4,5,8" and re-rolls the rest and gets "Monkey, Monkey, Monkey, Monkey, Sword, Gold, Sword, Gold"
+    Then I get a score of 1200
+
+  Scenario: Acceptance Test Line 95
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Parrot, Gold, Gold, Diamond, Diamond, Diamond"
+    And  I draw a "MonkeyBusiness" card
+    And Player 1 starts there turn
+    Then I get a score of 1200
+
+  Scenario: Acceptance Test Line 98
+    Given that the host is initialized
+    When I roll "Skulls, Sword, Sword, Sword, Sword, Sword, Sword, Sword"
+    And  Player 1 draws a "Skulls" card with "2 Skulls"
+    And Player 1 starts there turn
+    Then I die and get a score of 0
+
+  Scenario: Acceptance Test Line 99
+    Given that the host is initialized
+    When I roll "Skulls, Skulls, Sword, Sword, Sword, Sword, Sword, Sword"
+    And  Player 1 draws a "Skulls" card with "1 Skulls"
+    And Player 1 starts there turn
+    Then I die and get a score of 0
+
+  Scenario: Acceptance Test Line 100
+    Given that the host is initialized
+    When I roll "Skulls, Skulls, Parrot, Parrot, Parrot, Monkey, Monkey, Monkey"
+    And  Player 1 draws a "Skulls" card with "2 Skulls"
+    And Player 1 starts there turn
+    And Player 1 enters Skull island and rolls "Skulls, Skulls, Skulls, Skulls, Sword, Monkey, Monkey, Monkey"
+    And Player 1 enters Skull island and rolls "Skulls, Skulls, Skulls, Skulls, Sword, Skulls, Skulls, Skulls"
+    Then Player 1 exits Skull island and subtracts -900 to each other player's score
+
+  Scenario: Acceptance Test Line 102
+    Given that the host is initialized
+    When I roll "Skulls, Skulls, Skulls, Skulls, Skulls, Monkey, Monkey, Monkey"
+    And  I draw a "Captain" card
+    And Player 1 starts there turn
+    And Player 1 enters Skull island and rolls "Skulls, Skulls, Skulls, Skulls, Skulls, Skulls, Skulls, Gold"
+    Then Player 1 exits Skull island and subtracts -1400 to each other player's score
+
+  Scenario: Acceptance Test Line 103
+    Given that the host is initialized
+    When I roll "Skulls, Skulls, Skulls, Sword, Sword, Sword, Sword, Sword"
+    And  Player 1 draws a "Skulls" card with "2 Skulls"
+    And Player 1 starts there turn
+    And Player 1 enters Skull island and rolls "Skulls, Skulls, Skulls, Gold, Gold, Gold, Gold, Gold"
+    Then Player 1 exits Skull island and subtracts -500 to each other player's score
+
+  Scenario: Acceptance Test Line 106
+    Given that the host is initialized
+    And Player 1 has 500 points
+    When I roll "Monkey, Monkey, Monkey, Monkey, Skulls, Skulls, Skulls, Sword"
+    And  Player 1 draws a "SeaBattle" card with "2 Swords"
+    And Player 1 starts there turn
+    Then I die and get a score of 200
+
+  Scenario: Acceptance Test Line 107
+    Given that the host is initialized
+    And Player 1 has 600 points
+    When I roll "Sword, Sword, Skulls, Skulls, Parrot, Parrot, Parrot, Parrot"
+    And  Player 1 draws a "SeaBattle" card with "3 Swords"
+    And Player 1 starts there turn
+    And Player 1 keeps dice "1,2,3,4" and re-rolls the rest and gets "Sword, Sword, Skulls, Skulls, Skulls, Skulls, Skulls, Skulls"
+    Then I die and get a score of 100
+
+  Scenario: Acceptance Test Line 108
+    Given that the host is initialized
+    And Player 1 has 1100 points
+    When I roll "Monkey, Monkey, Skulls, Skulls, Skulls, Sword, Sword, Sword"
+    And  Player 1 draws a "SeaBattle" card with "4 Swords"
+    And Player 1 starts there turn
+    Then I die and get a score of 100
+
+  Scenario: Acceptance Test Line 109
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Sword, Sword, Gold, Parrot, Parrot"
+    And  Player 1 draws a "SeaBattle" card with "2 Swords"
+    And Player 1 starts there turn
+    Then I die and get a score of 500
+
+  Scenario: Acceptance Test Line 110
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Monkey, Sword, Skulls, Parrot, Parrot"
+    And  Player 1 draws a "SeaBattle" card with "2 Swords"
+    And Player 1 starts there turn
+    And Player 1 keeps dice "1,2,3,4,5,6" and re-rolls the rest and gets "Monkey, Monkey, Monkey, Monkey, Sword, Skulls, Sword, Skulls"
+    Then I die and get a score of 500
+
+  Scenario: Acceptance Test Line 112
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Sword, Sword, Sword, Sword, Skulls"
+    And  Player 1 draws a "SeaBattle" card with "3 Swords"
+    And Player 1 starts there turn
+    Then I die and get a score of 800
+
+  Scenario: Acceptance Test Line 113
+    Given that the host is initialized
+    And Player 1 has 800 points
+    When I roll "Monkey, Monkey, Monkey, Monkey, Sword, Sword, Skulls, Skulls"
+    And  Player 1 draws a "SeaBattle" card with "3 Swords"
+    And Player 1 starts there turn
+    And Player 1 keeps dice "5,6,7,8" and re-rolls the rest and gets "Sword, Sword, Skulls, Skulls, Skulls, Skulls, Sword, Sword"
+    Then I die and get a score of 300
+
+  Scenario: Acceptance Test Line 115
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Sword, Sword, Sword, Sword, Skulls"
+    And  Player 1 draws a "SeaBattle" card with "4 Swords"
+    And Player 1 starts there turn
+    Then I die and get a score of 1300
+
+  Scenario: Acceptance Test Line 116
+    Given that the host is initialized
+    When I roll "Monkey, Monkey, Monkey, Sword, Skulls, Diamond, Parrot, Parrot"
+    And  Player 1 draws a "SeaBattle" card with "4 Swords"
+    And Player 1 starts there turn
+    And Player 1 keeps dice "1,2,3,4,5,6" and re-rolls the rest and gets "Monkey, Monkey, Monkey, Sword, Skulls, Diamond, Sword, Sword"
+    And Player 1 keeps dice "4,5,6,7,8" and re-rolls the rest and gets "Sword, Skulls, Diamond, Sword, Sword, Sword, Parrot, Parrot"
+    Then I die and get a score of 1300

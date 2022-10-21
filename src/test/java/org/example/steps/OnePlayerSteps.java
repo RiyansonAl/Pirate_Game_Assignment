@@ -71,6 +71,8 @@ public class OnePlayerSteps {
         System.out.println("PlayerTurnPhase = " + playerTurnPhase[1] );
         if(playerTurnPhase[1] == true){
             obtainScore = host.calculateScore(currentPlayer, card, roll);
+        } else {
+            obtainScore = currentPlayer.getScore();
         }
         System.out.println("Printing the string " + score);
         System.out.println(host.endTurn(player1));
@@ -134,5 +136,89 @@ public class OnePlayerSteps {
         System.out.println("Printing the string " + score);
         System.out.println(host.endTurn(player1));
         assertEquals(score, obtainScore);
+    }
+
+    @And("Player {int} draws a {string} card with {string}")
+    public void playerDrawsACardWith(int playerNum, String cardName, String cardnumString) {
+        switch (playerNum){
+            case 1:
+                currentPlayer = player1;
+                break;
+            case 2:
+                currentPlayer = player2;
+                break;
+            case 3:
+                currentPlayer = player3;
+                break;
+            default:
+                currentPlayer = player1;
+                break;
+        }
+
+        System.out.println("Draw Card");
+        card = host.getCardByName(cardName);
+
+        String[] cardnumSplit = cardnumString.split(" ", 2);
+
+        int cardNum = Integer.valueOf(cardnumSplit[0]);
+        if(cardnumSplit[1].equals("Swords")){
+            currentPlayer.setSwordCardNum(cardNum);
+        } else if (cardnumSplit[1].equals("Skulls")){
+            currentPlayer.setSkullCardNum(cardNum);
+        }
+
+
+        System.out.println("Card: " + card + " with number: " + cardNum);
+
+    }
+
+    @And("Player {int} enters Skull island and rolls {string}")
+    public void playerEntersSkullIslandAndRolls(int playerNum, String stringRoll) {
+        String[] diceString = stringRoll.split(",",9);
+
+        GameHost.Dice[] gotRoll = new GameHost.Dice[diceString.length];
+
+        for (int i = 0; i < gotRoll.length; i++){
+            gotRoll[i] = host.getRollByName(diceString[i].strip());
+        }
+        //roll = gotRoll;
+
+        if(currentPlayer.getIsSkullIsland() == true){
+            roll = host.skullIsland(currentPlayer, card, roll, gotRoll);
+        }
+
+    }
+
+    @Then("Player {int} exits Skull island and subtracts {int} to each other player's score")
+    public void playerExitsSkullIslandAndSubtractsToEachOtherPlayerSScore(int playerNum, int score) {
+        System.out.println("Exit skull island");
+        roll = host.skullIsland(currentPlayer, card, roll, roll);
+        String[] temp = currentPlayer.getScoreBreakDown().split("=", 2);
+        String[] negativeScoreString = temp[1].split(" ", 5);
+        int negativeScore = Integer.valueOf(negativeScoreString[1]);
+
+        //System.out.println(currentPlayer.getScoreBreakDown());
+        System.out.println(host.endTurn(currentPlayer));
+        assertEquals(score, negativeScore);
+    }
+
+    @And("Player {int} has {int} points")
+    public void playerHasPoints(int playerNum, int points) {
+
+        switch (playerNum){
+            case 1:
+                player1.updateScore(points);
+                break;
+            case 2:
+                player2.updateScore(points);
+                break;
+            case 3:
+                player3.updateScore(points);
+                break;
+            default:
+                player1.updateScore(points);
+                break;
+        }
+
     }
 }
