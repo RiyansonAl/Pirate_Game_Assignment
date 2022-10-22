@@ -9,6 +9,9 @@ import org.example.GameHost;
 import org.example.Player;
 
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,6 +27,10 @@ public class OnePlayerSteps {
     int score;
     Player currentPlayer;
 
+    File fileName;
+
+    String msg = "";
+
     @Given("that the host is initialized")
     public void thatTheHostIsInitialized() {
         System.out.println("init");
@@ -34,7 +41,9 @@ public class OnePlayerSteps {
 
         host = new GameHost(players);
         score = 0;
+        msg = "";
         System.out.println("init end");
+
     }
 
     @When("I roll {string}")
@@ -75,7 +84,7 @@ public class OnePlayerSteps {
             obtainScore = currentPlayer.getScore();
         }
         System.out.println("Printing the string " + score);
-        System.out.println(host.endTurn(player1));
+        System.out.println(host.endTurn(currentPlayer));
         assertEquals(score, obtainScore);
 
     }
@@ -97,6 +106,9 @@ public class OnePlayerSteps {
                 break;
         }
         roll = host.playerTurnStart(currentPlayer, card, roll);
+        msg = msg + "\nStarting Player " + playerNum + " Turn\n";
+        msg = msg + "Player " + playerNum + " Draws " + card.toString() + "\n";
+        msg = msg + "Player " + playerNum + " Rolls " + Arrays.toString(roll) + "\n";
     }
 
     @And("Player {int} keeps dice {string} and re-rolls the rest and gets {string}")
@@ -134,7 +146,9 @@ public class OnePlayerSteps {
             obtainScore = host.calculateScore(currentPlayer, card, roll);
         }
         System.out.println("Printing the string " + score);
-        System.out.println(host.endTurn(player1));
+        String endTurnMsg = host.endTurn(currentPlayer);
+        System.out.println(endTurnMsg);
+        msg = msg + endTurnMsg;
         assertEquals(score, obtainScore);
     }
 
@@ -169,6 +183,7 @@ public class OnePlayerSteps {
 
 
         System.out.println("Card: " + card + " with number: " + cardNum);
+        msg = msg + "Player " + playerNum + " draws " + card + " with number: " + cardNum + "\n";
 
     }
 
@@ -219,6 +234,89 @@ public class OnePlayerSteps {
                 player1.updateScore(points);
                 break;
         }
+
+    }
+
+    @When("Player {int} rolls {string}")
+    public void playerRolls(int playerNum, String stringRoll) {
+        String[] diceString = stringRoll.split(",",9);
+        //System.out.println(Arrays.toString(diceString));
+        //System.out.println(diceString[1]);
+        //System.out.println(diceString[1].strip());
+
+        GameHost.Dice[] gotRoll = new GameHost.Dice[diceString.length];
+
+        for (int i = 0; i < gotRoll.length; i++){
+            gotRoll[i] = host.getRollByName(diceString[i].strip());
+        }
+        roll = gotRoll;
+        //System.out.println(Arrays.toString(gotRoll));
+        //System.out.println(gotRoll[3]);
+
+    }
+
+    @And("Player {int} draws a {string} card")
+    public void playerDrawsACard(int playerNum, String cardName) {
+        System.out.println("Draw Card");
+        card = host.getCardByName(cardName);
+        System.out.println(card);
+    }
+
+    @Then("Player {int} gets a score of {int}")
+    public void playerGetsAScoreOf(int playerBum, int score) {
+        boolean[] playerTurnPhase = host.getPlayerTurnPhase(currentPlayer);
+        int obtainScore = 0;
+        System.out.println("PlayerTurnPhase = " + playerTurnPhase[1] );
+        if(playerTurnPhase[1] == true){
+            obtainScore = host.calculateScore(currentPlayer, card, roll);
+        }
+        System.out.println("Printing the string " + score);
+        String endTurnMsg = host.endTurn(currentPlayer);
+        System.out.println(endTurnMsg);
+        msg = msg + endTurnMsg;
+        assertEquals(score, obtainScore);
+
+    }
+
+    @And("the scores are displayed")
+    public void theScoresAreDisplayed() {
+        msg = msg + "\nScore board: \n";
+        String scoreboard = host.displayScores();
+        msg = msg + scoreboard;
+        System.out.println(scoreboard);
+    }
+
+    @Then("log the game in log file {string}")
+    public void logTheGameInLogFile(String logName) {
+        fileName = new File(logName);
+        try {
+            FileWriter writer = new FileWriter(logName);
+            writer.write(msg);
+            writer.close();
+        }catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    @Given("that the host is initialized with {int} players")
+    public void thatTheHostIsInitializedWithPlayers(int numOfPlayers) {
+        System.out.println("init");
+        player1 = new Player(1);
+        player2 = new Player(2);
+        player3 = new Player(3);
+        if(numOfPlayers == 2){
+            players = new Player[]{player1, player2};
+
+        } else {
+            players = new Player[]{player1, player2, player3};
+        }
+
+        host = new GameHost(players);
+        score = 0;
+        msg = "";
+        System.out.println("init end");
+
 
     }
 }
