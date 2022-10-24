@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the Multi-player acceptance tests for lines 122 and 126">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the Multi-player acceptance tests for lines 134 and 139">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/easyCucumberRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberOnePlayer.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/easyCucumberStepDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,40 +60,13 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Acceptance Test Line 139">
-    <configuration name="Scenario: Acceptance Test Line 122" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" />
-      <option name="GLUE" value="org.example.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+  <component name="RunManager" selected="Application.easyCucumberRunner">
+    <configuration name="easyCucumberRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.easyCucumberRunner" />
       <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 122$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 122$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 122" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Acceptance Test Line 126" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" />
-      <option name="GLUE" value="org.example.steps" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Pirate" />
-      <option name="NAME_FILTER" value="^Acceptance Test Line 126$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Acceptance Test Line 126$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Acceptance Test Line 126" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,35 +114,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunnerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Die with 3 skulls" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberOnePlayer.feature" />
+      <option name="GLUE" value="org.example.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Pirate" />
+      <option name="NAME_FILTER" value="^Die with 3 skulls$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Die with 3 skulls$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Die with 3 skulls" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.RunnerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: I eat apple" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberOnePlayer.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Pirate" />
+      <option name="NAME_FILTER" value="^I eat apple$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^I eat apple$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: I eat apple" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 122" />
-      <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 126" />
+      <item itemvalue="Application.easyCucumberRunner" />
       <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 134" />
       <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 139" />
-      <item itemvalue="JUnit.RunnerTest" />
+      <item itemvalue="Cucumber Java.Scenario: Die with 3 skulls" />
+      <item itemvalue="Cucumber Java.Scenario: I eat apple" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.easyCucumberRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Die with 3 skulls" />
+        <item itemvalue="Cucumber Java.Scenario: I eat apple" />
         <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 139" />
         <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 134" />
-        <item itemvalue="JUnit.RunnerTest" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 126" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 122" />
       </list>
     </recent_temporary>
   </component>
@@ -178,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00049" summary="CODE: Wrote code to pass Acceptance Tests Line 63">
-      <created>1664333945783</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1664333945783</updated>
     </task>
     <task id="LOCAL-00050" summary="A-TEST: Acceptance Tests Line 64 - 65">
       <created>1664334068651</created>
@@ -522,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666413058380</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="A-TEST: wrote the Multi-player acceptance tests for lines 134 and 139">
+      <created>1666417831880</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1666417831880</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="U-TEST: Creating a Socket for the playable game" />
     <MESSAGE value="CODE: Wrote code to open sockets for players 2 and 3" />
     <MESSAGE value="U-TEST: Test for playing the first round of the game" />
     <MESSAGE value="CODE: Started to wrote code for testing the first round of the game" />
@@ -562,6 +561,7 @@
     <MESSAGE value="A-TEST: wrote the acceptance tests for lines 69-91" />
     <MESSAGE value="A-TEST: wrote the acceptance tests for lines 92-116" />
     <MESSAGE value="A-TEST: wrote the Multi-player acceptance tests for lines 122 and 126" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the Multi-player acceptance tests for lines 122 and 126" />
+    <MESSAGE value="A-TEST: wrote the Multi-player acceptance tests for lines 134 and 139" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the Multi-player acceptance tests for lines 134 and 139" />
   </component>
 </project>
