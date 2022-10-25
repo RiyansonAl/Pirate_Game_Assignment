@@ -10,6 +10,8 @@ import org.example.GameHost;
 import org.example.Player;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class easyCucumberStepDef {
@@ -152,11 +154,16 @@ public class easyCucumberStepDef {
         System.out.println("PlayerTurnPhase = " + playerTurnPhase[1] );
         if(playerTurnPhase[1] == true){
             obtainScore = host.calculateScore(currentPlayer, card, roll);
-        } else {
-            obtainScore = currentPlayer.getScore();
         }
+        /*
+        else {
+            //obtainScore = currentPlayer.getScore();
+        }
+         */
         System.out.println("Printing the string " + score);
-        System.out.println(host.endTurn(currentPlayer));
+        String endTurnMsg = host.endTurn(currentPlayer);
+        System.out.println(endTurnMsg);
+        msg = msg + endTurnMsg;
         assertEquals(score, obtainScore);
     }
 
@@ -239,6 +246,27 @@ public class easyCucumberStepDef {
                 break;
         }
 
+    }
+
+    @JAndStep("All the players scores are displayed")
+    public void allPlayersScoresDisplayed() {
+        msg = msg + "\nScore board: \n";
+        String scoreboard = host.displayScores();
+        msg = msg + scoreboard;
+        System.out.println(scoreboard);
+    }
+
+    @JThenStep("log the game in log file {String}")
+    public void logGameinFile(String logName) {
+        fileName = new File(logName);
+        try {
+            FileWriter writer = new FileWriter(logName);
+            writer.write(msg);
+            writer.close();
+        }catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
 

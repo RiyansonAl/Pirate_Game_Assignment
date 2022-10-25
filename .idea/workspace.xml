@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 51 and 91">
+    <list default="true" id="580da44e-7f81-41e1-8470-78ddd1e880f7" name="Changes" comment="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 92 and 116">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberMultiPlayer.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberOnePlayer.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/features/easyCucumberOnePlayer.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/easyCucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/easyCucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/features/MultiPlayerCucumber.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/steps/easyCucumberStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/steps/easyCucumberStepDef.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.easyCucumberRunner">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Acceptance Test Line 139">
     <configuration name="easyCucumberRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.easyCucumberRunner" />
       <module name="Pirate" />
@@ -160,11 +162,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 139" />
         <item itemvalue="Application.easyCucumberRunner" />
         <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 92" />
         <item itemvalue="Cucumber Java.Scenario: Die with 3 skulls" />
         <item itemvalue="Cucumber Java.Scenario: I eat apple" />
-        <item itemvalue="Cucumber Java.Scenario: Acceptance Test Line 139" />
       </list>
     </recent_temporary>
   </component>
@@ -176,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663468876830</updated>
-    </task>
-    <task id="LOCAL-00052" summary="A-TEST: Acceptance Tests Line 69 - 71">
-      <created>1664334790741</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1664334790741</updated>
     </task>
     <task id="LOCAL-00053" summary="A-TEST: Acceptance Tests Line 76 - 78">
       <created>1664368008184</created>
@@ -520,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666653970063</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 92 and 116">
+      <created>1666670579713</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1666670579714</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CODE: Started to wrote code for testing the first round of the game" />
     <MESSAGE value="CODE: Started to wrote code for running the main game loop added to enter skull island and re-rolling the dice" />
     <MESSAGE value="REFACTOR: Fixed some of the messages printed to the console" />
     <MESSAGE value="U-TEST: Test to determine the winner after other player have a turn" />
@@ -560,6 +561,7 @@
     <MESSAGE value="A-TEST: wrote the Multi-player acceptance tests for lines 134 and 139" />
     <MESSAGE value="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 37 and 50" />
     <MESSAGE value="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 51 and 91" />
-    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 51 and 91" />
+    <MESSAGE value="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 92 and 116" />
+    <option name="LAST_COMMIT_MESSAGE" value="A-TEST: wrote the Easy Cucumber Single Player acceptance tests for lines 92 and 116" />
   </component>
 </project>

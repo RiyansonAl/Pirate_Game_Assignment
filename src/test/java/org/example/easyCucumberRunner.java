@@ -11,6 +11,8 @@ import java.nio.file.Paths;
 public class easyCucumberRunner {
 
     public static void main(String[] args){
+/*
+        //Single player Easy Cucumber
         Path myFeatureFile= Paths.get("src/test/java/org/example/features/easyCucumberOnePlayer.feature");
         JFeature jFeature= EasyCucumber.build(myFeatureFile, easyCucumberStepDef.class);
 
@@ -25,6 +27,19 @@ public class easyCucumberRunner {
             throw new RuntimeException(e);
         }
 
+ */
+
+        //Multiplayer Easy Cucumber
+        Path myFeatureFileMulti= Paths.get("src/test/java/org/example/features/easyCucumberMultiPlayer.feature");
+        JFeature jFeatureMulti= EasyCucumber.build(myFeatureFileMulti, easyCucumberStepDef.class);
+
+        try {
+            jFeatureMulti.executeAll();
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }
